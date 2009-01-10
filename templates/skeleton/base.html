@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>{% block title %} Ringce {% endblock %}</title>
+	{% block css %}
+	<link rel="stylesheet" href="{{ 'static/base.css' | md5_querystring }}" type="text/css" media="screen" charset="utf-8">
+
+	{% block extra_css %}
+		
+	{% endblock %}
+
+	{% endblock %}
+	
+	{% block js %}
+
+	<script src="http://www.google.com/jsapi"></script>
+	<script>
+	google.load("jquery", "1.2.6");
+	</script>
+	<script src="media/js/jqueryui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="media/js/jquery.ui.badge.js" type="text/javascript" charset="utf-8"></script>
+	
+	{% block extra_js %}
+	
+	{% endblock %}
+		
+	{% endblock %}
+	
+</head>
+<body>
+<div id="site">	
+	<div id="header">
+		<img src="{{ images_dict.ringce.image }}">
+	</div>
+	<div class="content">
+		{% block content %}
+			
+		{% endblock %}
+	</div>
+</div>
+</body>
+</html>
