@@ -26,8 +26,8 @@ def main():
 	(static_dir_path,static_dir_name) = os.path.split(settings.STATIC_DIR)
 	deploy_static_dir = os.path.join(deploy_dir, static_dir_name)
 	process_static_dir(settings.STATIC_DIR)
-	# create_thumbnails(os.path.join(tmp_dir, os.path.basename(settings.STATIC_DIR)), context)
-	# render_pages(tmp_dir, context)
+	create_thumbnails(os.path.join(tmp_dir, os.path.basename(settings.STATIC_DIR)), context)
+	render_pages(tmp_dir, context)
 	
 
 def filter_unwanted(item_list):
@@ -46,10 +46,11 @@ def get_path_fragment(root_dir, dir):
 	while (not os.path.samefile(current_dir, root_dir)):
 		(current_dir, current_fragment_part) = os.path.split(current_dir)
 		current_fragment = os.path.join(current_fragment_part, current_fragment)
-	return current_dir
+	return current_fragment
 
 def mirror_dir_tree(directory, source_root, mirror_root):
 	current_fragment = get_path_fragment(source_root, directory)
+	if(not current_fragment): return mirror_root
 	mirror_directory = os.path.join(mirror_root, os.path.basename(source_root), current_fragment)
 	try:
 		os.makedirs(mirror_directory)
@@ -62,6 +63,7 @@ def process_static_dir(static_dir):
 		filter_unwanted(dirs)
 		filter_unwanted(files)
 		tmp_static_dir = mirror_dir_tree(root, settings.STATIC_DIR, settings.TMP_DIR)
+		print tmp_static_dir
 		for file in files:
 			process_static_file(root, file, tmp_static_dir)
 			
@@ -167,7 +169,7 @@ def render_pages(out_dir, context):
 		for page in files:
 			print u"Rendering %s..." % page
 			rendered = render_to_string(page, context)
-			source_dir = os.path.dirname(page)
+			source_dir = root
 			page_out_dir = mirror_dir_tree(source_dir, settings.PAGES_DIR, out_dir)
 			page_path = os.path.join(page_out_dir,page)
 			fout = open(page_path,'w')

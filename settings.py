@@ -3,18 +3,20 @@ ROOT_PATH = os.path.dirname(__file__)
 
 # setting up directory paths
 TEMPLATE_DIRS = (
-    os.path.join(ROOT_PATH,'templates')
+    os.path.join(ROOT_PATH,'templates'),
+    os.path.join(ROOT_PATH,'pages')
 )
 STATIC_DIR = os.path.join(ROOT_PATH,'static')
 DEPLOY_DIR = os.path.join(ROOT_PATH,'deploy')
 IMAGES_DIR = os.path.join(ROOT_PATH,'images')
 TMP_DIR = os.path.join(ROOT_PATH, 'aym_tmp_files')
+PAGES_DIR = os.path.join(ROOT_PATH, 'pages')
 
 # path for YUICompressor, or None if you don't
 # want to compress JS/CSS. Project homepage:
 # http://developer.yahoo.com/yui/compressor/
-YUI_COMPRESSOR = "./yuicompressor-2.4.1.jar"
-#YUI_COMPRESSOR = None # if you don't want to use YUI compressor
+#YUI_COMPRESSOR = "./yuicompressor-2.4.1.jar"
+YUI_COMPRESSOR = None # if you don't want to use YUI compressor
 
 # path for HSS, which is a preprocessor for CSS-like files (*.hss)
 # project page at http://ncannasse.fr/projects/hss
@@ -40,11 +42,11 @@ EMAIL = u"lakshmi.vyas@gmail.com"
 CONTEXT = {
     'email':EMAIL,
     'now':datetime.datetime.now(),
-    'badge_selectors': {"badge_new": "javascript" },
-    'products': [{'name': 'Shelved', 'disabled': True},
-                 {'name': 'Goalce', 'disabled': False}, 
-                 {'name': 'Unknown1', 'disabled':True}, 
-                 {'name': 'Unknown2', 'disabled':True}],
+    'badge_selectors': {"badge_new": "#javascript" },
+    'products': [{'name': 'Shelved', 'disabled': True, 'image': "Shelved_128x128.png"},
+                 {'name': 'Goalce', 'disabled': False, 'image': "what2do.png"}, 
+                 {'name': 'Unknown1', 'disabled':True, 'image': "blank.png"}, 
+                 {'name': 'Unknown2', 'disabled':True, 'image': "blank.png"}],
     'code_categories': [{'name': 'Python', 'disabled': True},
                         {'name': 'Javascript', 'disabled': False},
                         {'name': 'Cocoa', 'disabled': True}]

@@ -1,9 +1,9 @@
 blackish = #333
 darkgreen = #649064
-lightgreen = #649064
+lightgreen = #B5E3B5
 whitey = white
 greyout = #666
-sitesize = 51
+sitesize = 53em
 
 .clear:
 	clear:both
@@ -14,7 +14,7 @@ ol,ul,li,h1,h2,h3,h4,div:
 
 body:
 	background-color: $darkgreen
-	font-family: Helvetica, "Helvetica Nueue", Geneva, sans-serif
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif
 	color:$lightgreen
 	margin: 0
 
@@ -22,6 +22,15 @@ body:
 	width: $sitesize
 	background-color: $whitey
 	max-height: 90%
+	margin->
+		top:0
+		right:auto
+		left:auto
+		bottom:1.5em
+	-moz-border-radius-bottomright: 3em
+	-webkit-border-bottom-right-radius: 3em
+	-moz-border-radius-bottomleft: 3em
+	-webkit-border-bottom-left-radius: 3em
 
 #header:
 	height: 100px
@@ -35,7 +44,7 @@ body:
 	padding: 1em
 	
 	.tower:
-		float: left
+		float:left
 		height: 16em
 		width: 15em
 		
@@ -50,24 +59,28 @@ body:
 			text-align: center
 			border-bottom: 2px solid $darkgreen
 			
-		& > .block_content:
+.block_content:
+	padding: 0.5em
+	
+	& > ul:
+		list-style-type:none
+		
+		& > li:
 				padding: 0.5em
+				background-color: $lightgreen
+				cursor: pointer
+				-moz-border-radius: 1em
+				-webkit-border-radius: 1em
 				
-				& > ul:
-						list-style-type:none
-						
-						& > li:
-								padding: 0.5em
-								background-color: $lightgreen
-								cursor: pointer
-								-moz-border-radius: 1em
-								-webkit-border-radius: 1em
-								
-								& :hover:
-									background-color: $whitey
-						& > disabled:
-								background-color: $greyout
-								cursor:default
+				&:hover:
+					background-color: $whitey
+					
+		& > .disabled:
+				background-color: $greyout
+				cursor:default
+				
+				&:hover:
+					background-color: $greyout
 #product_container:
 	padding->
 		top:.5em
@@ -94,6 +107,7 @@ body:
 			right: 1em
 			bottom: 1em
 			left: 1em
+		color: $blackish
 			
 #blog:
 	height: 100%
@@ -105,6 +119,7 @@ body:
 		
 	.block_content:
 		padding-bottom: 1em
+		max-height: 11em
 		overflow: hidden
 		
 	#blog_footer:
@@ -121,11 +136,11 @@ body:
 			right: 2em
 			left: 2em
 		text-align: justify
-		line-height: 1.4em
+		line-height: 1.7em
 		
 .badge_new:
 	background->
-	 	image: 'static/images/new-badge.png'
+	 	image: url(../images/new-badge.png)
 	 	repeat: no-repeat
 	width: 45px
 	height: 45px
@@ -134,20 +149,3 @@ body:
 	background: url(../images/uc-badge.png) no-repeat;
 	width: 45px;
 	height: 48px;
-
-
-
-		
-
-		
-		
-
-		
-		
-	
-
-
-
-
-	
-
