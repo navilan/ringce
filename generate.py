@@ -26,8 +26,8 @@ def main():
 	(static_dir_path,static_dir_name) = os.path.split(settings.STATIC_DIR)
 	deploy_static_dir = os.path.join(deploy_dir, static_dir_name)
 	process_static_dir(settings.STATIC_DIR)
-	create_thumbnails(os.path.join(tmp_dir, os.path.basename(settings.STATIC_DIR)), context)
-	render_pages(tmp_dir, context)
+	# create_thumbnails(os.path.join(tmp_dir, os.path.basename(settings.STATIC_DIR)), context)
+	# render_pages(tmp_dir, context)
 	
 
 def filter_unwanted(item_list):
