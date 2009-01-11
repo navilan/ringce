@@ -1,0 +1,153 @@
+blackish = #333
+darkgreen = #649064
+lightgreen = #649064
+whitey = white
+greyout = #666
+sitesize = 51
+
+.clear:
+	clear:both
+
+ol,ul,li,h1,h2,h3,h4,div:
+	margin:0
+	padding:0
+
+body:
+	background-color: $darkgreen
+	font-family: Helvetica, "Helvetica Nueue", Geneva, sans-serif
+	color:$lightgreen
+	margin: 0
+
+#site:
+	width: $sitesize
+	background-color: $whitey
+	max-height: 90%
+
+#header:
+	height: 100px
+	text-align: center
+	background-color: $blackish
+	
+	img:
+		max-width: 90%
+
+.content:
+	padding: 1em
+	
+	.tower:
+		float: left
+		height: 16em
+		width: 15em
+		
+	.tower, .platform:
+		margin: 1em
+		background-color: $blackish
+		-moz-border-radius: 1em
+		-webkit-border-radius: 1em
+		
+		h2:
+			padding-top: 0.5em
+			text-align: center
+			border-bottom: 2px solid $darkgreen
+			
+		& > .block_content:
+				padding: 0.5em
+				
+				& > ul:
+						list-style-type:none
+						
+						& > li:
+								padding: 0.5em
+								background-color: $lightgreen
+								cursor: pointer
+								-moz-border-radius: 1em
+								-webkit-border-radius: 1em
+								
+								& :hover:
+									background-color: $whitey
+						& > disabled:
+								background-color: $greyout
+								cursor:default
+#product_container:
+	padding->
+		top:.5em
+		bottom:.5em
+		
+	& > li:
+		float:left
+		margin->
+			left: 1.7em
+			bottom: 1em
+			
+		img:
+			display:inline
+			height: 3.5em
+
+#code_container:
+	padding-bottom: 1.2em
+	text-align: center
+	
+	& > li:
+		font-size: 1.2em
+		margin->
+			top: .5em
+			right: 1em
+			bottom: 1em
+			left: 1em
+			
+#blog:
+	height: 100%
+	min-height: 100px
+	margin->
+		right: 1em
+	padding->
+		bottom: 0
+		
+	.block_content:
+		padding-bottom: 1em
+		overflow: hidden
+		
+	#blog_footer:
+		height: 2em
+		margin->
+			top: .5em
+		width: 100%
+		border->
+			top: 1px solid $darkgreen
+			
+	p:
+		font-size: 1em
+		padding->
+			right: 2em
+			left: 2em
+		text-align: justify
+		line-height: 1.4em
+		
+.badge_new:
+	background->
+	 	image: 'static/images/new-badge.png'
+	 	repeat: no-repeat
+	width: 45px
+	height: 45px
+
+.badge_uc:
+	background: url(../images/uc-badge.png) no-repeat;
+	width: 45px;
+	height: 48px;
+
+
+
+		
+
+		
+		
+
+		
+		
+	
+
+
+
+
+	
+

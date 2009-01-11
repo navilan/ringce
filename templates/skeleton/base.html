@@ -1,3 +1,4 @@
+{% load aym %}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -5,7 +6,7 @@
 <head>
 	<title>{% block title %} Ringce {% endblock %}</title>
 	{% block css %}
-	<link rel="stylesheet" href="{{ 'static/base.css' | md5_querystring }}" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="{{ "static/base.css"|md5_querystring }}" type="text/css" media="screen" charset="utf-8">
 
 	{% block extra_css %}
 		

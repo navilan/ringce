@@ -32,7 +32,7 @@ def main():
     hss = settings.HSS_PATH
 
     for filename in os.listdir(static_dir):
-        before_ext, ext = os.path.splitext(filename)
+        (before_ext, ext) = os.path.splitext(filename)
         if filename.startswith(".") or filename.endswith("~"):
             print u"Ignored '%s'" % filename
         elif hss and ext in (".hss"):
@@ -47,7 +47,7 @@ def main():
                 s,o=commands.getstatusoutput(u"java -jar %s %s > %s" % (compress, in_path, out_path))
                 if s > 0: print o
                 
-        elif settings.USE_CLEVER_CSS and ext in (settings.CLEVER_CSS_EXT):
+        elif settings.USE_CLEVER_CSS and ext and ext in (settings.CLEVER_CSS_EXT):
             print u"Compiling via CleverCSS, and copying '%s' to deploy/static/" % filename
             print ext
             import clevercss
@@ -130,6 +130,7 @@ def main():
 
     # completed build script
     print u"Done running build.py."
+
 
 if __name__ == "__main__":
     main()

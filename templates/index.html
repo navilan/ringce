@@ -1,18 +1,24 @@
 {% extends "skeleton/base.html" %}
 
+{% load webdesign %}
+
 {% block title %}
 	Ringce : Home
 {% endblock %}
 
 {% block extra_js %}
+
+<script type="text/javascript" charset="utf-8">
 $(function(){
-	{% for badge, selector in badge_selectors %}
+	{% for badge, selector in badge_selectors.items %}
 		$("{{selector}}").badge({
 			offset: {left: -20, top:-20},
 			cssClass: {{badge}}
 		});
 	{% endfor %}
 });	
+</script>
+
 {% endblock %}
 
 {% block content %}
@@ -22,9 +28,9 @@ $(function(){
 	<div class="block_content">
 		<ul id="product_container">
 			{% for product in products%}
-				<li id="{{ product.name | lowercase }}" 
+				<li id="{{ product.name|lower }}" 
 					{% if product.disabled %} class="disabled" {% endif %}>
-					<img alt="{{ product.name }}" src="{{ images_dict[product.name].image }}">
+					<img alt="{{ product.name }}" src="{{ images_dict.product.name.image }}">
 				</li>
 			{% endfor %}
 		</ul>
@@ -35,9 +41,9 @@ $(function(){
 	<div class="block_content">
 		<ul id="code_container">
 			{% for code_category in code_categories %}
-				<li id="{{ code_category.name | lowercase }}" 
+				<li id="{{ code_category.name|lower }}" 
 					{% if product.disabled %} class="disabled" {% endif %}>
-					<img alt="{{ code_category.name }}" src="{{ images_dict[code_category.name].image }}">
+					{{ code_category.name }}
 				</li>
 			{% endfor %}
 		</ul>
