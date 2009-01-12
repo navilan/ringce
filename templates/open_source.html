@@ -1,0 +1,73 @@
+{% extends "skeleton/base.html" %}
+{% block title %}Ringce : Open Source: {{title}} {% endblock %}
+{% block extra_css %}<link type="text/css" rel="stylesheet" href="{{media}}/css/SyntaxHighlighter.syn"></link>{% endblock %}
+{% block extra_js %}
+<script language="javascript" src="{{media}}/js/shCore.js"></script>
+<script language="javascript" src="{{media}}/js/shBrushjScript.js"></script>
+<script type="text/javascript" charset="utf-8">
+ $(function(){
+	dp.SyntaxHighlighter.ClipboardSwf = '{{media}}/flash/clipboard.swf';
+	dp.SyntaxHighlighter.HighlightAll('code');
+	{% block ready_function %}
+	{% endblock %}
+});
+</script>
+{% endblock %}
+{% block content %}
+<div id="main_nav">
+	<ul>
+		{% for group in groups %}
+		<li {% ifequal page_group group %}class="selected"{% endifequal %}>{{group}}</li>
+		{% endfor %}
+	</ul>
+</div>
+<div id="content_header">
+	<form action="#" method="post">
+		<h2>{{ title }}</h2>
+		<div id="content_header_actions">
+			<a href="#">List</a>
+			<input type="text" name="search" value="" id="search">
+		</div>
+	</form>
+	<div class="clear"></div>
+</div>
+<div id="code_content">
+	<div class="download_area">
+		<div class="download">
+			<a  href="#">
+				<img src="{{media}}/images/download.png"/>
+				<span>Download</span>
+			</a>
+		</div>
+		<div class="license">
+			<strong>Licenses:</strong>
+			<ul>
+				{% for license in licenses %}
+				<li><a href="{{all_licenses.license}}">{{license}}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="depends">
+			<strong>Dependencies:</strong>
+			<ul>
+				{% for dependency in dependencies %}
+				<li><a href="{{all_links.dependency}}">{{dependency}}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+		<div class="status">
+			<strong>Status:</strong>
+			<div class="status_badge">{{status}}</div>
+			Version: {{version}}
+		</div>
+		<div class="source">
+			<a href="{{source_link}}">
+				<img src="{{media}}/images/source.png"/>
+				<span>Source</span>
+			</a>
+		</div>
+		<div class="clear"></div>
+	</div>
+	{% block article%}{% endblock %}
+</div>
+{% endblock %}

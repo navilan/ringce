@@ -1,0 +1,74 @@
+{% extends "open_source.html" %}
+{% hyde
+{
+	"title":"jQuery UI Badge",
+	"licenses":("MIT","GPL"),
+	"page_group":"Open Source",
+	"dependencies": ("jQuery v1.2.6","jQuery UI v1.6RC4"),
+	"status": "beta",
+	"version": "0.1b",
+	"source_link": ""
+}
+%}
+{% block ready_function %}{% include "open_source/javascript/jQuery/badge_applier.html" %}{% endblock %}
+
+{% block article %}
+
+{% markdown %}
+
+### What is it? ###
+
+Badges are images that are tagged on elements to specialize them in someway. In several cases the placement of badges are dynamic. The jQuery UI Badge widget alleviates this problem by positioning the badge based on a css selector.
+
+### Demo ###
+
+<div class="demo_content">
+	<p>Feel free to play with the images below:</p>
+	<div class="left_column">
+		<ul id="badge_sender" class="hlist">
+			<li><div class="badge_new"></div></li>
+			<li><div class="badge_uc"></div></li>
+		</ul>
+	</div>
+	<div class="right_column">
+		<div id="badge_reciever" class="greenbox">This will look fancier with a badge</div>
+	</div>
+</div>
+<div class="clear"></div>
+
+### Code ###
+
+{% endmarkdown %}
+<div class="left_column">
+{% markdown %}
+
+#### Actions ####
+	
+*show(options):* Displays the badge. Accepts options. This can be used to switch from one badge to another as well.
+	
+*hide, toggle:* Simple functions that behave same as the jQuery hide and toggle functions.
+	
+*remove:* Removes all traces of the widget from the DOM.
+	
+{% endmarkdown %}
+</div>
+<div class="right_column">
+{% markdown %}
+#### Options ####
+	
+*cssClass:* The class that represents the badge.
+	
+*offset:* {left, top} - Offset from approximate bottom left of the element. You may need to play with the values a little to achieve the desired effect.
+
+{% endmarkdown %}
+</div>
+<div class="clear"></div>
+{% markdown %}
+#### Demo Example ####
+{% endmarkdown %}
+<pre name="code" class="javascript">
+$(function(){
+		{% include "open_source/javascript/jQuery/badge_applier.html" %}
+});
+</pre>
+{% endblock %}

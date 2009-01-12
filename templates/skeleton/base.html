@@ -1,3 +1,4 @@
+{% spaceless %}
 {% load aym %}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
@@ -6,22 +7,23 @@
 <head>
 	<title>{% block title %} Ringce {% endblock %}</title>
 	{% block css %}
-	<link rel="stylesheet" href="static/css/base.css" type="text/css" media="screen" charset="utf-8">
+	<link rel="stylesheet" href="{{media}}/css/base.css" type="text/css" media="screen" charset="utf-8">
 	{% block extra_css %}{% endblock %}{% endblock %}{% block js %}
 	<script src="http://www.google.com/jsapi"></script>
 	<script>
 	google.load("jquery", "1.2.6");
 	</script>
-	<script src="static/js/jqueryui.js" type="text/javascript" charset="utf-8"></script>
-	<script src="static/js/jquery.ui.badge.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{media}}/js/jqueryui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{media}}/js/jquery.ui.badge.js" type="text/javascript" charset="utf-8"></script>
 	{% block extra_js %}{% endblock %}{% endblock %}
 </head>
 <body>
 <div id="site">	
 	<div id="header">
-		<img src="static/images/ringce.png">
+		<img src="{{media}}/images/ringce.png">
 	</div>
-	<div class="content">{% block content %}{% endblock %}</div>
+	{% block content %}{% endblock %}
 </div>
 </body>
 </html>
+{% endspaceless %}

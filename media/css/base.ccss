@@ -1,0 +1,355 @@
+blackish = #333
+darkgreen = #649064
+lightgreen = #B5E3B5
+whitey = white
+greyout = #666
+sitesize = 53em
+
+img:
+	border:0
+a:
+	color:$blackish
+
+.clear:
+	clear:both
+
+ol,ul,li,h1,h2,h3,h4,div:
+	margin:0
+	padding:0
+
+h3:
+	border -> 
+		bottom: 1px solid $lightgreen
+	margin ->
+		bottom: .5em
+h4:
+	text-align: center
+	-moz-border-radius: 1em
+	-webkit-border-radius: 1em
+	background-color: $darkgreen
+	color: $lightgreen
+	padding-top: .5em
+	padding-bottom: .5em
+
+body:
+	background-color: $darkgreen
+	font-family: "Lucida Grande", Lucida, Verdana, sans-serif
+	color:$lightgreen
+	margin: 0
+
+#site:
+	width: $sitesize
+	background-color: $whitey
+	max-height: 90%
+	margin->
+		top:0
+		right:auto
+		left:auto
+		bottom:1.5em
+	-moz-border-radius-bottomright: 3em
+	-webkit-border-bottom-right-radius: 3em
+	-moz-border-radius-bottomleft: 3em
+	-webkit-border-bottom-left-radius: 3em
+
+#header:
+	height: 100px
+	text-align: center
+	background-color: $blackish
+	img:
+		max-width: 90%
+
+.home_content:
+	padding: 1em
+	
+	.tower:
+		float:left
+		height: 16em
+		width: 15em
+		
+	.tower, .platform:
+		margin: 1em
+		background-color: $blackish
+		-moz-border-radius: 1em
+		-webkit-border-radius: 1em
+		
+		h2:
+			padding-top: 0.5em
+			text-align: center
+			border-bottom: 2px solid $darkgreen
+			
+.block_content:
+	padding: 0.5em
+	
+	& > ul:
+		list-style-type:none
+		
+		& > li:
+				padding: 0.5em
+				background-color: $lightgreen
+				cursor: pointer
+				-moz-border-radius: 1em
+				-webkit-border-radius: 1em
+				
+				&:hover:
+					background-color: $whitey
+					
+		& > .disabled:
+				background-color: $greyout
+				cursor:default
+				
+				&:hover:
+					background-color: $greyout
+#product_container:
+	padding->
+		top:.5em
+		bottom:.5em
+		
+	& > li:
+		float:left
+		margin->
+			left: 1.7em
+			bottom: 1em
+			
+		img:
+			display:inline
+			height: 3.5em
+
+#code_container:
+	padding-bottom: 1.2em
+	text-align: center
+	
+	& > li:
+		font-size: 1.2em
+		margin->
+			top: .5em
+			right: 1em
+			bottom: 1em
+			left: 1em
+		color: $blackish
+			
+#blog:
+	height: 100%
+	min-height: 100px
+	margin->
+		right: 1em
+	padding->
+		bottom: 0
+		
+	.block_content:
+		padding-bottom: 1em
+		max-height: 11em
+		overflow: hidden
+		
+	#blog_footer:
+		height: 2em
+		margin->
+			top: .5em
+		width: 100%
+		border->
+			top: 1px solid $darkgreen
+			
+	p:
+		font-size: 1em
+		padding->
+			right: 2em
+			left: 2em
+		text-align: justify
+		line-height: 1.7em
+		
+.badge_new:
+	background->
+	 	image: url({{media}}/images/new_badge.png)
+	 	repeat: no-repeat
+	width: 45px
+	height: 45px
+
+.badge_uc:
+	background-> 
+		image: url({{media}}/images/uc_badge.png}}) 
+		repeat: no-repeat
+	width: 45px
+	height: 48px
+	
+.greenbox:
+	-moz-border-radius: 1em
+	-webkit-border-radius: 1em
+	background-color: $darkgreen
+	padding: 1em
+	margin->
+		left: 1em
+	color: $lightgreen
+	
+.hlist:
+	list-style-type: none
+	
+	li:
+		float:left
+		
+.left_column,.right_column:
+	float:left
+	width:21em
+	margin->
+		left: 1em
+	-moz-border-radius: 1em
+	-webkit-border-radius: 1em
+	color: $blackish
+	padding->
+		right: 1em
+		left: 1em
+		
+#main_nav:
+	margin-> 
+		right: 1em
+		top: .3em
+	width: 100%
+	
+	ul:
+		list-style-type: none
+		text-align: center
+		
+	li:
+		display:inline
+		margin-> 
+			left: .5em
+		background-color: $blackish
+		padding: .3em
+		-moz-border-radius-bottomright: .5em
+		-webkit-border-bottom-right-radius: .5em
+		-moz-border-radius-bottomleft: .5em
+		-webkit-border-bottom-left-radius: .5em
+		cursor: pointer
+		
+		&:hover,&.selected:
+			-moz-border-radius: 0
+			-webkit-border-radius: 0
+			border->
+				bottom: .5em solid $darkgreen
+		
+		&.selected:
+			background-color: $darkgreen
+			
+
+.download_area:
+	background-color: $lightgreen
+	margin:  -1em
+	margin-bottom: 1em
+	margin-right: -1em
+	padding-bottom: 1em
+
+	.source,.download:
+		background-color: $blackish
+		border: .3em solid $blackish
+		float:left
+		-moz-border-radius: .6em
+		-webkit-border-radius: .6em
+		margin-top: 1.5em
+		margin-left: 1.5em
+		margin-right: 1.5em
+		padding:0.2em;
+		text-align: center
+		height: 3em
+		width: 3em
+		max-width: 10%
+		
+		span:
+			font->
+				size: .6em
+				weight: bold
+			color: $blackish
+			border: 0
+			padding: 0
+
+	img:
+		width: 3.3em
+		text-align: center
+		height: 3em
+		max-width: 100%
+		
+	.source,.download:
+		&:hover:
+			border: .3em solid $darkgreen
+
+	.depends,.status,.license:
+		float: left
+		width: 11em
+		margin-top: 1.5em
+		padding-left: 1.5em
+		height: 5em
+		max-width: 21%
+		border-left: 1px solid $darkgreen
+
+
+	.depends:
+		width: 20em
+		max-width: 27%
+
+
+	.license:
+		max-width: 18%
+
+	.status:
+		border-right: 1px solid $darkgreen
+		max-width: 18%
+
+		.status_badge:
+			background-color: $blackish	
+			color: $lightgreen
+			font-variant: small-caps
+			font-size: 1em
+			-moz-border-radius: .5em
+			-webkit-border-radius: .5em	
+			width: 2em
+			padding: .2em .5em
+			margin-bottom: .4em
+			margin-top: .4em
+
+	ul:
+		list-style-type: none
+ 	li:
+		line-height: 1.5em
+
+#content_header:
+	margin-top: .77em
+	background-color: $darkgreen
+	border-top: 1px solid $darkgreen
+	border-bottom: 1px solid $darkgreen
+
+	h2:
+		float: left
+		padding-left: 1em
+		padding-top: .2em
+		max-width: 30em
+
+	#content_header_actions:
+		float: right
+		max-width: 20em
+		padding-left: 1.5em
+
+	a:
+		float: left
+		margin-top: .1em
+		margin-right: 1em
+		color: $lightgreen
+		max-width: 20%
+		padding: .3em .5em
+
+
+	a:hover:
+		-moz-border-radius: .6em
+		-webkit-border-radius: .6em
+		background-color: $blackish
+
+
+	input[type=text]:
+		float: left
+		font-size: 1em
+		max-width: 65%
+		margin: .3em
+		color: $darkgreen
+		border: 0		
+		-moz-border-radius: .6em
+		-webkit-border-radius: .6em
+
+#code_content:
+	color: $blackish
+	padding: 1em
