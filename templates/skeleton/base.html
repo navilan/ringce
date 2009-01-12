@@ -1,5 +1,3 @@
-{% spaceless %}
-{% load aym %}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -20,7 +18,7 @@
 <body>
 <div id="site">	
 	<div id="header">
-		<img src="{{media}}/images/ringce.png">
+		<a href="{{media}}/../index.html"><img src="{{media}}/images/ringce.png"></a>
 	</div>
 	{% block content %}{% endblock %}
 </div>
@@ -29,4 +27,3 @@ Ringce 1.0. This site and its contents have been created with love, sweat and bl
 </div>
 </body>
 </html>
-{% endspaceless %}

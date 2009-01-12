@@ -5,7 +5,7 @@
 <div id="main_nav">
 	<ul>
 		{% for group in groups %}
-		<li {% ifequal page.page_group group %}class="selected"{% endifequal %}>{{group}}</li>
+		<li {% ifequal page.page_group group %}class="selected"{% endifequal %}><a href="{{media}}/../{{group|slugify}}/{{group|slugify}}.html">{{group}}</a></li>
 		{% endfor %}
 	</ul>
 </div>
@@ -15,7 +15,6 @@
 	<form action="#" method="post">
 		<h2>{{ page.title }}</h2>
 		<div id="content_header_actions">
-			<a href="{{page.listing_url}}">List</a>
 			<input type="text" name="search" value="" id="search">
 		</div>
 	</form>

@@ -240,6 +240,14 @@ body:
 		&.selected:
 			background-color: $darkgreen
 			
+			a:
+				text-decoration: underline
+				color: $blackish
+	
+		a:
+			color: $lightgreen
+			text-decoration: none
+			
 
 .meta_area:
 	background-color: $lightgreen
@@ -285,11 +293,12 @@ body:
 		margin-left: 2.5em
 
 	.depends,.status,.license:
+		font-size: 0.8em
 		float: left
 		width: 11em
 		margin-top: 1.5em
 		padding-left: 1.5em
-		height: 5em
+		height: 8em
 		max-width: 21%
 		border-left: 1px solid $darkgreen
 

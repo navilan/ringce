@@ -44,10 +44,11 @@ CONTEXT = {
 		{'name': 'Cocoa', 'disabled': True}
 	),
 	'all_links': {
-		"jQuery v1.2.6" : "",
-		"jQuery UI v1.6RC4" : "",
-		"MIT": "",
-		"GPL": ""
+		"jQuery v1.2.6" : "http://jquery.com/",
+		"jQuery UI v1.6RC4" : "http://ui.jquery.com/",
+		"jQuery Form Plugin v2.18": "http://malsup.com/jquery/form/",
+		"MIT": "http://www.opensource.org/licenses/mit-license.php",
+		"GPL": "http://www.gnu.org/copyleft/gpl.html"
 	}
 	
 }

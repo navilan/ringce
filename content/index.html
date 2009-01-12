@@ -3,58 +3,61 @@
 {% block extra_js %}
 <script type="text/javascript" charset="utf-8">
 $(function(){
-	{% for badge, selector in badge_selectors.items %}
-	$("{{selector}}").badge({
-		offset: {left: -20, top:-20},
-		cssClass: '{{badge}}'
-	});
-	{% endfor %}
-});	
+    {% for badge, selector in badge_selectors.items %}
+    $("{{selector}}").badge({
+        offset: {left: -20, top:-20},
+        cssClass: '{{badge}}'
+    });
+    {% endfor %}
+}); 
 </script>
 {% endblock %}
 {% block content %}
 <div class="home_content">
-	<div id="software" class="tower">
-		<h2>Products</h2>
-		<div class="block_content">
-			<ul id="product_container">
-				{% for product in products%}
-					<li id="{{ product.name|lower }}" {% if product.disabled %} class="disabled" {% endif %}>
-						<img alt="{{ product.name }}" src="{{media}}/images/{{product.image}}">
-					</li>
-				{% endfor %}
-			</ul>
-		</div>
-	</div>		
-	<div id="code" class="tower">
-		<h2>Open Source</h2>
-		<div class="block_content">
-			<ul id="code_container">
-				{% for code_category in code_categories %}
-					<li id="{{ code_category.name|lower }}" {% if code_category.disabled %} class="disabled" {% endif %}>{{ code_category.name }}</li>
-				{% endfor %}
-			</ul>
-		</div>
-	</div>
-	<div id="about" class="tower">
-		<h2>Tweets</h2>
-		<div class="block_content">
-		</div>
-	</div>
-	<div class="clear"></div>
-	<div id="blog" class="platform">
-		<h2>Blog</h2>
-		<div id="blog_content" class="block_content">
-			{% if not recent_post %}
-			{% lorem 3 p %}
-			{% else %}
-			{% include recent_post.excerpt_template %}
-			{% endif %}
-		</div>
-		<div id="blog_footer">
-		</div>
-	</div>
-	<div class="clear"></div>
-</div>	
+    <div id="software" class="tower">
+        <h2>Products</h2>
+        <div class="block_content">
+            <ul id="product_container">
+                {% for product in products%}
+                    <li id="{{ product.name|lower }}" {% if product.disabled %} class="disabled" {% endif %}>
+                        <a {% if not product.disabled %}href="{% if product.url %}{{product.url}}{% else %}{{media}}/../products/{{product.name}}/{{product.name}}.html{% endif %}"  {% endif %}>
+                        <img alt="{{ product.name }}" src="{{media}}/images/{{product.image}}"></a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>      
+    <div id="code" class="tower">
+        <h2>Open Source</h2>
+        <div class="block_content">
+            <ul id="code_container">
+                {% for code_category in code_categories %}
+                    <li id="{{ code_category.name|lower }}" 
+                    {% if code_category.disabled %} class="disabled" {% endif %}>
+                    <a {% if not code_category.disabled %} href="{{media}}/../open-source/{{code_category.name}}/{{code_category.name}}.html" {% endif %}>{{ code_category.name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <div id="about" class="tower">
+        <h2>Tweets</h2>
+        <div class="block_content">
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="blog" class="platform">
+        <h2>Blog</h2>
+        <div id="blog_content" class="block_content">
+            {% if not recent_post %}
+            {% lorem 3 p %}
+            {% else %}
+            {% include recent_post.excerpt_template %}
+            {% endif %}
+        </div>
+        <div id="blog_footer">
+        </div>
+    </div>
+    <div class="clear"></div>
+</div>  
 {% endblock %}
 
