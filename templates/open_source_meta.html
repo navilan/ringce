@@ -1,0 +1,36 @@
+<div class="meta_area">
+	<div class="download">
+		<a  href="#">
+			<img src="{{media}}/images/download.png"/>
+			<span>Download</span>
+		</a>
+	</div>
+	<div class="license">
+		<strong>Licenses:</strong>
+		<ul>
+			{% for license in page.licenses %}
+			<li><a href="{{all_licenses.license}}">{{license}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="depends">
+		<strong>Dependencies:</strong>
+		<ul>
+			{% for dependency in page.dependencies %}
+			<li><a href="{{all_links.dependency}}">{{dependency}}</a></li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="status">
+		<strong>Status:</strong>
+		<div class="status_badge">{{page.status}}</div>
+		Version: {{page.version}}
+	</div>
+	<div class="source">
+		<a href="{{page.source_link}}">
+			<img src="{{media}}/images/source.png"/>
+			<span>Source</span>
+		</a>
+	</div>
+	<div class="clear"></div>
+</div>

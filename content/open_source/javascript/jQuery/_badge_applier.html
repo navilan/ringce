@@ -1,0 +1,11 @@
+$("#badge_sender div").css('cursor', 'pointer');
+$("#badge_reciever").badge();
+$("#badge_sender div").click(function(){
+	var this_class = $(this).attr("class");
+	if($("#badge_reciever ." + this_class).length){
+		$("#badge_reciever").badge('toggle');
+	}
+	else{
+		$("#badge_reciever").badge('show', {offset:{left:-35, top:-35}, cssClass:this_class});
+	}
+});

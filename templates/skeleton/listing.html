@@ -1,0 +1,16 @@
+{% extends "skeleton/body.html"%}
+{% block content_body %}
+<div class="page_listing">
+{% for folder in page.subfolders %}
+{% if folder.pages %}
+<h2>{{folder.name}}</h2>
+{% block directory_content %}{% endblock %}
+{% for page in folder.pages %}
+<ul>
+	<li>
+		<h4><a href="{{page.page_url}}">{{page.title}}</a></h4>
+		{% block page_content %}AAA{% endblock %}
+	</li>
+</ul>{% endfor %}{%endif%}{% endfor %}
+</div>
+{% endblock %}
