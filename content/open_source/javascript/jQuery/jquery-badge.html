@@ -10,7 +10,7 @@
 	"source_link": ""
 }
 %}
-{% block ready_function %}{% include "open_source/javascript/jQuery/badge_applier.html" %}{% endblock %}
+{% block ready_function %}{% include "open_source/javascript/jQuery/_badge_applier.html" %}{% endblock %}
 
 {% block article %}
 
@@ -18,11 +18,11 @@
 
 ### What is it? ###
 
-Badges are images that are tagged on elements to specialize them in someway. In several cases the placement of badges are dynamic. The jQuery UI Badge widget alleviates this problem by positioning the badge based on a css selector.
+jQuery UI Badge is a simple widget that allows dynamic position of an overlay on a specified element. A css class for the badge and an offset is all it takes to overlay the badge. 
 
 ### Demo ###
 
-{% include "open_source/javascript/jQuery/badge_demo.html" %}
+{% include "open_source/javascript/jQuery/_badge_demo.html" %}
 
 ### Code ###
 
@@ -50,9 +50,15 @@ Badges are images that are tagged on elements to specialize them in someway. In 
 #### Demo Example ####
 <pre name="code" class="javascript">
 $(function(){
-		{% include "open_source/javascript/jQuery/badge_applier.html" %}
+  {% include "open_source/javascript/jQuery/_badge_applier.html" %}
 });
 </pre>
+
+### Backlog ###
+
+1. Allow arbitrary elements to be positioned as overlays
+2. Allow click event to be captured
+3. Effects
 
 {% endmarkdown %}
 {% endblock %}

@@ -232,7 +232,7 @@ body:
 			background-color: $darkgreen
 			
 
-.download_area:
+.meta_area:
 	background-color: $lightgreen
 	margin:  -1em
 	margin-bottom: 1em
@@ -320,13 +320,14 @@ body:
 	h2:
 		float: left
 		padding-left: 1em
-		padding-top: .2em
+		padding-top: 0
 		max-width: 30em
 
 	#content_header_actions:
 		float: right
 		max-width: 20em
 		padding-left: 1.5em
+		padding-top: 0.1em
 
 	a:
 		float: left
@@ -356,3 +357,32 @@ body:
 #code_content:
 	color: $blackish
 	padding: 1em
+	padding->
+		bottom: 3em
+	
+	ol:
+		margin->
+			left: 2em
+			font-size: 0.9em
+			
+.page_listing:
+	padding:.5em
+	color: #333
+	
+	ul:
+		list-style-type:none
+		
+	.meta_area:
+		width:50em
+		margin->
+			left: 1em
+			bottom: 1em
+			top: .05em
+		-moz-border-radius: .5em
+		-webkit-border-radius: .5em
+	
+	h2:
+		text-align: center
+		margin-bottom:.2em
+	
+	
