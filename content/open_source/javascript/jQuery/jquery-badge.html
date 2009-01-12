@@ -22,25 +22,11 @@ Badges are images that are tagged on elements to specialize them in someway. In 
 
 ### Demo ###
 
-<div class="demo_content">
-	<p>Feel free to play with the images below:</p>
-	<div class="left_column">
-		<ul id="badge_sender" class="hlist">
-			<li><div class="badge_new"></div></li>
-			<li><div class="badge_uc"></div></li>
-		</ul>
-	</div>
-	<div class="right_column">
-		<div id="badge_reciever" class="greenbox">This will look fancier with a badge</div>
-	</div>
-</div>
-<div class="clear"></div>
+{% include "open_source/javascript/jQuery/badge_demo.html" %}
 
 ### Code ###
 
-{% endmarkdown %}
-<div class="left_column">
-{% markdown %}
+<span class="left_column">
 
 #### Actions ####
 	
@@ -49,26 +35,24 @@ Badges are images that are tagged on elements to specialize them in someway. In 
 *hide, toggle:* Simple functions that behave same as the jQuery hide and toggle functions.
 	
 *remove:* Removes all traces of the widget from the DOM.
-	
-{% endmarkdown %}
-</div>
-<div class="right_column">
-{% markdown %}
+
+</span>
+
+<span class="right_column">
 #### Options ####
 	
 *cssClass:* The class that represents the badge.
 	
 *offset:* {left, top} - Offset from approximate bottom left of the element. You may need to play with the values a little to achieve the desired effect.
 
-{% endmarkdown %}
-</div>
-<div class="clear"></div>
-{% markdown %}
+</span>
+
 #### Demo Example ####
-{% endmarkdown %}
 <pre name="code" class="javascript">
 $(function(){
 		{% include "open_source/javascript/jQuery/badge_applier.html" %}
 });
 </pre>
+
+{% endmarkdown %}
 {% endblock %}

@@ -22,6 +22,7 @@ h3:
 		bottom: 1px solid $lightgreen
 	margin ->
 		bottom: .5em
+		
 h4:
 	text-align: center
 	-moz-border-radius: 1em
@@ -30,6 +31,7 @@ h4:
 	color: $lightgreen
 	padding-top: .5em
 	padding-bottom: .5em
+	clear:both
 
 body:
 	background-color: $darkgreen
@@ -186,6 +188,7 @@ body:
 		float:left
 		
 .left_column,.right_column:
+	display:block
 	float:left
 	width:21em
 	margin->
