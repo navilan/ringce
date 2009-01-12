@@ -26,7 +26,7 @@ MEDIA_PROCESSORS = {
 		'.css':('hyde.processors.TemplateProcessor','hyde.processors.YUICompressor',),
 		'.ccss':('hyde.processors.TemplateProcessor','hyde.processors.CleverCSS', 'hyde.processors.YUICompressor',),
 		'.hss':('hyde.processors.TemplateProcessor','hyde.processors.HSS', 'hyde.processors.YUICompressor',),
-		'.js':('hyde.processors.YUICompressor',)
+
 	} 
 }
 

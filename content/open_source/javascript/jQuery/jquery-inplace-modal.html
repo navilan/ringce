@@ -1,0 +1,75 @@
+{% extends "open_source.html" %}
+{% hyde
+{
+	"title":"In Place Modal",
+	"licenses":("MIT","GPL"),
+	"page_group":"Open Source",
+	"dependencies": ("jQuery v1.2.6","jQuery UI v1.6RC4"),
+	"status": "beta",
+	"version": "0.1b",
+	"source_link": ""
+}
+%}
+{% block extra_extra_js %}
+	<script src="{{media}}/js/jquery.ui.inplaceModal.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+{% block ready_function %}{% include "open_source/javascript/jQuery/_inplace_modal_applier.html" %}{% endblock %}
+
+{% block article %}
+
+{% markdown %}
+
+### What is it? ###
+
+In place modal is a jquery UI widget that adds the gray backgrounds that are usually seen with modal popups. While focusing the users onto a particular element, it also keeps them in the context of the page unlike modal popups.
+
+### Demo ###
+
+{% include "open_source/javascript/jQuery/_inplace_modal_demo.html" %}
+
+### How does it work? ###
+
+The widget creates and positions four layers(top, right, bottom ,left) so that the current element remains focussed.
+
+### Code ###
+
+<span class="left_column">
+
+#### Actions ####
+
+*inplaceModal:* Creates the modal and shows it during the first call.
+
+*show:* Displays the overlay by figuring out the dimensions of the target element.
+	
+*resizeOverlay:* This function can be called to resize/reposition the overlay if the target element changes size/position.
+	
+*hide:* Hide's the overlays without removing them from the DOM.
+
+</span>
+
+<span class="right_column">
+#### Options ####
+	
+No options for this widget yet. Class *overlay* is applied to the overlay elements.
+
+</span>
+
+#### Demo Example ####
+<pre name="code" class="javascript">
+$(function(){
+  {% include "open_source/javascript/jQuery/_inplace_modal_applier.html" %}
+});
+</pre>
+
+### Known Issues ###
+
+1. The target element must have an id property.
+
+### Backlog ###
+
+1. Allow options
+2. Follow jQuery UI guidelines for styles and elements.
+3. Effects
+
+{% endmarkdown %}
+{% endblock %}
