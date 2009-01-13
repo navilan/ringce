@@ -3,10 +3,15 @@ darkgreen = #649064
 lightgreen = #B5E3B5
 whitey = white
 
+html:
+    background-color: $darkgreen
+
 body:
-    background-color: $lightgreen
     margin: 0
     color: $blackish
+    height:100%
+    width: 100%
+    
 #hyde-site:
     height: 600px
     width: 610px
