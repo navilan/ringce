@@ -31,12 +31,13 @@ MEDIA_PROCESSORS = {
 }
 
 CONTEXT = {
+    'content':CONTENT_DIR,
 	'groups':("Products", "Open Source", "Blog", "About"),
 	'badge_selectors': {"badge_new": "#javascript"},
 	'products': (
 		{'name': 'Shelved', 'disabled': True, 'image': "Shelved_128x128.png"},
 		{'name': 'Goalce', 'disabled': False, 'image': "what2do.png"},             
-		{'name': 'Unknown1', 'disabled':True, 'image': "blank.png"},                
+		{'name': 'Hyde', 'disabled':False, 'image': "hyde-icon.png"},                
 		{'name': 'Unknown2', 'disabled':True, 'image': "blank.png"}),   
 	'code_categories': (
 		{'name': 'Python', 'disabled': True},

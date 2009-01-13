@@ -1,3 +1,11 @@
+{% extends "skeleton/root.html" %}
+{% hyde
+    {
+        "title": "Hyde",
+    }
+%}
+
+{% block all %}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
 	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
@@ -13,19 +21,7 @@
         <div class="hyde-left"></div>
         <div class="hyde-main">
             <div class="hyde-head"></div>
-            <div class="hyde-center">
-{% markdown %}
-* Static Website Generator
-    * using
-* Django Templates
-    * extended with
-* Page Context Variables
-    * and
-* Site templates.
-    * supports
-* Plugins
-{%endmarkdown%}
-            </div>
+{% include "products/hyde/_hyde_excerpt.html"%}
             <div class="hyde-git">
                 <a href="">GO GIT IT</a>
             </div>
@@ -49,3 +45,4 @@
 </div>
 </body>
 </html>
+{% endblock %}

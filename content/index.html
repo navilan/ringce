@@ -15,20 +15,20 @@ $(function(){
 {% block content %}
 <div class="home_content">
     <div id="software" class="tower">
-        <h2>Products</h2>
+        <h2><a href="products/products.html">Products</a></h2>
         <div class="block_content">
             <ul id="product_container">
                 {% for product in products%}
                     <li id="{{ product.name|lower }}" {% if product.disabled %} class="disabled" {% endif %}>
-                        <a {% if not product.disabled %}href="{% if product.url %}{{product.url}}{% else %}{{media}}/../products/{{product.name}}/{{product.name}}.html{% endif %}"  {% endif %}>
-                        <img alt="{{ product.name }}" src="{{media}}/images/{{product.image}}"></a>
+                        <a {% if not product.disabled %} tooltip="{{product.name}}" href="{% if product.url %}{{product.url}}{% else %}{{media}}/../products/{{product.name}}/{{product.name}}.html{% endif %}"  {% endif %}>
+                        <img alt="{{ product.name }}"  src="{{media}}/images/{{product.image}}"></a>
                     </li>
                 {% endfor %}
             </ul>
         </div>
     </div>      
     <div id="code" class="tower">
-        <h2>Open Source</h2>
+        <h2><a href="open-source/open-source.html">Open Source</a></h2>
         <div class="block_content">
             <ul id="code_container">
                 {% for code_category in code_categories %}

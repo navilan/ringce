@@ -64,7 +64,7 @@ body:
                         line-height: 60px
                         list-style-type: none
                         color: $whitey
-                        
+                        font-variant: small-caps
                         li:
                             font-size: 15px
                             line-height: 20px
