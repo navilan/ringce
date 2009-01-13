@@ -1,0 +1,17 @@
+{% extends "skeleton/listing.html"%}
+{% hyde 
+{
+	"title": "List",
+	"page_group": "Products",
+	"listing_needed": True
+}
+%}
+
+{% block page_content %}
+<div class="page_excerpt">
+{% ifequal page.title "Hyde" %}
+    {%include "products/hyde/_hyde_excerpt.html" %}
+{% endifequal %}
+</div>
+
+{% endblock %}
