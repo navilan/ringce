@@ -1,8 +1,8 @@
 {% extends "skeleton/base.html" %}
 {% block title %}Ringce : {{page.page_group}} : {{page.title}} {% endblock %}
 {% block content %}
-{% block main_nav %}
-<div id="main_nav">
+{% block main-nav %}
+<div id="main-nav">
 	<ul>
 		{% for group in groups %}
 		<li {% ifequal page.page_group group %}class="selected"{% endifequal %}><a href="{{media}}/../{{group|slugify}}/{{group|slugify}}.html">{{group}}</a></li>
@@ -10,11 +10,11 @@
 	</ul>
 </div>
 {% endblock %}
-{% block page_header %}
-<div id="content_header">
+{% block page-header %}
+<div id="content-header">
 	<form action="#" method="post">
 		<h2>{{ page.title }}</h2>
-		<div id="content_header_actions">
+		<div id="content-header_actions">
 			<input type="text" name="search" value="" id="search">
 		</div>
 	</form>

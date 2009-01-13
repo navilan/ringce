@@ -11,7 +11,10 @@ body:
     color: $blackish
     height:100%
     width: 100%
-    
+#hyde-all:
+    width:100%
+    margin-top:auto
+    margin-bottom:0
 #hyde-site:
     height: 600px
     width: 610px
@@ -25,6 +28,7 @@ body:
         top:0
         right:auto
         left:auto
+        bottom: 0
     .hyde-left:
         width: 200px
         height: 100%
@@ -63,7 +67,7 @@ body:
                     li:
                         line-height: 60px
                         list-style-type: none
-                        color: $whitey
+                        color: $blackish
                         font-variant: small-caps
                         li:
                             font-size: 15px

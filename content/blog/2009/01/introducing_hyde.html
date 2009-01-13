@@ -1,0 +1,81 @@
+{% extends "blog.html" %}
+
+{%hyde
+    
+    {
+        "title": "Introducing Hyde",
+        "created": "2009-01-12 22:07:15",
+        "page_group": "blog"
+    }
+    
+%}
+
+{% block article %}
+
+### Here is how it all started ###
+
+One week back I wanted to open source a few jQuery plugins that I use for my top secret project. I was debating between github and bitbucket and initially chose bitbucket since I wanted to give the under-hyped a fair chance. But I did find the github pages feature interesting and decided I was going to move to GitHub.
+
+### Theres Jekyll ###
+
+[Jekyll]({{all_links.Jekyll}}) is a really nice static website generator built by one of the git-hubbers. I started using Jekyll only to find that [Liquid]({{all_links.Liquid}}), the templating language used by Jekyll was not to my liking at all. 
+
+Granted, I have been severely spoiled by [Django]({{all_links.Django}}), which is incidentally the [original inspiration]("http://archive.jvoorhis.com/articles/2005/10/01/shopify-templates-resemble-django") for liquid.
+
+
+### Looking for DJekyllango ###
+
+So I started looking for the best of both worlds and came across three options:
+
+1. Roll my own: I found this nice article on [how to run Django components in a standalone mode]("http://www.b-list.org/weblog/2007/sep/22/standalone-django-scripts/").
+2. Static Generator: Static generator is a clever Python class for Django that [creates static files](http://superjared.com/projects/static-generator/) for performance. 
+3. Aym CMS: [Will Larson](all_links.WillLarson) had a similar need and had started and got a [CMS]({{all_links.aym_cms}}) working successfully. Unfortunately, by the time I found out about this, I had already started going down option 1.  
+
+### What do I do? ###
+
+Hard ones first, option #2 was out. This option meant either I hack the code to force generate the site or make http requests to generate the static pages before hand. This seemed to be more complicated than the other options.
+
+Aym CMS seemed complete and was successfully doing the site generation. So I started using it. But I did find a few issues:
+
+1. No multi directory support. I am a OCD code organizer. If files are not grouped I cannot think. 
+2. The site generator and site were essentially the same. Understandable since it was just a single build file. Again my OCD played up and I wanted to change that.
+3. The odd bug: There was a weird glitch where my css files were being ignored. This was probably because I was mucking around with the directories. 
+4. No page context: This is actually a django issue. I cannot provide my base page parameters. There is a global context which was populated and accessed sequentially based on the Django template loading scheme. There is no page context where per page there could be some variables that the entire template hierarchy needs to look at. For dynamic websites this is a non issue since you can always make a db call to get what you need. But for static generators, this is a deal breaker. This significantly ties down the all powerful Django template hierarchy.
+
+
+All in all, while there was a lot of value in aym_cms, it was not right for me. 
+
+### Hyde born ###
+
+So with my tongue firmly lodged in my cheek, I christened my new project Hyde. However, since I was going to be using some of the aym_cms code, template tags, clever css, yui compressor, I thought the right thing to do was to fork the project from aym_cms.
+
+> An aside:This is my first foray into the world of open source. If I am
+> breaking rules or stepping on toes please do let me know. 
+
+This is the feature set I targeted three days back:
+
+1. Page Context
+2. Separation of generator from the site
+3. Modular design with plugin hooks
+4. Site templates
+5. Per item processing(reuired for #6)
+6. Run as daemon / web server polling for changes and auto deploying on save.
+
+Today, I am happy to say that items 1  - 4 are complete and the site you are looking at has been generated using Hyde. Over the next couple of weeks I will try to get 5 and 6 done, while improving the performance of the application. 
+
+### Next Steps ###
+
+There are quite a few plugins I would like to create / integrate including the ones mentioned on the aym cms site:
+
+1. Typografica
+2. Git hub plugin
+3. Disqus plugin
+4. Get Satisfaction / User Voice plugin
+5. Twitter plugin
+
+
+### Fork me over ###
+
+If this project fills your need and would like to contribute please do fork and push your changes on github.
+
+{% endblock %}

@@ -33,7 +33,7 @@ MEDIA_PROCESSORS = {
 CONTEXT = {
     'content':CONTENT_DIR,
 	'groups':("Products", "Open Source", "Blog", "About"),
-	'badge_selectors': {"badge_new": "#javascript"},
+	'badge_selectors': {"badge-new": "#javascript"},
 	'products': (
 		{'name': 'Shelved', 'disabled': True, 'image': "Shelved_128x128.png"},
 		{'name': 'Goalce', 'disabled': False, 'image': "what2do.png"},             
@@ -45,6 +45,11 @@ CONTEXT = {
 		{'name': 'Cocoa', 'disabled': True}
 	),
 	'all_links': {
+	    "WillLarson": "http://lethain.com/",
+	    "aym_cms": "http://aymcms.com/",
+	    "Django":"http://www.djangoproject.com/",
+	    "Liquid": "http://www.liquidmarkup.org/",
+	    "Jekyll": "http://github.com/mojombo/jekyll/tree/master",
 		"jQuery v1.2.6" : "http://jquery.com/",
 		"jQuery UI v1.6RC4" : "http://ui.jquery.com/",
 		"jQuery Form Plugin v2.18": "http://malsup.com/jquery/form/",

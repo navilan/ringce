@@ -1,18 +1,18 @@
 {% extends "skeleton/body.html"%}
 {% block content_body %}
-<div class="page_listing">
+<div class="page-listing">
 {% for folder in page.subfolders %}
 {% if folder.pages %}
 {%ifnotequal {{folder.name}} {{page.title}} %}
 <h2><a href="{{folder.url}}">{{folder.name}}</a></h2>
 {% endifnotequal %}
-{% block directory_content %}{% endblock %}
+{% block directory-content %}{% endblock %}
 {% for page in folder.pages %}
 {% if page.title %}
 <ul>
 	<li>
 		<h4><a href="{{page.page_url}}">{{page.title}}</a></h4>
-		{% block page_content %}{% endblock %}
+		{% block page-content %}{% endblock %}
 	</li>
 </ul>{% endif %}{% endfor %}{%endif%}{% endfor %}
 </div>

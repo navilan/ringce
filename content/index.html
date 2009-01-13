@@ -13,11 +13,11 @@ $(function(){
 </script>
 {% endblock %}
 {% block content %}
-<div class="home_content">
+<div class="home-content">
     <div id="software" class="tower">
         <h2><a href="products/products.html">Products</a></h2>
-        <div class="block_content">
-            <ul id="product_container">
+        <div class="block-content">
+            <ul id="product-container">
                 {% for product in products%}
                     <li id="{{ product.name|lower }}" {% if product.disabled %} class="disabled" {% endif %}>
                         <a {% if not product.disabled %} tooltip="{{product.name}}" href="{% if product.url %}{{product.url}}{% else %}{{media}}/../products/{{product.name}}/{{product.name}}.html{% endif %}"  {% endif %}>
@@ -29,8 +29,8 @@ $(function(){
     </div>      
     <div id="code" class="tower">
         <h2><a href="open-source/open-source.html">Open Source</a></h2>
-        <div class="block_content">
-            <ul id="code_container">
+        <div class="block-content">
+            <ul id="code-container">
                 {% for code_category in code_categories %}
                     <li id="{{ code_category.name|lower }}" 
                     {% if code_category.disabled %} class="disabled" {% endif %}>
@@ -41,20 +41,20 @@ $(function(){
     </div>
     <div id="about" class="tower">
         <h2>Tweets</h2>
-        <div class="block_content">
+        <div class="block-content">
         </div>
     </div>
     <div class="clear"></div>
     <div id="blog" class="platform">
         <h2>Blog</h2>
-        <div id="blog_content" class="block_content">
+        <div id="blog-content" class="block-content">
             {% if not recent_post %}
             {% lorem 3 p %}
             {% else %}
             {% include recent_post.excerpt_template %}
             {% endif %}
         </div>
-        <div id="blog_footer">
+        <div id="blog-footer">
         </div>
     </div>
     <div class="clear"></div>
