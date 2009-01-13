@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>|::::HYDE::::|</title>
+    <link rel="stylesheet" href="{{media}}/css/base.css" type="text/css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="{{media}}/css/hyde.css" type="text/css" media="screen" charset="utf-8">
+    
+</head>
+<body>
+    <div id="hyde-site">
+        <div class="hyde-left"></div>
+        <div class="hyde-main">
+            <div class="hyde-head"></div>
+            <div class="hyde-center">
+{% markdown %}
+* Static Website 
+* Django Templates
+* Page Context 
+* Site templates.
+* Plugins
+{%endmarkdown%}
+            </div>
+            <div class="hyde-git">
+                <a href="">GO GIT IT</a>
+            </div>
+        </div>
+    <div class="clear"> </div>
+    </div>    
+    <div class="hyde-tidbits">        
+    {% markdown %}
+##### Tidbits #####
+1. Hyde was deviously inspired by [Jekyll]({{all_links.Jekyll}})
+2. Jekyll's cool. But [Liquid]({{all_links.liquid}}) just doesn't cut it.
+3. On the other hand [Django]({{all_links.django}}) rocks.
+4. Hyde was initially forked from [aym-cms]({{all_links.aymcms}})
+    {%endmarkdown%}
+    </div>    
+
+<div class="clear"></div>
+<div class="hyde-bottom">
+{% include "skeleton/header.html" %}
+{% include "skeleton/footer.html" %}
+</div>
+</body>
+</html>

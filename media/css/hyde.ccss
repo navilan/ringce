@@ -1,0 +1,94 @@
+blackish = #333
+darkgreen = #649064
+lightgreen = #B5E3B5
+whitey = white
+
+body:
+    background-color: $lightgreen
+    margin: 0
+    color: $blackish
+#hyde-site:
+    height: 600px
+    width: 610px
+    background-color: $whitey
+    -moz-border-radius-bottomright: 30px
+    -webkit-border-bottom-right-radius: 30px
+    -moz-border-radius-bottomleft: 100px
+    -webkit-border-bottom-left-radius: 100px
+    padding-right: 50px
+    margin->
+        top:0
+        right:auto
+        left:auto
+    .hyde-left:
+        width: 200px
+        height: 100%
+        float:left
+        border-right: 10px solid $darkgreen
+        -moz-border-radius-bottomleft: 100px
+        -webkit-border-bottom-left-radius: 100px
+        background->
+            color: $blackish
+            image: url({{media}}/images/hyde-egg.png)
+            position: 0 40%
+            repeat: no-repeat
+    .hyde-main:
+        height: 600px
+        width: 400px
+        float:left
+        font->
+            size: 30px            
+            family: "Lucida Grande", Lucida, Verdana, sans-serif            
+        .hyde-head: 
+            width: 100%
+            height: 150px
+            background->
+                image: url({{media}}/images/hyde.png)
+                repeat: no-repeat
+        .hyde-center:
+            padding-left: 70px
+            background->
+                color: $lightgreen 
+            -moz-border-radius-bottomright: 20px
+            -webkit-border-bottom-right-radius: 20px
+            -moz-border-radius-topright: 20px
+            -webkit-border-top-right-radius: 20px                           
+            li:
+                line-height: 80px
+                list-style-type: none
+                color: $whitey
+        .hyde-git:
+            font-size: 40px
+            color: $darkgreen
+            width: 100%
+            padding-left: 40px
+            a:
+                padding: 20px
+                text-decoration: none
+                background-color:$blackish
+                color: $whitey
+                padding-top:0
+                -moz-border-radius-bottomright: 10px
+                -webkit-border-bottom-right-radius: 10px
+                -moz-border-radius-bottomleft: 10px
+                -webkit-border-bottom-left-radius: 10px
+                &:hover:
+                    color: $lightgreen
+.hyde-tidbits:
+    background-color:$darkgreen
+    color:white
+    font-size: 10px
+    width: 400px
+    margin:0 auto
+    padding->
+        left: 50px
+        right: 20px
+        top: 1px
+        bottom: 10px
+    text-align: center
+    ol:
+        list-style-type:none
+    h5: 
+        margin-top: 20px
+        font-size: 12px
+        margin-bottom: 5px

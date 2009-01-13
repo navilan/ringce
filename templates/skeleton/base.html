@@ -17,13 +17,9 @@
 </head>
 <body>
 <div id="site">	
-	<div id="header">
-		<a href="{{media}}/../index.html"><img src="{{media}}/images/ringce.png"></a>
-	</div>
+    {% include "skeleton/header.html" %}
 	{% block content %}{% endblock %}
 </div>
-<div id='footer'>
-Ringce 1.0. This site and its contents have been created with love, sweat and blood(almost). Please don't steal from me.
-</div>
+{% include "skeleton/footer.html" %}
 </body>
 </html>
