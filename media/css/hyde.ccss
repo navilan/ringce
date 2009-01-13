@@ -37,7 +37,7 @@ body:
         width: 400px
         float:left
         font->
-            size: 30px            
+            size: 25px            
             family: "Lucida Grande", Lucida, Verdana, sans-serif            
         .hyde-head: 
             width: 100%
@@ -53,21 +53,27 @@ body:
             -webkit-border-bottom-right-radius: 20px
             -moz-border-radius-topright: 20px
             -webkit-border-top-right-radius: 20px                           
-            li:
-                line-height: 80px
-                list-style-type: none
-                color: $whitey
+            & > ul:
+                    margin-bottom: 20px
+                    li:
+                        line-height: 60px
+                        list-style-type: none
+                        color: $whitey
+                        
+                        li:
+                            font-size: 15px
+                            line-height: 20px
+                            color: $blackish
         .hyde-git:
             font-size: 40px
             color: $darkgreen
             width: 100%
-            padding-left: 40px
+            padding-left:15px 
             a:
                 padding: 20px
                 text-decoration: none
                 background-color:$blackish
                 color: $whitey
-                padding-top:0
                 -moz-border-radius-bottomright: 10px
                 -webkit-border-bottom-right-radius: 10px
                 -moz-border-radius-bottomleft: 10px
