@@ -140,7 +140,7 @@ $.submitAjaxActionDefault = $.extend({}, $.ajaxActionDefault, {
 
 $.addAjaxActionDefault = $.extend({}, $.submitAjaxActionDefault, {
 	processResponse: function(widget, responseText, statusText){
-		$(this._prefix(widget) + "-container").append("<li>" + responseText + "</li>");
+		$(this._prefix(widget) + "_container").append("<li>" + responseText + "</li>");
 		return true;
 	}
 });

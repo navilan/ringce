@@ -19,11 +19,11 @@
 			var widget = this;
 			$(this.element).each( function(){
 				if(!$("#" + widget._identifier(this)).length){
-					var badge-html = 
+					var badge_html = 
 						"<div style='position:relative;width:100%;height:100%'>" +
 						"<div id='" + widget._identifier(this) + 
 						"'/></div>";
-					$(this).prepend(badge-html);
+					$(this).prepend(badge_html);
 				}
 			});
 			this.show();
