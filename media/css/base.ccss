@@ -390,7 +390,7 @@ body:
     ol:
         margin->
             left: 2em
-            font-size: 0.9em
+        font-size: 0.9em
 
 .demo-content:
     padding:1em

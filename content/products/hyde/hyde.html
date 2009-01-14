@@ -8,39 +8,50 @@
 {% block all %}
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
     <title>|::::HYDE::::|</title>
-    <link rel="stylesheet" href="{{media}}/css/base.css" type="text/css" media="screen" charset="utf-8">
-    <link rel="stylesheet" href="{{media}}/css/hyde.css" type="text/css" media="screen" charset="utf-8">    
+    <link rel="stylesheet" href="{{media}}/css/base.css" type="text/css" media="screen" charset="utf-8"/>
+    <link rel="stylesheet" href="{{media}}/css/hyde.css" type="text/css" media="screen" charset="utf-8"/>    
 </head>
 <body>
-    <div id="hyde-all">    
-        <div id="hyde-site">
-            <div class="hyde-left"></div>
-            <div class="hyde-main">
-                <div class="hyde-head"></div>
-    {% include "products/hyde/_hyde_excerpt.html"%}
-                <div class="hyde-git">
-                    <a href="">GO GIT IT</a>
-                </div>
-            </div>
-            <div class="clear"> </div>
-        </div>    
-        <div class="hyde-tidbits">        
-{% markdown %}
-##### Tidbits #####
-1. Hyde was deviously inspired by [Jekyll]({{all_links.Jekyll}})
-2. Jekyll's cool. But [Liquid]({{all_links.liquid}}) just doesn't cut it.
-3. On the other hand [Django]({{all_links.django}}) rocks.
-4. Hyde was initially forked from [aym-cms]({{all_links.aymcms}})
+    <a href="http://github.com/lakshmivyas/hyde"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+    <div id="hyde-site">
+        <div class="hyde-left">
+            <div id="hyde-tidbits">
+{%markdown%}
+
+Hyde was deviously inspired by [Jekyll]({{all_links.Jekyll}})
+
+Jekyll is nice. But [Liquid]({{all_links.Liquid}}) is not very solid.
+
+[Django]({{all_links.Django}}) however, plays very well.
+
+[aym-cms]({{all_links.aym_cms}}) gave birth to Hyde.
+
 {%endmarkdown%}
-        </div>    
-        <div class="clear"></div>
-        <div class="hyde-bottom">
-{% include "skeleton/header.html" %}
-{% include "skeleton/footer.html" %}
+            </div> 
+        </div>
+        <div class="hyde-main">
+            <div class="hyde-head"></div>
+{% include "products/hyde/_hyde_excerpt.html"%}
+            </div>
+        </div>
+    </div>      
+    <div id="hyde-footer">
+        <div class="status">
+            <strong>Status:</strong>
+            <div class="status_badge">Alpha</div>
+            <span>Version: 0.1a</span>
+        </div>
+        <div class="download">
+            <a  href="#">
+                <img src="{{media}}/images/download.png"/>
+            </a>
+        </div>
+        <div class="source">
+                <img src="{{media}}/images/source.png"/>
         </div>
     </div>
 </body>
