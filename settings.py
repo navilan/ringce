@@ -23,11 +23,16 @@ GENERATE_ABSOLUTE_FS_URLS = True
 
 MEDIA_PROCESSORS = {
 	'*':{
-		'.css':('hyde.processors.TemplateProcessor','hyde.processors.YUICompressor',),
-		'.ccss':('hyde.processors.TemplateProcessor','hyde.processors.CleverCSS', 'hyde.processors.YUICompressor',),
-		'.hss':('hyde.processors.TemplateProcessor','hyde.processors.HSS', 'hyde.processors.YUICompressor',),
+		'.css':('hyde.media_processors.TemplateProcessor','hyde.media_processors.YUICompressor',),
+		'.ccss':('hyde.media_processors.TemplateProcessor','hyde.media_processors.CleverCSS', 'hyde.media_processors.YUICompressor',),
+		'.hss':('hyde.media_processors.TemplateProcessor','hyde.media_processors.HSS', 'hyde.media_processors.YUICompressor',),
 
 	} 
+}
+
+CONTENT_PROCESSORS = {
+    "*" : "hyde.content_processors.PyContentProcessor",
+    "blog": "hyde.content_processprs.YAMLContentProcessor"
 }
 
 CONTEXT = {
