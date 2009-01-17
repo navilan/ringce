@@ -1,0 +1,15 @@
+{% extends "skeleton/listing.html"%}
+{% hyde 
+{
+	"title": "Archives",
+	"page_group": "Blog",
+	"listing_needed": True
+}
+%}
+{% block content_body_before %}
+<div class="blog_list">
+{% endblock %}
+{% block page_heading %}
+    <a href="{{page.page_url}}">{{page.title}}</a>
+{% endblock %}
+{% block content_body_after %}</div>{% endblock %}

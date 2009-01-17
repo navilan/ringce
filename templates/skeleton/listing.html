@@ -1,4 +1,5 @@
 {% extends "skeleton/body.html"%}
+{% block content_body_before %}{% endblock %}
 {% block content_body %}
 <div class="page-listing">
 {% for folder in page.subfolders %}
@@ -11,9 +12,10 @@
 {% if page.title %}
 <ul>
 	<li>
-		<h4><a href="{{page.page_url}}">{{page.title}}</a></h4>
+		{% block page-heading %}<h4><a href="{{page.page_url}}">{{page.title}}</a></h4>{% endblock %}
 		{% block page-content %}{% endblock %}
 	</li>
 </ul>{% endif %}{% endfor %}{%endif%}{% endfor %}
 </div>
 {% endblock %}
+{% block content_body_after %}{% endblock %}
