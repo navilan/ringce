@@ -193,16 +193,16 @@ body {
     padding-right: 1em;
     padding-left: 1em;
 }
-#main-nav {
+#sitenav {
     margin-right: 1em;
     margin-top: .3em;
     width: 100%;
 }
-#main-nav ul {
+#sitenav ul {
     list-style-type: none;
     text-align: center;
 }
-#main-nav li {
+#sitenav li {
     display: inline;
     margin-left: .5em;
     background-color: #333;
@@ -213,19 +213,19 @@ body {
     -webkit-border-bottom-left-radius: .5em;
     cursor: pointer;
 }
-#main-nav li:hover,#main-nav li.selected {
+#sitenav li:hover,#sitenav li.selected {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-bottom: .5em solid #649064;
 }
-#main-nav li.selected {
+#sitenav li.selected {
     background-color: #649064;
 }
-#main-nav li.selected a {
+#sitenav li.selected a {
     text-decoration: underline;
     color: #333;
 }
-#main-nav li a {
+#sitenav li a {
     color: #b5e3b5;
     text-decoration: none;
 }

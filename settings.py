@@ -3,18 +3,22 @@ import os
 ROOT_PATH = os.path.dirname(__file__)
 
 #Directories
-SITE_TEMPLATE_DIR = os.path.join(ROOT_PATH, 'templates')
+LAYOUT_DIR = os.path.join(ROOT_PATH, 'layout')
 CONTENT_DIR = os.path.join(ROOT_PATH, 'content')
 MEDIA_DIR = os.path.join(ROOT_PATH, 'media')
 DEPLOY_DIR = os.path.join(ROOT_PATH, 'deploy')
 TMP_DIR = os.path.join(ROOT_PATH, 'deploy_tmp')
 BACKUPS_DIR = os.path.join(ROOT_PATH, 'backups')
 
+SITE_NAME = "Ringce"
+
 
 # {folder : extension : (processors)}
 # The processors are run in the given order and are chained.
-# Only a lone * is supported for folders. Path shoud be specifed 
-# starting under the media folder. For example, if you have media/css under 
+# Only a lone * is supported as an indicator for folders. Path 
+# shoud be specifed. No wildcard card support yet.
+ 
+# Starting under the media folder. For example, if you have media/css under 
 # your site root,you should specify just css. If you have media/css/ie you 
 # should specify css/ie for the folder name. css/* is not supported (yet).
 
@@ -22,46 +26,51 @@ BACKUPS_DIR = os.path.join(ROOT_PATH, 'backups')
 GENERATE_ABSOLUTE_FS_URLS = True
 
 MEDIA_PROCESSORS = {
-	'*':{
-		'.css':('hyde.media_processors.TemplateProcessor','hyde.media_processors.YUICompressor',),
-		'.ccss':('hyde.media_processors.TemplateProcessor','hyde.media_processors.CleverCSS', 'hyde.media_processors.YUICompressor',),
-		'.hss':('hyde.media_processors.TemplateProcessor','hyde.media_processors.HSS', 'hyde.media_processors.YUICompressor',),
-
-	} 
+    '*':{
+        '.css':('hydeengine.media_processors.YUICompressor',),
+        '.ccss':('hydeengine.media_processors.CleverCSS', 'hydeengine.media_processors.YUICompressor',),
+        '.hss':('hydeengine.media_processors.HSS', 'hydeengine.media_processors.YUICompressor',),
+        '.js':('hydeengine.media_processors.YUICompressor',)
+    } 
 }
 
 CONTENT_PROCESSORS = {
-    "*" : "hyde.content_processors.PyContentProcessor",
-    "blog": "hyde.content_processprs.YAMLContentProcessor"
+    '*': {
+        '.html':('hydeengine.content_processors.YAMLContentProcessor',
+                # If you want to create a dictionary in python instead:
+                # 'hydeengine.content_processors.PyContentProcessor'
+                # Needs py.code.
+        )
+    }
 }
 
 CONTEXT = {
     'content':CONTENT_DIR,
-	'groups':("Products", "Open Source", "Blog", "About"),
-	'badge_selectors': {"badge-new": "#javascript"},
-	'products': (
-		{'name': 'Shelved', 'disabled': True, 'image': "Shelved_128x128.png"},
-		{'name': 'Goalce', 'disabled': False, 'image': "what2do.png"},             
-		{'name': 'Hyde', 'disabled':False, 'image': "hyde-icon.png"},                
-		{'name': 'Unknown2', 'disabled':True, 'image': "blank.png"}),   
-	'code_categories': (
-		{'name': 'Python', 'disabled': True},
-		{'name': 'Javascript', 'disabled': False},                       
-		{'name': 'Cocoa', 'disabled': True}
-	),
-	'all_links': {
-	    "WillLarson": "http://lethain.com/",
-	    "aym_cms": "http://aymcms.com/",
-	    "Django":"http://www.djangoproject.com/",
-	    "Liquid": "http://www.liquidmarkup.org/",
-	    "Jekyll": "http://github.com/mojombo/jekyll/tree/master",
-		"jQuery v1.2.6" : "http://jquery.com/",
-		"jQuery UI v1.6RC4" : "http://ui.jquery.com/",
-		"jQuery Form Plugin v2.18": "http://malsup.com/jquery/form/",
-		"MIT": "http://www.opensource.org/licenses/mit-license.php",
-		"GPL": "http://www.gnu.org/copyleft/gpl.html"
-	}
-	
+    'groups':("Products", "Open Source", "Blog", "About"),
+    'badge_selectors': {"badge-new": "#javascript"},
+    'products': (
+        {'name': 'Shelved', 'disabled': True, 'image': "Shelved_128x128.png"},
+        {'name': 'Goalce', 'disabled': False, 'image': "what2do.png"},             
+        {'name': 'Hyde', 'disabled':False, 'image': "hyde-icon.png"},                
+        {'name': 'Unknown2', 'disabled':True, 'image': "blank.png"}),   
+    'code_categories': (
+        {'name': 'Python', 'disabled': True},
+        {'name': 'Javascript', 'disabled': False},                       
+        {'name': 'Cocoa', 'disabled': True}
+    ),
+    'links': {
+        "WillLarson": "http://lethain.com/",
+        "aym_cms": "http://aymcms.com/",
+        "Django":"http://www.djangoproject.com/",
+        "Liquid": "http://www.liquidmarkup.org/",
+        "Jekyll": "http://github.com/mojombo/jekyll/tree/master",
+        "jQuery v1.2.6" : "http://jquery.com/",
+        "jQuery UI v1.6RC4" : "http://ui.jquery.com/",
+        "jQuery Form Plugin v2.18": "http://malsup.com/jquery/form/",
+        "MIT": "http://www.opensource.org/licenses/mit-license.php",
+        "GPL": "http://www.gnu.org/copyleft/gpl.html"
+    }
+    
 }
 
 #Processor Configuration
@@ -74,16 +83,16 @@ YUI_COMPRESSOR = "../hyde/tools/yuicompressor-2.4.1.jar"
 
 # path for HSS, which is a preprocessor for CSS-like files (*.hss)
 # project page at http://ncannasse.fr/projects/hss
-HSS_PATH = "../hyde/tools/hss-1.0-osx"
-#HSS_PATH = None # if you don't want to use HSS
+#HSS_PATH = "../hyde/lib/hss-1.0-osx"
+HSS_PATH = None # if you don't want to use HSS
 
 #Django settings
 
-TEMPLATE_DIRS = ( SITE_TEMPLATE_DIR, CONTENT_DIR, MEDIA_DIR, TMP_DIR )
+TEMPLATE_DIRS = ( LAYOUT_DIR, CONTENT_DIR, TMP_DIR)
 
 INSTALLED_APPS = (
-	'hyde',
-    'django.contrib.webdesign'
+    'hydeengine',
+    'django.contrib.webdesign',
 )
 
 

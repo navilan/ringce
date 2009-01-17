@@ -1,0 +1,17 @@
+{% extends "skeleton/_base.html" %}
+{% block title %}{{site.name}} : {{page.module}} : {{page.title}} {% endblock %}
+{% block content %}{% block sitenav %}
+<div id="sitenav">
+    <ul>
+        {% for module in site.children %}
+        <li{% ifequal page.module module %} class="selected" {% endifequal %}>
+            <a href="{{module.listing_url}}">
+                {{module.name|unslugify}}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
+{% block content_header %}<h1>{{ page.title }}</h1>{% endblock %}
+{% block content_body %}{% endblock %}{% endblock %}

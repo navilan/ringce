@@ -1,0 +1,8 @@
+{% extends "skeleton/_body.html"%}
+{% block content_body %}
+<div class="page-listing">
+{% with page.node as node %}
+{% include "skeleton/_innerlisting.html" %}
+{% endwith %}
+</div>
+{% endblock %}

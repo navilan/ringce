@@ -1,9 +1,8 @@
-{% extends "skeleton/body.html" %}
-
+{% extends "skeleton/_body.html" %}
 {% block content_body %}
-
-<div id="article-content">
+<div id="post-content">
 {% markdown %}
+
 {% block article %}
     
 {% endblock %}
@@ -11,5 +10,4 @@
 {%endmarkdown%}
 
 </div>
-    
 {% endblock %}

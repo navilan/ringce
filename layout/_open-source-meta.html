@@ -1,7 +1,7 @@
 <div class="meta-area">
 	<div class="download">
 		<a  href="#">
-			<img src="{{media}}/images/download.png"/>
+			<img src="{{site.url}}/media/images/download.png"/>
 			<span>Download</span>
 		</a>
 	</div>
@@ -9,7 +9,7 @@
 		<strong>Licenses:</strong>
 		<ul>
 			{% for license in page.licenses %}
-			<li><a href="{{all_links|value_for_key:license}}">{{license}}</a></li>
+			<li><a href="{{links|value_for_key:license}}">{{license}}</a></li>
 			{% endfor %}
 		</ul>
 	</div>
@@ -17,7 +17,7 @@
 		<strong>Dependencies:</strong>
 		<ul>
 			{% for dependency in page.dependencies %}
-			<li><a href="{{all_links|value_for_key:dependency}}">{{dependency}}</a></li>
+			<li><a href="{{links|value_for_key:dependency}}">{{dependency}}</a></li>
 			{% endfor %}
 		</ul>
 	</div>
@@ -28,7 +28,7 @@
 	</div>
 	<div class="source">
 		<a href="{{page.source_link}}">
-			<img src="{{media}}/images/source.png"/>
+			<img src="{{site.url}}/media/images/source.png"/>
 			<span>Source</span>
 		</a>
 	</div>

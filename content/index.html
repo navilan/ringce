@@ -20,8 +20,8 @@ $(function(){
             <ul id="product-container">
                 {% for product in products%}
                     <li id="{{ product.name|lower }}" {% if product.disabled %} class="disabled" {% endif %}>
-                        <a {% if not product.disabled %} tooltip="{{product.name}}" href="{% if product.url %}{{product.url}}{% else %}{{media}}/../products/{{product.name}}/{{product.name}}.html{% endif %}"  {% endif %}>
-                        <img alt="{{ product.name }}"  src="{{media}}/images/{{product.image}}"></a>
+                        <a {% if not product.disabled %} tooltip="{{product.name}}" href="{% if product.url %}{{product.url}}{% else %}{{site.url}}/media//products/{{product.name}}/{{product.name}}.html{% endif %}"  {% endif %}>
+                        <img alt="{{ product.name }}"  src="{{site.url}}/media/images/{{product.image}}"></a>
                     </li>
                 {% endfor %}
             </ul>
@@ -34,7 +34,7 @@ $(function(){
                 {% for code_category in code_categories %}
                     <li id="{{ code_category.name|lower }}" 
                     {% if code_category.disabled %} class="disabled" {% endif %}>
-                    <a {% if not code_category.disabled %} href="{{media}}/../open-source/{{code_category.name}}/{{code_category.name}}.html" {% endif %}>{{ code_category.name }}</a></li>
+                    <a {% if not code_category.disabled %} href="{{site.url}}/media//open-source/{{code_category.name}}/{{code_category.name}}.html" {% endif %}>{{ code_category.name }}</a></li>
                 {% endfor %}
             </ul>
         </div>
