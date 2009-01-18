@@ -1,4 +1,4 @@
-{% extends "skeleton/body.html" %}
+{% extends "skeleton/_body.html" %}
 {% block extra_css %}<link type="text/css" rel="stylesheet" href="{{site.url}}/media/css/SyntaxHighlighter.syn"></link>{% endblock %}
 {% block extra_js %}
 <script language="javascript" src="{{site.url}}/media/js/shCore.js"></script>
@@ -14,7 +14,7 @@
 </script>
 {% endblock %}
 {% block content_body %}
-<div id="article-content">
+<div id="post-content">
 	{% include "open-source_meta.html" %}
 	{% block article%}{% endblock %}
 </div>

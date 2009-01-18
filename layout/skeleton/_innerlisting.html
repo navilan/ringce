@@ -1,22 +1,27 @@
+{%spaceless%}
+{%ifnotequal node page.node %}
 {% if node.has_listing %}<a href="{{node.listing_url}}">{% endif %}
-{{node.name|unslugify}}
+<h2>{{node.name|unslugify}}</h2>
 {% if node.has_listing %}</a>{% endif %}
+{%endifnotequal%}
 <ul>
     {% for list_page in node.pages %}
     {% ifnotequal list_page node.listing_page %}
-    {% if first %}
+    {% if not list_page.exclude %}
     {% with list_page.name_without_extension|remove_date_prefix|unslugify as default_title %}
     <li><a href="{{list_page.url}}">{{list_page.title|default_if_none:default_title }}</a></li>
     {%endwith%}
+    {%endif%}
     {% endifnotequal %}
     {% endfor %}
 </ul>
 <ul>
 {% with node as parent%}        
 {% for node in parent.children %}
-    <li>
+    <li class="node">
     {% include "skeleton/_innerlisting.html" %}
-    <li>
+    </li>
 {% endfor %}
 {% endwith %}
 </ul>
+{%endspaceless%}

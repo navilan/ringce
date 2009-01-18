@@ -1,18 +1,21 @@
-{% extends "open-source.html" %}
+{% extends "_open-source.html" %}
 {% hyde
-{
-	"title":"Ajax Machine : Basics",
-	"licenses":("MIT","GPL"),
-	"page_group":"Open Source",
-	"dependencies": ("jQuery v1.2.6","jQuery UI v1.6RC4", "jQuery Form Plugin v2.18"),
-	"status": "alpha",
-	"version": "0.1a",
-	"source_link": "",
-}
+
+    title: Ajax Machine Basics
+    licenses:
+        - MIT
+        - GPL
+    dependencies: 
+        - jQuery v1.2.6
+        - jQuery UI v1.6RC4
+        - jQuery Form Plugin v2.18
+    status: alpha
+    version: 0.1a
+    source_link: 
 %}
 {% block extra_extra_js %}
-	<script src="{{media}}/js/jquery.ui.inplaceModal.js" type="text/javascript" charset="utf-8"></script>
-	<script src="{{media}}/js/jquery.ui.ajaxMachine.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{site.url}}/media/js/jquery.ui.inplaceModal.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{site.url}}/media/js/jquery.ui.ajaxMachine.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
 {% block ready_function %}{% include "open-source/javascript/jQuery/_ajax_machine_applier.html" %}{% endblock %}
 
@@ -25,14 +28,16 @@
 Ajax machine is a state machine for your page. It allows all the different ajax events and results to be configured in one place instead of strewn around in multiple places. Most web applications are developed using one form of template engine or another. Ajax templates are usually split up into small templets. In order to get a smooth single page interface to a mini web app, all these small templets have to be configured just right. Ajax machine alleviates many of these problems.
 
 ### Demo ###
+{%endmarkdown%}
 
 {% include "open-source/javascript/jQuery/_ajax_machine_demo.html" %}
 
+{%markdown%}
 ### How does it work? ###
 
 Ajax Machine to some extent enforces conventions over configuration. 
 
-![Ajax Machine Flow]({{media}}/images/ajaxmachine.png "Ajax Machine Basics")
+![Ajax Machine Flow]({{site.url}}/media/images/ajaxmachine.png "Ajax Machine Basics")
 
 These are the conventions, some are recommended and some are enforced.
 

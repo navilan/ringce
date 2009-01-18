@@ -27,10 +27,7 @@ GENERATE_ABSOLUTE_FS_URLS = True
 
 MEDIA_PROCESSORS = {
     '*':{
-        '.css':('hydeengine.media_processors.YUICompressor',),
-        '.ccss':('hydeengine.media_processors.CleverCSS', 'hydeengine.media_processors.YUICompressor',),
-        '.hss':('hydeengine.media_processors.HSS', 'hydeengine.media_processors.YUICompressor',),
-        '.js':('hydeengine.media_processors.YUICompressor',)
+        '.css':('hydeengine.media_processors.TemplateProcessor','hydeengine.media_processors.YUICompressor',),
     } 
 }
 
@@ -78,7 +75,7 @@ CONTEXT = {
 # path for YUICompressor, or None if you don't
 # want to compress JS/CSS. Project homepage:
 # http://developer.yahoo.com/yui/compressor/
-YUI_COMPRESSOR = "../hyde/tools/yuicompressor-2.4.1.jar"
+YUI_COMPRESSOR = "../hyde/lib/yuicompressor-2.4.1.jar"
 #YUI_COMPRESSOR = None 
 
 # path for HSS, which is a preprocessor for CSS-like files (*.hss)

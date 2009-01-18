@@ -1,17 +1,20 @@
-{% extends "open-source.html" %}
+{% extends "_open-source.html" %}
 {% hyde
-{
-	"title":"In Place Modal",
-	"licenses":("MIT","GPL"),
-	"page_group":"Open Source",
-	"dependencies": ("jQuery v1.2.6","jQuery UI v1.6RC4"),
-	"status": "beta",
-	"version": "0.1b",
-	"source_link": "",
-}
+
+    title: In Place Modal
+    licenses:
+        -MIT
+        -GPL
+    dependencies: 
+        -jQuery v1.2.6
+        -jQuery UI v1.6RC4
+    status: beta
+    version: 0.1b
+    source_link: 
+
 %}
 {% block extra_extra_js %}
-	<script src="{{media}}/js/jquery.ui.inplaceModal.js" type="text/javascript" charset="utf-8"></script>
+    <script src="{{site.url}}/media/js/jquery.ui.inplaceModal.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
 {% block ready_function %}{% include "open-source/javascript/jQuery/_inplace_modal_applier.html" %}{% endblock %}
 
@@ -40,16 +43,16 @@ The widget creates and positions four layers(top, right, bottom ,left) so that t
 *inplaceModal:* Creates the modal and shows it during the first call.
 
 *show:* Displays the overlay by figuring out the dimensions of the target element.
-	
+    
 *resizeOverlay:* This function can be called to resize/reposition the overlay if the target element changes size/position.
-	
+    
 *hide:* Hide's the overlays without removing them from the DOM.
 
 </span>
 
 <span class="right-column">
 #### Options ####
-	
+    
 No options for this widget yet. Class *overlay* is applied to the overlay elements.
 
 </span>

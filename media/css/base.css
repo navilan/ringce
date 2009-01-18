@@ -157,13 +157,13 @@ body {
     line-height: 1.7em;
 }
 .badge-new {
-    background-image: url('{{media}}/images/new_badge.png');
+    background-image: url('{{site.url}}/media/images/new_badge.png');
     background-repeat: no-repeat;
     width: 45px;
     height: 45px;
 }
 .badge-uc {
-    background-image: url(' {{media}}/images/uc_badge.png;');
+    background-image: url('{{site.url}}/media/images/uc_badge.png;');
     background-repeat: no-repeat;
     width: 45px;
     height: 48px;
@@ -221,10 +221,7 @@ body {
 #sitenav li.selected {
     background-color: #649064;
 }
-#sitenav li.selected a {
-    text-decoration: underline;
-    color: #333;
-}
+
 #sitenav li a {
     color: #b5e3b5;
     text-decoration: none;
@@ -314,9 +311,11 @@ body {
     background-color: #649064;
     border-top: 1px solid #649064;
     border-bottom: 1px solid #649064;
+    height: 2em;
 }
-#content-header h2 {
+#content-header h1 {
     float: left;
+    font-size: 1.5em;
     padding-left: 1em;
     padding-top: .1em;
     max-width: 30em;
@@ -350,13 +349,13 @@ body {
     -moz-border-radius: .6em;
     -webkit-border-radius: .6em;
 }
-#article-content {
+#post-content {
     color: #333;
     line-height: 1.5em;
     padding: 1em;
     padding-bottom: 3em;
 }
-#article-content ol {
+#post-content ol {
     margin-left: 2em;
     font-size: .9em;
 }
@@ -374,6 +373,8 @@ body {
 }
 .demo-content a {
     display: block;
+    float:left;
+    padding:1em;
     cursor: pointer;
     text-align: center;
     margin: 2em;
@@ -385,11 +386,13 @@ body {
     background-color: #333;
 }
 .page-listing {
-    padding: .5em;
+    padding: 2em;
     color: #333;
 }
 .page-listing ul {
-    list-style-type: none;
+    padding-left: .5em;
+    line-height: 1.5em;
+    
 }
 .page-listing .meta-area {
     width: 50em;
@@ -402,10 +405,19 @@ body {
 .page-listing .meta-area .download {
     margin-left: 1.5em;
 }
-.page-listing h2 {
-    text-align: center;
+.page-listing > a > h2 {
     margin-bottom: .2em;
+    text-align:center;
 }
+
+.page-listing > ul > li > a > h2 {
+    font-size: 1.2em;
+}
+
+.page-listing > ul > li > ul > li a > h2 {
+    font-size: 1em;
+}
+
 .page-listing .page-excerpt {
     text-align: center;
     background-color: #b5e3b5;

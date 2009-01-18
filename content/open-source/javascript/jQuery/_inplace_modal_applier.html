@@ -1,20 +1,20 @@
 $("#item11").unbind('click').bind('click', function(){
-	$("#list1").inplaceModal();	
-	if($("#list1").attr("hasModal") == "true"){
-		$("#list1").inplaceModal('hide');		
-	} else {
-		$("#list1").inplaceModal('show');
-	}
+    $("#list1").inplaceModal(); 
+    if($("#list1").attr("hasModal") == "true"){
+        $("#list1").inplaceModal('hide');       
+    } else {
+        $("#list1").inplaceModal('show');
+    }
 });
 $("#item12").unbind('click').bind('click', function(){
-	if($("#list1").attr("hasModal") == "true"){
-		$("#list1").height($("#list1").height() + 5);
-	}
-	$("#list1").inplaceModal('resizeOverlay');
+    if($("#list1").attr("hasModal") == "true"){
+        $("#list1").height($("#list1").height() + 5);
+    }
+    $("#list1").inplaceModal('resizeOverlay');
 });
 $("#item13").unbind('click').bind('click', function(){
-	if($("#list1").attr("hasModal") == "true"){
-		$("#list1").height($("#list1").height() - 5);
-	}
-	$("#list1").inplaceModal('resizeOverlay');
+    if($("#list1").attr("hasModal") == "true"){
+        $("#list1").height($("#list1").height() - 5);
+    }
+    $("#list1").inplaceModal('resizeOverlay');
 });

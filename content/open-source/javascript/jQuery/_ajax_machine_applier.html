@@ -1,9 +1,9 @@
-$("#ajax_demo-container").ajaxMachine({
-	prefix: function(widget){return "#ajax_demo-container";},
-	startStateName: "view",
-	states: {
+$("#ajax_demo_container").ajaxMachine({
+    prefix: function(widget){return "#ajax_demo_container";},
+    startStateName: "view",
+    states: {
    //  state: {actions: [S.ajaxAction("action_name", "next_state")]},
-		view: {actions: [$.ajaxAction("edit", "edit")]},
-		edit: {actions: [$.ajaxAction("view", "view")]}
-	}
+        view: {actions: [$.ajaxAction("edit", "edit")]},
+        edit: {actions: [$.ajaxAction("view", "view")]}
+    }
 });
