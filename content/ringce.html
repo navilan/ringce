@@ -15,7 +15,7 @@ $(function(){
 {% block content %}
 <div class="home-content">
     <div id="software" class="tower">
-        <h2><a href="products/products.html">Products</a></h2>
+        <h2><a href="{{site.url}}/products/products.html">Products</a></h2>
         <div class="block-content">
             <ul id="product-container">
                 {% for product in products%}
@@ -28,7 +28,7 @@ $(function(){
         </div>
     </div>      
     <div id="code" class="tower">
-        <h2><a href="open-source/open-source.html">Open Source</a></h2>
+        <h2><a href="{{site.url}}/open-source/open-source.html">Open Source</a></h2>
         <div class="block-content">
             <ul id="code-container">
                 {% for code_category in code_categories %}
@@ -39,18 +39,19 @@ $(function(){
             </ul>
         </div>
     </div>
-    <div id="about" class="tower">
-        <h2>Tweets</h2>
+    <div id="tweet" class="tower">
+        <h2><a href="{{links.twitter}}">Tweets</a></h2>
         <div class="block-content">
         </div>
     </div>
     <div class="clear"></div>
     <div id="blog" class="platform">
-        <h2>Blog</h2>
+        <h2><a href="{{site.url}}/blog/blog.html">Blog</a></h2>
         <div id="blog-content" class="block-content">
             {% latest_excerpt "{{site.folder.path}}/blog" %}
         </div>
-        <div id="blog-footer">
+        <div id="blog-footer">            
+            Read More: <a href="{{latest_excerpt_url}}">{{latest_excerpt_title}}</a>
         </div>
     </div>
     <div class="clear"></div>

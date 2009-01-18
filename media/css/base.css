@@ -142,13 +142,19 @@ body {
     padding-bottom: 1em;
     max-height: 11em;
     overflow: hidden;
+    border-bottom: 1px solid #649064;
 }
 #blog #blog-footer {
     height: 2em;
-    margin-top: .5em;
-    width: 100%;
-    border-top: 1px solid #649064;
+    color: #b9e3b5;
+    text-align:right;
+    padding: 1em;
+    font-size: 0.8em;
 }
+#blog #blog-footer a{
+   color: #b9e3b5;
+}
+
 #blog p {
     font-size: 1em;
     padding-right: 2em;
