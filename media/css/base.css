@@ -377,6 +377,7 @@ body {
     padding: 1em;
     padding-bottom: 3em;
 }
+#post-content ul,
 #post-content ol {
     margin-left: 2em;
     font-size: .9em;
