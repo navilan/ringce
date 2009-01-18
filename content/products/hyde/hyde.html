@@ -15,9 +15,9 @@
     <link rel="stylesheet" href="{{site.url}}/media/css/base.css" type="text/css" media="screen" charset="utf-8"/>
     <link rel="stylesheet" href="{{site.url}}/media/css/hyde.css" type="text/css" media="screen" charset="utf-8"/>    
 </head>
-<body>
-    <a href="http://github.com/lakshmivyas/hyde"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub" /></a>
+<body>    
     <div id="hyde-site">
+        <a href="{{links.HydeSource}}"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub" /></a>
         <div class="hyde-left">
             <div id="hyde-tidbits">
 {%markdown%}
@@ -40,18 +40,26 @@ Jekyll is nice. But [Liquid]({{links.Liquid}}) is not very solid.
         </div>
     </div>      
     <div id="hyde-footer">
+        <div class="ringce-icon">
+            <a href="{{site.listing_url}}">
+            <img src="{{site.url}}/media/images/ringce-icon.png"></a>
+        </div>    
         <div class="status">
-            <strong>Status:</strong>
+            <strong>Status</strong>
             <div class="status_badge">Alpha</div>
             <span>Version: 0.1a</span>
         </div>
         <div class="download">
-            <a  href="#">
+            <strong>Download</strong>
+            <a href="{{links.HydeDownload}}">
                 <img src="{{site.url}}/media/images/download.png"/>
             </a>
         </div>
         <div class="source">
+            <strong>Source</strong>
+            <a href="{{links.HydeSource}}">
                 <img src="{{site.url}}/media/images/source.png"/>
+            </a>
         </div>
     </div>
 </body>

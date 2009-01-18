@@ -10,12 +10,16 @@ body {
 }
 
 #hyde-site {
-    width: 50em;
+    position: relative;
+    width: 47em;
     height: 36em;
     margin-top: 0;
     margin-right: auto;
     margin-left: auto;
     background-color: #649064;
+    border-right:1em solid #333;
+    border-left:1em solid #333;
+    padding-left:1em;
 }
 
 #hyde-site .hyde-left {
@@ -80,8 +84,9 @@ body {
 }
 
 #hyde-footer {
-    background: #333 url('{{site.url}}/media/images/ringce-icon.png') no-repeat 1em;
-    padding-left: 15em;
+    width: 50em;
+    margin: 0 auto;
+    background-color: #333;
     height: 12em;
 }
 
@@ -105,6 +110,10 @@ body {
     line-height: 2em;
     padding-top: 2em;
 }
-
-#hyde-footer .download, #hyde-footer .source {
+#hyde-footer .status_badge{
+    margin-top: 1.5em;
+}
+#hyde-footer .download img, 
+#hyde-footer .source img {
+    margin-top: 0.5em;
 }

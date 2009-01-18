@@ -65,7 +65,9 @@ CONTEXT = {
         "jQuery UI v1.6RC4" : "http://ui.jquery.com/",
         "jQuery Form Plugin v2.18": "http://malsup.com/jquery/form/",
         "MIT": "http://www.opensource.org/licenses/mit-license.php",
-        "GPL": "http://www.gnu.org/copyleft/gpl.html"
+        "GPL": "http://www.gnu.org/copyleft/gpl.html",
+        "HydeSource": "http://github.com/lakshmivyas/hyde",
+        "HydeDownload": "http://github.com/lakshmivyas/hyde",
     }
     
 }
