@@ -15,7 +15,9 @@
 {% endblock %}
 {% block content_body %}
 <div id="post-content">
-	{% include "code_meta.html" %}
+{% excerpt %}
+	{% include "_code-meta.html" %}
+{% endexcerpt %}
 	{% block article%}{% endblock %}
 </div>
 {% endblock %}

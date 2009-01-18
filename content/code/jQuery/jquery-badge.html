@@ -3,17 +3,17 @@
 
     title: UI Badge
     licenses:
-        -MIT
-        -GPL
+        - MIT
+        - GPL
     dependencies: 
-        -jQuery v1.2.6
-        -jQuery UI v1.6RC4
+        - jQuery v1.2.6
+        - jQuery UI v1.6RC4
     status: beta
     version: 0.1b
     source_link: 
 
 %}
-{% block ready_function %}{% include "code/javascript/jQuery/_badge_applier.html" %}{% endblock %}
+{% block ready_function %}{% include "code/jQuery/_badge_applier.html" %}{% endblock %}
 
 {% block article %}
 
@@ -25,7 +25,7 @@ UI Badge is a simple jQuery UI widget that allows dynamic position of an overlay
 
 ### Demo ###
 
-{% include "code/javascript/jQuery/_badge_demo.html" %}
+{% include "code/jQuery/_badge_demo.html" %}
 
 ### How does it work? ###
 
@@ -57,7 +57,7 @@ The widget creates and inserts two layers(nested) inside the target element. The
 #### Demo Example ####
 <pre name="code" class="javascript">
 $(function(){
-  {% include "code/javascript/jQuery/_badge_applier.html" %}
+  {% include "code/jQuery/_badge_applier.html" %}
 });
 </pre>
 

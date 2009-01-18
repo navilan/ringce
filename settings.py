@@ -44,7 +44,7 @@ CONTENT_PROCESSORS = {
 CONTEXT = {
     'content':CONTENT_DIR,
     'groups':("Products", "Open Source", "Blog", "About"),
-    'badge_selectors': {"badge-new": "#javascript"},
+    'badge_selectors': {"badge-new": "#jQuery"},
     'products': (
         {'name': 'Shelved', 'disabled': True, 'image': "Shelved_128x128.png"},
         {'name': 'Goalce', 'disabled': False, 'image': "what2do.png"},             
@@ -52,7 +52,7 @@ CONTEXT = {
         {'name': 'Unknown2', 'disabled':True, 'image': "blank.png"}),   
     'code_categories': (
         {'name': 'Python', 'disabled': True},
-        {'name': 'Javascript', 'disabled': False},                       
+        {'name': 'jQuery', 'disabled': False},                       
         {'name': 'Cocoa', 'disabled': True}
     ),
     'links': {

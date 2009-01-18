@@ -1,15 +1,5 @@
 {% extends "skeleton/_listing.html"%}
 {% hyde 
-{
     title: List
-}
+    excerpt: True
 %}
-
-{% block page-content %}
-<div class="page-excerpt">
-{% ifequal page.title "Hyde" %}
-    {%include "products/hyde/_hyde_excerpt.html" %}
-{% endifequal %}
-</div>
-
-{% endblock %}

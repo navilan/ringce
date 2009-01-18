@@ -314,7 +314,8 @@ body {
     font-size: 1em;
     -moz-border-radius: .5em;
     -webkit-border-radius: .5em;
-    width: 2em;
+    width: 2.5em;
+    text-align:center;
     padding: .2em .5em;
     margin-bottom: .4em;
     margin-top: .4em;
@@ -374,6 +375,7 @@ body {
     padding: 0.5em;   
     font-size:0.8em;
     color: #b9e3b5;
+    position:absolute;
 }
 
 .breadcrumbs li{
@@ -425,16 +427,12 @@ body {
     padding: 2em;
     color: #333;
 }
-.page-listing ul {
-    padding-left: .5em;
-    line-height: 1.5em;
-    
-}
+
 .page-listing .meta-area {
     width: 50em;
-    margin-left: 1em;
     margin-bottom: 1em;
-    margin-top: .05em;
+    margin-left: -0.5em;
+    margin-top: .5em;
     -moz-border-radius: .5em;
     -webkit-border-radius: .5em;
 }
@@ -448,6 +446,7 @@ body {
 
 .page-listing > ul > li > a > h2 {
     font-size: 1.2em;
+    line-height: 1.5em;
 }
 
 .page-listing > ul > li > ul > li a > h2 {
@@ -475,14 +474,4 @@ body {
     width: 0;
     height: 0;
     z-index: 90;
-}
-
-.blog_list ul {
-    list-style-type: square;
-    text-align: left;
-    color: #333;
-}
-
-.blog_list ul yl {
-    list-style-type: circle;
 }

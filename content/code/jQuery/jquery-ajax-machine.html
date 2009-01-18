@@ -17,7 +17,7 @@
 	<script src="{{site.url}}/media/js/jquery.ui.inplaceModal.js" type="text/javascript" charset="utf-8"></script>
 	<script src="{{site.url}}/media/js/jquery.ui.ajaxMachine.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
-{% block ready_function %}{% include "code/javascript/jQuery/_ajax_machine_applier.html" %}{% endblock %}
+{% block ready_function %}{% include "code/jQuery/_ajax_machine_applier.html" %}{% endblock %}
 
 {% block article %}
 
@@ -30,7 +30,7 @@ Ajax machine is a state machine for your page. It allows all the different ajax 
 ### Demo ###
 {%endmarkdown%}
 
-{% include "code/javascript/jQuery/_ajax_machine_demo.html" %}
+{% include "code/jQuery/_ajax_machine_demo.html" %}
 
 {%markdown%}
 ### How does it work? ###
@@ -67,7 +67,7 @@ The AjaxMachine's state machine configuration is fairly intuitive.
 
 <pre name="code" class="javascript">
 $(function(){
-  {% include "code/javascript/jQuery/_ajax_machine_applier.html" %}
+  {% include "code/jQuery/_ajax_machine_applier.html" %}
 });
 </pre>
 
