@@ -1,0 +1,233 @@
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<title>Ringce : /Users/lakshmivyas/work/ringce/content/open-source : Ajax Machine Basics </title>
+	
+	<link rel="stylesheet" href="/Users/lakshmivyas/work/ringce/deploy/media/css/base.css" type="text/css" media="screen" charset="utf-8">
+	<link type="text/css" rel="stylesheet" href="/Users/lakshmivyas/work/ringce/deploy/media/css/SyntaxHighlighter.syn"></link>
+	<script src="/Users/lakshmivyas/work/ringce/deploy/media/js/jquery.js"></script>
+	<script src="/Users/lakshmivyas/work/ringce/deploy/media/js/jqueryui.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/Users/lakshmivyas/work/ringce/deploy/media/js/jquery.ui.badge.js" type="text/javascript" charset="utf-8"></script>
+	
+<script language="javascript" src="/Users/lakshmivyas/work/ringce/deploy/media/js/shCore.js"></script>
+<script language="javascript" src="/Users/lakshmivyas/work/ringce/deploy/media/js/shBrushjScript.js"></script>
+
+	<script src="/Users/lakshmivyas/work/ringce/deploy/media/js/jquery.ui.inplaceModal.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/Users/lakshmivyas/work/ringce/deploy/media/js/jquery.ui.ajaxMachine.js" type="text/javascript" charset="utf-8"></script>
+
+<script type="text/javascript" charset="utf-8">
+ $(function(){
+	dp.SyntaxHighlighter.ClipboardSwf = '/Users/lakshmivyas/work/ringce/deploy/media/flash/clipboard.swf';
+	dp.SyntaxHighlighter.HighlightAll('code');
+	$("#ajax_demo_container").ajaxMachine({
+    prefix: function(widget){return "#ajax_demo_container";},
+    startStateName: "view",
+    states: {
+   //  state: {actions: [S.ajaxAction("action_name", "next_state")]},
+        view: {actions: [$.ajaxAction("edit", "edit")]},
+        edit: {actions: [$.ajaxAction("view", "view")]}
+    }
+});
+});
+</script>
+
+</head>
+<body>
+<div id="site">	
+    <div id="header">
+    <a href="/Users/lakshmivyas/work/ringce/deploy/ringce.html">
+        <img src="/Users/lakshmivyas/work/ringce/deploy/media/images/ringce.png">
+    </a>
+</div>
+
+	
+<div id="sitenav">
+    <ul>
+        
+        <li>
+            <a href="/Users/lakshmivyas/work/ringce/deploy/blog/blog.html">
+                Blog
+            </a>
+        </li>
+        
+        <li class="selected" >
+            <a href="/Users/lakshmivyas/work/ringce/deploy/open-source/open-source.html">
+                Open Source
+            </a>
+        </li>
+        
+        <li>
+            <a href="/Users/lakshmivyas/work/ringce/deploy/products/products.html">
+                Products
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+<div id="content-header"><h1>Ajax Machine Basics</h1></div>
+
+<ul class="breadcrumbs">
+
+    <li>
+        <a href="/Users/lakshmivyas/work/ringce/deploy/ringce.html">Ringce</a>
+        
+        <span class="separator">&gt;</span>
+    </li>
+
+    <li>
+        <a href="/Users/lakshmivyas/work/ringce/deploy/open-source/open-source.html">Open Source</a>
+        
+        <span class="separator">&gt;</span>
+    </li>
+
+    <li>
+        <a href="/Users/lakshmivyas/work/ringce/deploy/open-source/javascript/javascript.html">Javascript</a>
+        
+        <span class="separator">&gt;</span>
+    </li>
+
+    <li>
+        <a href="/Users/lakshmivyas/work/ringce/deploy/open-source/javascript/jQuery/jQuery.html">Jquery</a>
+        
+    </li>
+
+</ul>
+
+
+<div id="post-content">
+	
+	
+
+<h3>What is it?</h3>
+<p>Ajax machine is a state machine for your page. It allows all the different ajax events and results to be configured in one place instead of strewn around in multiple places. Most web applications are developed using one form of template engine or another. Ajax templates are usually split up into small templets. In order to get a smooth single page interface to a mini web app, all these small templets have to be configured just right. Ajax machine alleviates many of these problems.
+</p>
+
+<h3>Demo</h3>
+
+<div class="demo-content">
+    <div id="ajax_demo_container">
+    
+<h4>View State</h4>
+<a id="ajax_demo_container_edit_action" href="/Users/lakshmivyas/work/ringce/deploy/open-source/javascript/jQuery/ajax_demo_editor.html">Edit</a>
+<div class="clear"></div>
+<div>
+    <ol>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ol>
+</div>
+
+    </div>
+</div>
+<div class="clear"></div>
+
+<h3>How does it work?</h3>
+<p>Ajax Machine to some extent enforces conventions over configuration. 
+</p>
+<p><img src="/Users/lakshmivyas/work/ringce/deploy/media/images/ajaxmachine.png" title="Ajax Machine Basics" alt="Ajax Machine Flow"/>
+</p>
+<p>These are the conventions, some are recommended and some are enforced.
+</p>
+<ol>
+ <li>
+     All actions should be named(id=) as:(prefix)_(action_name)_action. 
+ </li>
+
+ <li>
+     (Prefix) is provided as part of the callback. It is recommended that it take the form #(containerid).
+ </li>
+
+ <li>
+     All actions should have an href attribute, that contains the url corresponding to the action(Ajax get or post url). Since you need to have a href attribute, why not make it a link?
+ </li>
+</ol>
+<p>Now that the rules have been stated, lets move on to the fun part.
+</p>
+
+<h4>The State Machine</h4>
+<p>The AjaxMachine's state machine configuration is fairly intuitive.
+</p>
+<ol>
+ <li>
+     A State contains a list of actions
+ </li>
+
+ <li>
+     An action has a name and also knows its target state(The state the machine will be set to if the action is successful). If the action does not change the state, the target state must be null.
+ </li>
+
+ <li>
+     The state machine knows the start state
+ </li>
+</ol>
+<h5>Sequence of events</h5><ol>
+ <li>
+     On Load, the container is bound to the state machine by an ajaxMachine call.
+ </li>
+
+ <li>
+     Ajax Machine in turn looks at the start state and binds to all the action buttons based on the actions specified for the current state and the above conventions.
+ </li>
+
+ <li>
+     User clicks on a action button(link, whatever).
+ </li>
+
+ <li>
+     Ajax machine handles the request by posting an Ajax Request to the url in the href attribute of the action button
+ </li>
+
+ <li>
+     When the response is received, it automatically loads the response into the container and binds the actions for the target state.
+ </li>
+</ol>
+
+<h4>Demo Example</h4>
+<pre name="code" class="javascript">
+$(function(){
+  $("#ajax_demo_container").ajaxMachine({
+    prefix: function(widget){return "#ajax_demo_container";},
+    startStateName: "view",
+    states: {
+   //  state: {actions: [S.ajaxAction("action_name", "next_state")]},
+        view: {actions: [$.ajaxAction("edit", "edit")]},
+        edit: {actions: [$.ajaxAction("view", "view")]}
+    }
+});
+});
+</pre>
+
+
+<h3>Coming Up</h3>
+<ol>
+ <li>
+     Before and After hooks
+ </li>
+
+ <li>
+     Plugins
+ </li>
+
+ <li>
+     Posting forms
+ </li>
+
+ <li>
+     Advanced machines
+ </li>
+</ol>
+
+</div>
+
+</div>
+<div id='footer'>
+Ringce 0.1b. This site and its contents have been created with love, sweat and lots of lost sleep by <a href="/Users/lakshmivyas/work/ringce/deploy/media/about/about.html">Lakshmi</a>.
+</div>
+
+</body>
+</html>

@@ -11,7 +11,7 @@ TMP_DIR = os.path.join(ROOT_PATH, 'deploy_tmp')
 BACKUPS_DIR = os.path.join(ROOT_PATH, 'backups')
 
 SITE_NAME = "Ringce"
-
+DATETIME_FORMAT = "%Y-%m-%d %H:%M"
 
 # {folder : extension : (processors)}
 # The processors are run in the given order and are chained.

@@ -48,11 +48,7 @@ $(function(){
     <div id="blog" class="platform">
         <h2>Blog</h2>
         <div id="blog-content" class="block-content">
-            {% if not recent_post %}
-            {% lorem 3 p %}
-            {% else %}
-            {% include recent_post.excerpt_template %}
-            {% endif %}
+            {% latest_excerpt "{{site.folder.path}}/blog" %}
         </div>
         <div id="blog-footer">
         </div>

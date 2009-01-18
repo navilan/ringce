@@ -349,6 +349,22 @@ body {
     -moz-border-radius: .6em;
     -webkit-border-radius: .6em;
 }
+
+.breadcrumbs{
+    list-style-type:none; 
+    padding: 0.5em;   
+    font-size:0.8em;
+    color: #b9e3b5;
+}
+
+.breadcrumbs li{
+    float:left;
+}
+
+.breadcrumbs a{
+    color: #649064;
+}
+
 #post-content {
     color: #333;
     line-height: 1.5em;
