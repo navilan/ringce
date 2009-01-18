@@ -1,4 +1,4 @@
-{% extends "skeleton/_base.html" %}
+{% extends "skeleton/_body.html" %}
 {% load webdesign %}{% block title %}Ringce : Home{% endblock %}
 {% block extra_js %}
 <script type="text/javascript" charset="utf-8">
@@ -11,8 +11,8 @@ $(function(){
     {% endfor %}
 }); 
 </script>
-{% endblock %}
-{% block content %}
+{% endblock %}{% block content_header %}{% endblock %}{% block breadcrumbs %}{% endblock %}
+{% block content_body %}
 <div class="home-content">
     <div id="software" class="tower">
         <h2><a href="{{site.url}}/products/products.html">Products</a></h2>
@@ -28,13 +28,13 @@ $(function(){
         </div>
     </div>      
     <div id="code" class="tower">
-        <h2><a href="{{site.url}}/open-source/open-source.html">Open Source</a></h2>
+        <h2><a href="{{site.url}}/code/code.html">Code</a></h2>
         <div class="block-content">
             <ul id="code-container">
                 {% for code_category in code_categories %}
                     <li id="{{ code_category.name|lower }}" 
                     {% if code_category.disabled %} class="disabled" {% endif %}>
-                    <a {% if not code_category.disabled %} href="{{site.url}}/open-source/{{code_category.name}}/{{code_category.name}}.html" {% endif %}>{{ code_category.name }}</a></li>
+                    <a {% if not code_category.disabled %} href="{{site.url}}/code/{{code_category.name}}/{{code_category.name}}.html" {% endif %}>{{ code_category.name }}</a></li>
                 {% endfor %}
             </ul>
         </div>

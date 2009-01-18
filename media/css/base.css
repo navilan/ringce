@@ -219,6 +219,11 @@ body {
     -webkit-border-bottom-left-radius: .5em;
     cursor: pointer;
 }
+
+#sitenav li:hover,#sitenav li.home-selected{
+   background-color: #649064;
+}
+
 #sitenav li:hover,#sitenav li.selected {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;

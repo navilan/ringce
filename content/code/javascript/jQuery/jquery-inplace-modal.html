@@ -1,4 +1,4 @@
-{% extends "_open-source.html" %}
+{% extends "_code.html" %}
 {% hyde
 
     title: In Place Modal
@@ -16,7 +16,7 @@
 {% block extra_extra_js %}
     <script src="{{site.url}}/media/js/jquery.ui.inplaceModal.js" type="text/javascript" charset="utf-8"></script>
 {% endblock %}
-{% block ready_function %}{% include "open-source/javascript/jQuery/_inplace_modal_applier.html" %}{% endblock %}
+{% block ready_function %}{% include "code/javascript/jQuery/_inplace_modal_applier.html" %}{% endblock %}
 
 {% block article %}
 
@@ -28,7 +28,7 @@ In place modal is a jquery UI widget that adds the gray backgrounds that are usu
 
 ### Demo ###
 
-{% include "open-source/javascript/jQuery/_inplace_modal_demo.html" %}
+{% include "code/javascript/jQuery/_inplace_modal_demo.html" %}
 
 ### How does it work? ###
 
@@ -60,7 +60,7 @@ No options for this widget yet. Class *overlay* is applied to the overlay elemen
 #### Demo Example ####
 <pre name="code" class="javascript">
 $(function(){
-  {% include "open-source/javascript/jQuery/_inplace_modal_applier.html" %}
+  {% include "code/javascript/jQuery/_inplace_modal_applier.html" %}
 });
 </pre>
 
