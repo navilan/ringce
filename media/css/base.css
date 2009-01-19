@@ -433,7 +433,7 @@ body {
 }
 
 .page-listing .meta-area {
-    width: 50em;
+    width: 48em;
     margin-bottom: 1em;
     margin-left: -0.5em;
     margin-top: .5em;
@@ -492,4 +492,8 @@ body {
 
 #twitter_div a{
     color: #649064;
+}
+
+.goalce-soon{
+    text-align:center;
 }

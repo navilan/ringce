@@ -20,7 +20,7 @@ $(function(){
             <ul id="product-container">
                 {% for product in products%}
                     <li id="{{ product.name|lower }}" {% if product.disabled %} class="disabled" {% endif %}>
-                        <a {% if not product.disabled %} tooltip="{{product.name}}" href="{% if product.url %}{{product.url}}{% else %}{{site.url}}/products/{{product.name}}/{{product.name}}.html{% endif %}"  {% endif %}>
+                        <a {% if not product.disabled %} tooltip="{{product.name}}" href="{% if product.url %}{{product.url}}{% else %}{{site.url}}/products/{{product.name|slugify}}/{{product.name|slugify}}.html{% endif %}"  {% endif %}>
                         <img alt="{{ product.name }}"  src="{{site.url}}/media/images/{{product.image}}"></a>
                     </li>
                 {% endfor %}

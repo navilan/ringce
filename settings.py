@@ -72,19 +72,19 @@ CONTEXT = {
         "MIT": "http://www.opensource.org/licenses/mit-license.php",
         "GPL": "http://www.gnu.org/copyleft/gpl.html",
         "Hyde": {
-            "Download": GIT_HUB + "/hyde/downloads/master",
+            "Download": GIT_HUB + "/hyde/zipball/master",
             "Source": GIT_HUB + "/hyde"},
         "Ringce": {
-            "Download": GIT_HUB + "/ringce/downloads/master",
+            "Download": GIT_HUB + "/ringce/zipball/master",
             "Source": GIT_HUB + "/ringce"},
         "jquery-inplace-modal": {
-            "Download": GIT_HUB + "/jquery-ui-inplace-modal/downloads/master",
+            "Download": GIT_HUB + "/jquery-ui-inplace-modal/zipball/master",
             "Source": GIT_HUB + "/jquery-ui-inplace-modal"},
         "jquery-badge": {
-            "Download": GIT_HUB + "/jquery-ui-badge/downloads/master",
+            "Download": GIT_HUB + "/jquery-ui-badge/zipball/master",
             "Source": GIT_HUB + "/jquery-ui-badge"},
         "jquery-ajax-machine": {
-            "Download": GIT_HUB + "/jquery-ui-ajax-machine/downloads/master",
+            "Download": GIT_HUB + "/jquery-ui-ajax-machine/zipball/master",
             "Source": GIT_HUB + "/jquery-ui-ajax-machine"},
         "Tamil": "http://en.wikipedia.org/wiki/Tamil",
         "5RingsBook": "http://en.wikipedia.org/wiki/Book_of_five_rings",
