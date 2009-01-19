@@ -23,11 +23,13 @@ DATETIME_FORMAT = "%Y-%m-%d %H:%M"
 # should specify css/ie for the folder name. css/* is not supported (yet).
 
 # Extensions do not support wildcards.
-GENERATE_ABSOLUTE_FS_URLS = True
+GENERATE_ABSOLUTE_FS_URLS = False
 
 MEDIA_PROCESSORS = {
-    '*':{
-        '.css':('hydeengine.media_processors.TemplateProcessor','hydeengine.media_processors.YUICompressor',),
+    '*':{ 
+        '.css':( 
+                'hydeengine.media_processors.TemplateProcessor',
+                'hydeengine.media_processors.YUICompressor',),
     } 
 }
 
@@ -41,18 +43,21 @@ CONTENT_PROCESSORS = {
     }
 }
 
+GIT_HUB = "http://github.com/lakshmivyas"
+TED = "http://www.ted.com/index.php/talks"
+
 CONTEXT = {
     'content':CONTENT_DIR,
     'groups':("Products", "Open Source", "Blog", "About"),
-    'badge_selectors': {"badge-new": "#jQuery"},
+    'badge_selectors': {"badge-new": "#jquery"},
     'products': (
         {'name': 'Shelved', 'disabled': True, 'image': "Shelved_128x128.png"},
-        {'name': 'Goalce', 'disabled': False, 'image': "what2do.png"},             
-        {'name': 'Hyde', 'disabled':False, 'image': "hyde-icon.png"},                
-        {'name': 'Unknown2', 'disabled':True, 'image': "blank.png"}),   
+        {'name': 'Goalce', 'disabled': False, 'image': "what2do.png"},
+        {'name': 'Hyde', 'disabled':False, 'image': "hyde-icon.png"},
+        {'name': 'Unknown2', 'disabled':True, 'image': "blank.png"}),
     'code_categories': (
         {'name': 'Python', 'disabled': True},
-        {'name': 'jQuery', 'disabled': False},                       
+        {'name': 'jQuery', 'disabled': False},
         {'name': 'Cocoa', 'disabled': True}
     ),
     'links': {
@@ -66,8 +71,43 @@ CONTEXT = {
         "jQuery Form Plugin v2.18": "http://malsup.com/jquery/form/",
         "MIT": "http://www.opensource.org/licenses/mit-license.php",
         "GPL": "http://www.gnu.org/copyleft/gpl.html",
-        "HydeSource": "http://github.com/lakshmivyas/hyde",
-        "HydeDownload": "http://github.com/lakshmivyas/hyde",
+        "Hyde": {
+            "Download": GIT_HUB + "/hyde/downloads/master",
+            "Source": GIT_HUB + "/hyde"},
+        "Ringce": {
+            "Download": GIT_HUB + "/ringce/downloads/master",
+            "Source": GIT_HUB + "/ringce"},
+        "jquery-inplace-modal": {
+            "Download": GIT_HUB + "/jquery-ui-inplace-modal/downloads/master",
+            "Source": GIT_HUB + "/jquery-ui-inplace-modal"},
+        "jquery-badge": {
+            "Download": GIT_HUB + "/jquery-ui-badge/downloads/master",
+            "Source": GIT_HUB + "/jquery-ui-badge"},
+        "jquery-ajax-machine": {
+            "Download": GIT_HUB + "/jquery-ui-ajax-machine/downloads/master",
+            "Source": GIT_HUB + "/jquery-ui-ajax-machine"},
+        "Tamil": "http://en.wikipedia.org/wiki/Tamil",
+        "5RingsBook": "http://en.wikipedia.org/wiki/Book_of_five_rings",
+        "Mushashi": "http://en.wikipedia.org/wiki/Miyamoto_Musashi",
+        "NatureTedTalk": TED + "/janine_benyus_shares_nature_s_designs.html",
+        "ProjectPlus": "http://github.com/ciaran/projectplus/tree/master",
+        "JavascriptLint":"http://www.javascriptlint.com/",
+        "PyChecker": "http://svn.textmate.org/trunk/Bundles/Python.tmbundle",
+        "CSSEdit":"http://macrabbit.com/cssedit/",
+        "Xylescope": "http://culturedcode.com/xyle/",
+        "Webkit": "http://webkit.org/",
+        "Firebug": "https://addons.mozilla.org/en-US/firefox/addon/1843",
+        "IPython":"http://ipython.scipy.org/moin/",
+        "Textmate":"http://macromates.com/",
+        "Markdown":"http://daringfireball.net/projects/markdown/",
+        "Twitter":"http://twitter.com/lakshmivyas",
+        "Facebook":"http://www.facebook.com/people/Lakshmi-Vyasarajan/614146002",
+        "FriendFeed":"http://friendfeed.com/lakshmivyas",
+        "LinkedIn":"http://www.linkedin.com/in/lakshmivyas",
+        "Delicious":"http://delicious.com/ezlux",
+        "Flickr":"http://www.flickr.com/photos/ezlux",
+        "GitHub":GIT_HUB,
+        "Ohloh":"http://www.ohloh.net/accounts/lakshmivyas",
     }
     
 }

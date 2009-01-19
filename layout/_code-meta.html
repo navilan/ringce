@@ -1,6 +1,6 @@
 <div class="meta-area">
 	<div class="download">
-		<a  href="#">
+		<a  href="	{{links|value_for_key:page.name_without_extension|value_for_key:"Download"}}">
 			<img src="{{site.url}}/media/images/download.png"/>
 			<span>Download</span>
 		</a>
@@ -27,7 +27,7 @@
 		Version: {{page.version}}
 	</div>
 	<div class="source">
-		<a href="{{page.source_link}}">
+		<a  href="	{{links|value_for_key:page.name_without_extension|value_for_key:"Source"}}">
 			<img src="{{site.url}}/media/images/source.png"/>
 			<span>Source</span>
 		</a>

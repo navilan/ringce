@@ -287,12 +287,12 @@ body {
     margin-left: 2.5em;
 }
 .meta-area .depends,.meta-area .status,.meta-area .license {
-    font-size: .8em;
+    font-size: .9em;
     float: left;
     width: 11em;
     margin-top: 1.5em;
     padding-left: 1.5em;
-    height: 8em;
+    height: 7em;
     max-width: 21%;
     border-left: 1px solid #649064;
 }
