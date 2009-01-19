@@ -73,6 +73,7 @@ body {
     float: left;
     height: 16em;
     width: 15em;
+    overflow:hidden;
 }
 .home-content .tower,.home-content .platform {
     margin: 1em;
@@ -286,6 +287,8 @@ body {
 .meta-area .download {
     margin-left: 2.5em;
 }
+
+
 .meta-area .depends,.meta-area .status,.meta-area .license {
     font-size: .9em;
     float: left;
@@ -296,6 +299,11 @@ body {
     max-width: 21%;
     border-left: 1px solid #649064;
 }
+
+#post-content .meta-area ul{
+    margin:0;
+}
+
 .meta-area .depends {
     width: 20em;
     max-width: 25%;
