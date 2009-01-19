@@ -91,6 +91,7 @@ body {
 }
 .block-content {
     padding: .5em;
+    overflow: hidden;
 }
 .block-content>ul {
     list-style-type: none;
@@ -148,7 +149,6 @@ body {
 #blog .block-content {
     padding-bottom: 1em;
     max-height: 11em;
-    overflow: hidden;
     border-bottom: 1px solid #649064;
 }
 #blog #blog-footer {
@@ -426,6 +426,10 @@ body {
 .page-listing {
     padding: 2em;
     color: #333;
+    min-height: 400px;
+}
+.page-listing ul{
+    margin-left: 0.5em;
 }
 
 .page-listing .meta-area {
@@ -474,4 +478,18 @@ body {
     width: 0;
     height: 0;
     z-index: 90;
+}
+
+#twitter_div{
+    font-size:0.8em;
+    line-height:1.5em;
+    padding-left: 1em;
+}
+
+#twitter_div li{
+   margin-top:.3em;
+}
+
+#twitter_div a{
+    color: #649064;
 }

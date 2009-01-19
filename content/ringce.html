@@ -42,6 +42,9 @@ $(function(){
     <div id="tweet" class="tower">
         <h2><a href="{{links.Twitter}}">Tweets</a></h2>
         <div class="block-content">
+            <div id="twitter_div">
+                <ul id="twitter_update_list"></ul>
+            </div>
         </div>
     </div>
     <div class="clear"></div>
@@ -56,5 +59,10 @@ $(function(){
     </div>
     <div class="clear"></div>
 </div>  
+{% endblock %}
+
+{% block endbody %}
+    <script type="text/javascript" src="http://twitter.com/javascripts/blogger.js"></script>
+    <script type="text/javascript" src="http://twitter.com/statuses/user_timeline/lakshmivyas.json?callback=twitterCallback2&amp;count=2"></script>
 {% endblock %}
 
