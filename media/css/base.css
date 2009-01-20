@@ -502,6 +502,17 @@ body {
     color: #649064;
 }
 
+#disqus-comments{
+    padding: 2em;
+    padding-top:0;
+    margin-top: -2em;
+    color: #333;
+}
+
+#disqus-comments h3{
+    border:0;
+}
+
 .goalce-soon{
     text-align:center;
 }

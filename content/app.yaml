@@ -1,0 +1,33 @@
+application: ringceweb
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /(ringce\.html)?
+  static_files: ringce.html
+  upload: ringce.html
+
+- url: /media
+  static_dir: media
+  
+- url: /media/css/(.*)\.syn
+  static_files: media/css/\1.syn
+  mime_type: text/css
+  upload: media/css/(.*)\.syn
+
+- url: /about
+  static_dir: about
+
+- url: /code
+  static_dir: code
+
+- url: /blog
+  static_dir: blog
+  
+- url: /products
+  static_dir: products
+
+- url: /((?:\w/)*?)(\w)/?
+  static_files: \1/\2/\2.html 
+  upload: ((?:\w/)*?)(\w)/?.html
