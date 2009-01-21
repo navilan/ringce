@@ -15,13 +15,13 @@
  {% if not node_page.listing and not node_page.exclude %}
  <entry>
    <title>{{node_page.title}}</title>
-   <link href="{{node_page.full_url}}"/>
-   <updated>{{node_page.updated|default:node_page.created|xmldatetime}}</updated>
+  <author><name>Lakshmi Vyas</name></author>
+   <link href="{{node_page.full_url}}"/>   <updated>{{node_page.updated|default:node_page.created|xmldatetime}}</updated>
    <published>{{node_page.created|xmldatetime}}</published>
    <id>{{node_page.full_url}}</id>
    {%block entry_extra%}{%endblock%}
    <content type="html">
-        {% render_article node_page %}
+       {%filter force_escape%}{% render_article node_page %}{%endfilter%}
    </content>
  </entry>
  {%endif%}

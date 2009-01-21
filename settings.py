@@ -12,7 +12,7 @@ BACKUPS_DIR = os.path.join(ROOT_PATH, 'backups')
 
 BACKUP = False
 
-SITE_WWW_URL = "http://www.ringce.com"
+SITE_WWW_URL = "http://site.ringce.com"
 SITE_NAME = "Ringce"
 DATETIME_FORMAT = "%Y-%m-%d %H:%M"
 
