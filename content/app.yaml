@@ -7,6 +7,10 @@ handlers:
 - url: /(ringce\.html)?
   static_files: ringce.html
   upload: ringce.html
+  
+- url: /favicon.ico
+  static_files: media/images/favicon.ico
+  upload: media/images/favicon.ico
 
 - url: /media
   static_dir: media
@@ -16,18 +20,18 @@ handlers:
   mime_type: text/css
   upload: media/css/(.*)\.syn
 
-- url: /about
-  static_dir: about
+- url: /(.*?)/([^\.\/]*).xml
+  static_files: \1/\2.xml
+  upload: (.*?)/([^\.\/]*).xml
 
-- url: /code
-  static_dir: code
+- url: /(.*?)/([^\.\/]*).html
+  static_files: \1/\2.html 
+  upload: (.*?)/([^\.\/]*).html
 
-- url: /blog
-  static_dir: blog
-  
-- url: /products
-  static_dir: products
+- url: /([^\.\/]*)/?
+  static_files: \1/\1.html 
+  upload: ([^\.\/]*)/([^\.\/]*).html
 
-- url: /((?:\w/)*?)(\w)/?
+- url: /(.*?)/([^\.\/]*)/?
   static_files: \1/\2/\2.html 
-  upload: ((?:\w/)*?)(\w)/?.html
+  upload: (.*?)/([^\.\/]*)/([^\.\/]*).html

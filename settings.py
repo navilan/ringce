@@ -10,6 +10,9 @@ DEPLOY_DIR = os.path.join(ROOT_PATH, 'deploy')
 TMP_DIR = os.path.join(ROOT_PATH, 'deploy_tmp')
 BACKUPS_DIR = os.path.join(ROOT_PATH, 'backups')
 
+BACKUP = False
+
+SITE_WWW_URL = "http://www.ringce.com"
 SITE_NAME = "Ringce"
 DATETIME_FORMAT = "%Y-%m-%d %H:%M"
 
@@ -109,7 +112,6 @@ CONTEXT = {
         "GitHub":GIT_HUB,
         "Ohloh":"http://www.ohloh.net/accounts/lakshmivyas",
     }
-    
 }
 
 #Processor Configuration
@@ -127,7 +129,7 @@ HSS_PATH = None # if you don't want to use HSS
 
 #Django settings
 
-TEMPLATE_DIRS = ( LAYOUT_DIR, CONTENT_DIR, TMP_DIR)
+TEMPLATE_DIRS = (LAYOUT_DIR, CONTENT_DIR, TMP_DIR)
 
 INSTALLED_APPS = (
     'hydeengine',
