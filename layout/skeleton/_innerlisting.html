@@ -9,7 +9,7 @@
 <ul>
     {% for list_page in node.pages %}
     {% ifnotequal list_page node.listing_page %}
-    {% if not list_page.exclude %}
+    {% if list_page.display_in_list %}
     <li>
         <a href="{{list_page.url}}">
         {% with list_page.name_without_extension|remove_date_prefix|unslugify as default_title %}
