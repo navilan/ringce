@@ -15,10 +15,8 @@
 {% endblock %}
 {% block content_body %}
 <div id="post-content">
-{% excerpt %}
-	{% include "_code-meta.html" %}
-{% endexcerpt %}
-	{% block article%}{% endblock %}
+{% include "_code-meta.html" %}
+{% block article%}{% endblock %}
 </div>
 {% block comments %}
 {% include "skeleton/_disqus.html" %}

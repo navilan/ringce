@@ -1,5 +1,35 @@
-{% extends "skeleton/_listing.html"%}
+{% extends "skeleton/_body.html"%}
 {% hyde 
-    title: Products
-    excerpt: True
+    title: Software
 %}
+
+{% block content_body %}
+<div class="product_excerpt">
+    <div class="product_logo">
+        <a href="{{site.url}}/products/hyde/hyde.html">
+            <img src="{{site.url}}/media/images/hyde-icon.png">
+        </a>
+    </div>
+    <div class="product_content">
+    <h3>Hyde</h3>
+{%markdown%}
+Hyde is a static website generator inspired by [Jekyll]({{links.Jekyll}}). It uses Django templates extended with several features that are tailored towards creating content as effortlessly as possible.
+{%endmarkdown%}
+    </div>
+</div>   
+<div class="product_excerpt">
+    <div class="product_logo">
+        <a href="{{site.url}}/products/goalce/goalce.html">
+            <img src="{{site.url}}/media/images/what2do.png">
+        </a>
+    </div>
+    <div class="product_content">
+        <div class="goalce-soon">
+        <h3>Goalce</h3>
+        <img src="{{site.url}}/media/images/goalce-intro.png">
+        </div>    
+    </div>
+</div>    
+<div class="clear"> </div>
+{% endblock %}
+
