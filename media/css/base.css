@@ -585,8 +585,6 @@ body {
     font-size: .8em;
 }
 
-.page-excerpt-footer .separator { Property: Value; }
-
 .product_excerpt {
     padding: 1em;
     width: 51em;
@@ -605,7 +603,6 @@ body {
     *float:left;
 }
 
-.product_excerpt .product_content { margin-left: 10em; }
+.product_excerpt .product_content { margin-left: 10em; margin-right: 2em;}
 .product_content h3 { text-align: center; }
-.product_excerpt .product_logo a { Property: Value; }
 .product_excerpt .product_logo:hover { background-color: #b9e3b5; }
