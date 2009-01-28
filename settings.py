@@ -46,6 +46,15 @@ CONTENT_PROCESSORS = {
     }
 }
 
+SITE_POST_PROCESSORS = {
+    'media/js/': {
+        'hydeengine.site_post_processors.FolderFlattener' : {
+                'remove_processed_folders': True,
+                'pattern':"*.js"
+        }
+    }
+}
+
 GIT_HUB = "http://github.com/lakshmivyas"
 TED = "http://www.ted.com/index.php/talks"
 
