@@ -3,7 +3,9 @@
 {% block content %}
 {% block breadcrumbs %}{% include "skeleton/_breadcrumbs.html"%}{% endblock %}
 {%block context%}
+{%if page.display_in_list %}
 {%include "skeleton/_context_nav.html"%}
+{%endif%}
 {%endblock%}
 {% block sitenav %}
 <div id="sitenav">
