@@ -2,6 +2,9 @@
 {% block title %}{{site.name}} : {{page.title}} {% endblock %}
 {% block content %}
 {% block breadcrumbs %}{% include "skeleton/_breadcrumbs.html"%}{% endblock %}
+{%block context%}
+{%include "skeleton/_context_nav.html"%}
+{%endblock%}
 {% block sitenav %}
 <div id="sitenav">
     <ul>

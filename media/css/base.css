@@ -42,6 +42,7 @@ body {
 }
 
 #site {
+    position:relative;
     width: 53em;
     background-color: white;
     max-height: 90%;
@@ -436,6 +437,8 @@ body {
     -webkit-border-radius: .6em;
 }
 
+
+.context-nav,
 .breadcrumbs {
     list-style-type: none;
     padding: .5em;
@@ -444,8 +447,15 @@ body {
     position: absolute;
 }
 
+.context-nav{
+    right:0;;
+}
+
 .breadcrumbs li { float: left; }
+.context-nav a,
 .breadcrumbs a { color: #649064; }
+
+.context-nav a{margin-right:.5em;}
 
 #post-content {
     color: #333;
