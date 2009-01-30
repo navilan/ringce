@@ -454,7 +454,6 @@ body {
 .breadcrumbs li { float: left; }
 .context-nav a,
 .breadcrumbs a { color: #649064; }
-
 .context-nav a{margin-right:.5em;}
 
 #post-content {
@@ -616,3 +615,12 @@ body {
 .product_excerpt .product_content { margin-left: 10em; margin-right: 2em;}
 .product_content h3 { text-align: center; }
 .product_excerpt .product_logo:hover { background-color: #b9e3b5; }
+
+.drag_handle{
+    float:left;
+    width:1em;
+    height:2em;
+    background-color:#649064;
+    cursor: move;
+    border:1px solid #b3e9b5;
+}

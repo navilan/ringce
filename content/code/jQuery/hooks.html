@@ -1,0 +1,83 @@
+{% extends "_code.html" %}
+{% hyde
+
+    title: Ajax Machine Events
+    created: 2009-01-29 00:44:25
+    licenses:
+        - MIT
+        - GPL
+    dependencies: 
+        - jQuery v1.2.6
+        - jQuery UI v1.6RC4
+        - jQuery Form Plugin v2.18
+    status: alpha
+    version: 0.1a
+%}
+{% block extra_extra_js %}
+	<script src="{{site.url}}/media/js/jquery.ui.inplaceModal.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{site.url}}/media/js/jquery.ui.ajaxMachine.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+{% block ready_function %}{% include "code/jQuery/_hooks_applier.html" %}{% endblock %}
+
+{% block article %}
+
+{% markdown %}
+
+### Overview ###
+
+{%article%}
+
+{% excerpt %}
+
+The [previous article]({{site.url}}/code/jQuery/jquery-ajax-machine.html) on Ajax Machine covered the fundamentals of setting up an Ajax Machine. In this article we take a few steps forward towards integrating before and after events that are triggered for each action.
+
+{% endexcerpt %}
+
+{%endarticle%}
+
+### Demo ###
+
+This demo builds upon the previous article with two additional requirements:
+
+1. Ask the user for confirmation when the Edit button is pressed
+2. Make the resulting list(edit mode) sortable
+
+{%endmarkdown%}
+
+{% include "code/jQuery/_hooks_demo.html" %}
+
+{%markdown%}
+
+        Note: The above code is for demonstration and does not really save anything.
+
+### How does it work? ###
+
+To briefly review the discussion from the previous article:
+
+1. Every Page (or a portion of a page) has a set of states
+2. Each state has actions that are triggered by the user
+3. These actions may or may not cause the current state to change.
+
+Before and after events can be specified for every action.  The before event handler must return true in order for the action to be execute. The after event handler must return true in order for the next state to be bound.
+
+In this demo, the before event handler returns the result of a ``confirm`` method call. The after event handler calls ``jquery.ui.sortable`` to make the resulting list sortable.
+
+#### Demo Example ####
+
+<pre name="code" class="javascript">
+$(function(){
+  {% include "code/jQuery/_hooks_applier.html" %}
+});
+</pre>
+
+
+### This series ###
+
+1. [Basics]({{site.url}}/code/jQuery/jquery_ajax_machine.html)
+2. [Events]({{page.url}})
+3. Plugins
+4. Posting forms
+5. Advanced machines
+
+{% endmarkdown %}
+{% endblock %}

@@ -1,0 +1,27 @@
+canEdit = function(widget){
+    return confirm("Are you sure?");
+};
+
+makeSortable = function(widget){
+    $("#list_items_container").sortable({
+        opacity: 0.7,
+        revert: true,
+        scroll: true, 
+        handle: $(".drag_handle"),
+        cursor: "move",
+        axis:'y',
+        placeholder: 'sort_placeholder',
+        });
+        return true;  
+};
+
+$("#hooks_demo_container").ajaxMachine({
+    prefix: function(widget){return "#hooks_demo_container";},
+    startStateName: "view",
+    states: {
+   //  state: {actions: [S.ajaxAction("action_name", "next_state")]},
+        view: {actions: [$.ajaxAction("edit", "edit", {
+            before:canEdit, after:makeSortable})]},
+        edit: {actions: [$.ajaxAction("view", "view")]}
+    }
+});
