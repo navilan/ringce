@@ -9,6 +9,9 @@ MEDIA_DIR = os.path.join(ROOT_PATH, 'media')
 DEPLOY_DIR = os.path.join(ROOT_PATH, 'deploy')
 TMP_DIR = os.path.join(ROOT_PATH, 'deploy_tmp')
 BACKUPS_DIR = os.path.join(ROOT_PATH, 'backups')
+SITEMAP_FILE = os.path.join(TMP_DIR, 'sitemap.xml')
+SITEMAP_GENERATOR = os.path.join(ROOT_PATH, 
+ "../hyde/lib/sitemap_gen-1.4/sitemap_gen.py")
 
 BACKUP = False
 
@@ -47,6 +50,13 @@ CONTENT_PROCESSORS = {
 }
 
 SITE_POST_PROCESSORS = {
+    '/' : {
+        'hydeengine.site_post_processors.GoogleSitemapGenerator' : {
+            'sitemap_file':SITEMAP_FILE,
+            'generator': SITEMAP_GENERATOR,
+            
+        }
+    },
     'media/js/': {
         'hydeengine.site_post_processors.FolderFlattener' : {
                 'remove_processed_folders': True,
