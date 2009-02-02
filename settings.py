@@ -95,7 +95,8 @@ CONTEXT = {
         "GPL": "http://www.gnu.org/copyleft/gpl.html",
         "Hyde": {
             "Download": GIT_HUB + "/hyde/zipball/master",
-            "Source": GIT_HUB + "/hyde"},
+            "Source": GIT_HUB + "/hyde",
+            "Forum": "http://groups.google.com/group/hyde-dev"},
         "Ringce": {
             "Download": GIT_HUB + "/ringce/zipball/master",
             "Source": GIT_HUB + "/ringce"},

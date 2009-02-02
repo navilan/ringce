@@ -1,0 +1,41 @@
+{% extends "_post.html" %}
+
+{%hyde
+    
+    title: Hyde Moves Ahead
+    created: 2009-02-02 14:45:38
+    updated: 2009-02-02 14:45:45
+%}
+
+{% block article %}
+
+{%article%}
+
+{% excerpt %}
+
+Between my first post [introducing hyde]({{site.url}}/blog/2009/introducing_hyde.html) and now, hyde has moved further along, although not as much as I expected.
+
+The following features have been added since the last post:
+
+1. Atom 1.0 support
+2. Breadcrumbs
+3. Previous / Next support
+4. Better Page Listing
+5. Built in cherrypy webserver
+6. A half-decent default site template
+7. Google sitemap generator
+8. Folder flattener post processing plugin to support gitsubmodules or svn externals.
+
+I am currently working on incremental/continuous generation support. This would allow 
+us to make changes to the site, save, reload the page to get the changes as opposed to calling ``hyde -g`` to generate the site. I am also working on creating better documentation for using/extending hyde building upon what is now just a Readme file on github to include the above features. 
+
+While the default template is usable, the [source for this website]({{links.Ringce.Source}}) is still the best reference for building a complete website with Hyde.
+
+Please do fork the repository if you'd like to add features. I also created a [google group]({{links.Hyde.Forum}}) for developer discussions.
+
+
+{%endexcerpt%}
+
+{%endarticle%}
+
+{% endblock %}

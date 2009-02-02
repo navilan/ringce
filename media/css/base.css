@@ -174,12 +174,27 @@ body {
 
 #blog #blog-footer a { color: #b9e3b5; }
 
+#blog a{
+    color: #b9e3b5;
+}
+
 #blog p {
     font-size: .8em;
     padding-right: 2em;
     padding-left: 2em;
     text-align: justify;
     line-height: 1.7em;
+}
+
+#blog h3 {
+    border: 0;
+    color: #649064;
+}
+
+#blog li {
+    padding-left:2em;
+    line-height:1.5em;
+    font-size:0.8em;
 }
 
 .badge-new {
@@ -536,7 +551,10 @@ body {
     -webkit-border-radius: 0;
 }
 
-.page-listing .page-excerpt li { line-height: 2em; }
+.page-listing .page-excerpt li { 
+    line-height: 2em; 
+    margin-left: 2em;
+}
 
 .overlay {
     background-color: #bcc;
@@ -572,11 +590,6 @@ body {
 
 #disqus-comments h3 { border: 0; }
 .goalce-soon { text-align: center; }
-
-#blog h3 {
-    border: 0;
-    color: #649064;
-}
 
 .page-excerpt-footer .breadcrumbs {
     position: static;
