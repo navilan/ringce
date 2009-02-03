@@ -192,7 +192,7 @@ body {
 }
 
 #blog li {
-    padding-left:2em;
+    margin-left:4em;
     line-height:1.5em;
     font-size:0.8em;
 }
