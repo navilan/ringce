@@ -2,9 +2,9 @@
 {% block all %}
 <div class="context-nav">
     <a
-    {%if page.prev%}
-    href="{{page.prev.url}}"{%endif%}>Previous</a>
-    <a {%if page.next%}
-    href="{{page.next.url}}"{%endif%}>Next</a>
+    {%if page.next%}
+    href="{{page.next.url}}"{%endif%}>Previous</a>
+    <a {%if page.prev%}
+    href="{{page.prev.url}}"{%endif%}>Next</a>
 </div>
 {% endblock %}

@@ -196,7 +196,7 @@ body {
 #blog li {
     margin-left: 4em;
     line-height: 1.5em;
-    font-size: 0.8em;
+    font-size: .8em;
 }
 
 .badge-new {
@@ -265,7 +265,7 @@ body {
     color: #b5e3b5;
     text-decoration: none;
     background-color: #333;
-    padding: 0.2em 0.5em;
+    padding: .2em .5em;
     vertical-align: top;
     cursor: pointer;
 }
@@ -315,7 +315,7 @@ body {
     border: 0;
     padding: 0;
     width: 5.2em;
-    margin: 0.8em 0 0 -0.2em;
+    margin: .8em 0 0 -0.2em;
     vertical-align: bottom;
     text-decoration: none;
 }
@@ -375,45 +375,41 @@ body {
 #content-header {
     position: relative;
     background-color: #649064;
-    border-top: .2em solid #649064;
     border-bottom: 1px solid #649064;
     height: 2em;
     margin-top: .5em;
 }
 
 #content-header .date-badge {
-    position: absolute;
-    left: -4.4em;
-    top: -0.3em;
-    width: 4em;
-    height: 4.5em;
-    text-align: center;
-    font-weight: bold;
-    color: #649064;
-    background-color: #b9e3b5;
-    border: .2em solid #b9e3b5;
+    float: left;
+    color: #b9e3b5;
+    background-color: #333;
+    margin-left: .1em;
+    font-family: Helvetica;
+    width: 3em;
+    height: 2em;
+    padding-left: .2em;
+    padding-right: .2em;
 }
 
 #content-header span {
-    width: 100%;
     display: block;
-    font-size: .8em;
-    margin-bottom: .3em;
+    float: right;
+    font-size: 0.50em;
+    margin-right: .1em;
+    margin-top: .5em;
 }
 
-#content-header .date-badge .date-day {
+#content-header span.date-day {
     font-size: 1.5em;
-    padding-top: .2em;
-    margin-bottom: .2em;
-    height: 1.25em;
-    background-color: #649064;
-    color: #b9e3b5;
+    margin-top: 0;
+    float: left;
 }
 
 #content-header h1 {
     float: left;
     font-size: 1.5em;
-    padding-left: 2em;
+    padding-left: .5em;
     padding-top: .1em;
     max-width: 30em;
 }
@@ -470,7 +466,7 @@ body {
     line-height: 2em;
     padding: 1em;
     padding-bottom: 3em;
-    padding-left: 3em;
+    padding-left: 4em;
     padding-right: 3em;
 }
 
@@ -541,8 +537,8 @@ body {
     margin-top: 0;
     line-height: 1.5em;
     padding: 1em;
-    padding-left: 3em;
-    padding-right: 2em;
+    padding-left: 4em;
+    padding-right: 3em;
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
 }
@@ -595,7 +591,7 @@ body {
 
 .page-excerpt-footer {
     height: 1.5em;
-    padding: .5em 3em 0em 3em;
+    padding: .5em 4em 0 4em;
 }
 
 .page-excerpt-footer>a {

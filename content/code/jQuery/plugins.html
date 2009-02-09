@@ -1,0 +1,66 @@
+{% extends "_code.html" %}
+{% hyde
+
+    title: Ajax Machine Plugins
+    created: 2009-02-09 10:10:42
+    licenses:
+        - MIT
+        - GPL
+    dependencies: 
+        - jQuery v1.2.6
+        - jQuery UI v1.6RC4
+        - jQuery Form Plugin v2.18
+    status: alpha
+    version: 0.1a
+%}
+{% block extra_extra_js %}
+	<script src="{{site.url}}/media/js/jquery.ui.inplaceModal.js" type="text/javascript" charset="utf-8"></script>
+	<script src="{{site.url}}/media/js/jquery.ui.ajaxMachine.js" type="text/javascript" charset="utf-8"></script>
+{% endblock %}
+{% block ready_function %}{% include "code/jQuery/_plugins_applier.html" %}{% endblock %}
+
+{% block article %}
+
+{% markdown %}
+
+### Overview ###
+
+{%article%}
+
+{% excerpt %}
+
+We have seen a basic Ajax machine and an Ajax machine with before and after events so far. This article introduces plugins. Plugins are special handlers for before and after events. Once registered with the Ajax Machine they receive before and after events for all actions. They can introspect the action and choose to execute or skip.
+
+{% endexcerpt %}
+
+{%endarticle%}
+
+### Demo ###
+
+This demo combines the previous two articles by providing an edit mode and a sort mode. Both the modes display an [in-place modal]({{site.url}}/code/jQuery/jquery-inplace-modal.html) to focus the user.
+
+{%endmarkdown%}
+
+{% include "code/jQuery/_plugins_demo.html" %}
+
+{%markdown%}
+
+        Note: The above code is for demonstration and does not really save anything.
+
+### Some Tidbits ###
+
+1. All plugins are called after any handlers that are registered for the action
+2. Plugin results determine if the next step (binding/changing state) is executed.
+
+#### Demo Example ####
+
+<pre name="code" class="javascript">
+$(function(){
+  {% include "code/jQuery/_plugins_applier.html" %}
+});
+</pre>
+
+{% include "code/jQuery/_ajax-machine-series.html" %}
+
+{% endmarkdown %}
+{% endblock %}
