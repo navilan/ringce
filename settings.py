@@ -83,6 +83,8 @@ CONTEXT = {
         {'name': 'Cocoa', 'disabled': True}
     ),
     'links': {
+        "py":"http://codespeak.net/py/dist/",
+        "setuptools":"http://pypi.python.org/pypi/setuptools",
         "WillLarson": "http://lethain.com/",
         "aym_cms": "http://aymcms.com/",
         "Django":"http://www.djangoproject.com/",
