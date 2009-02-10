@@ -386,23 +386,24 @@ body {
     background-color: #333;
     margin-left: .1em;
     font-family: Helvetica;
-    width: 3em;
+    width: 3.8em;
     height: 2em;
     padding-left: .2em;
-    padding-right: .2em;
 }
 
 #content-header span {
-    display: block;
-    float: right;
-    font-size: 0.50em;
-    margin-right: .1em;
-    margin-top: .5em;
+    font-size: .55em;
+    margin-right: .2em;
+    margin-top: 1em;
+    *margin-top: .5em;
+    margin-left: 0.5em;
+    float: left;
 }
 
 #content-header span.date-day {
     font-size: 1.5em;
-    margin-top: 0;
+    margin-top: .2em;
+    margin-left: 0;
     float: left;
 }
 
@@ -551,6 +552,8 @@ body {
 .overlay {
     background-color: #bcc;
     opacity: .3;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; 
+    filter: alpha(opacity=30);
     position: absolute;
     top: 0;
     left: 0;
@@ -666,3 +669,4 @@ span.social-badges li {
 }
 
 #post-content h2 { margin: 1em 0; }
+#content-header .date-badge span.date-year { margin-top: 0em; }

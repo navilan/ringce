@@ -12,7 +12,7 @@ inplaceModalPlugin = {
             $(widget.element).inplaceModal("hide");
         }
         return true;
-    },
+    }
 };
 
 makeSortable = function(widget){
@@ -36,7 +36,7 @@ $("#plugins_demo_container").ajaxMachine({
         view: {
             actions: [
                 $.ajaxAction("edit", "edit", {before:canEdit}),
-                $.ajaxAction("sort", "sort", {after:makeSortable}),        
+                $.ajaxAction("sort", "sort", {after:makeSortable})
             ]},
         edit: {actions: [$.ajaxAction("view", "view")]},
         sort: {actions: [$.ajaxAction("view", "view")]}
