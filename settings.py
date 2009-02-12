@@ -55,6 +55,9 @@ SITE_POST_PROCESSORS = {
             'sitemap_file':SITEMAP_FILE,
             'generator': SITEMAP_GENERATOR,
             
+        },
+        'hydeengine.site_post_processors.HtaccessGenerator' : {
+            'template' : '_htaccess'    
         }
     },
     'media/js/': {
