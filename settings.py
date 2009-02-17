@@ -30,6 +30,8 @@ DATETIME_FORMAT = "%Y-%m-%d %H:%M"
 
 # Extensions do not support wildcards.
 GENERATE_ABSOLUTE_FS_URLS = False
+GENERATE_CLEAN_URLS = True
+LISTING_PAGE_NAMES = ["ringce"]
 
 MEDIA_PROCESSORS = {
     '*':{ 
@@ -56,9 +58,6 @@ SITE_POST_PROCESSORS = {
             'generator': SITEMAP_GENERATOR,
             
         },
-        'hydeengine.site_post_processors.HtaccessGenerator' : {
-            'template' : '_htaccess'    
-        }
     },
     'media/js/': {
         'hydeengine.site_post_processors.FolderFlattener' : {
@@ -72,6 +71,7 @@ GIT_HUB = "http://github.com/lakshmivyas"
 TED = "http://www.ted.com/index.php/talks"
 
 CONTEXT = {
+    'GENERATE_CLEAN_URLS': GENERATE_CLEAN_URLS,
     'content':CONTENT_DIR,
     'groups':("Products", "Open Source", "Blog", "About"),
     'badge_selectors': {"badge-new": "#jquery"},
