@@ -18,6 +18,11 @@ BACKUP = False
 SITE_WWW_URL = "http://www.ringce.com"
 SITE_NAME = "Ringce"
 DATETIME_FORMAT = "%Y-%m-%d %H:%M"
+SITE_ROOT = "/"
+FILTER = {
+    "include" : (".htaccess",),
+    "exclude" : (".*", "*~")
+}
 
 # {folder : extension : (processors)}
 # The processors are run in the given order and are chained.
@@ -69,7 +74,6 @@ GIT_HUB = "http://github.com/lakshmivyas"
 TED = "http://www.ted.com/index.php/talks"
 
 CONTEXT = {
-    'content':CONTENT_DIR,
     'groups':("Products", "Open Source", "Blog", "About"),
     'badge_selectors': {"badge-new": "#jquery"},
     'products': (
@@ -157,5 +161,3 @@ INSTALLED_APPS = (
     'hydeengine',
     'django.contrib.webdesign',
 )
-
-
