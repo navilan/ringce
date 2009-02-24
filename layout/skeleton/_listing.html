@@ -2,9 +2,9 @@
 {% block content_header %}{% endblock %}
 {% block content_body %}
 <div class="page-listing">
-{% with page.node as node %}
+{% for node in page.node.walk %}
 {% include "skeleton/_innerlisting.html" %}
-{% endwith %}
+{% endfor %}
 </div>
 <div class="clear"></div>
 {% endblock %}

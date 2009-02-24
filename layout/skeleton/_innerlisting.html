@@ -17,21 +17,10 @@
             {%with list_page as page %}
             {% include "skeleton/_breadcrumbs.html" %}
             {%endwith%}
-            <a href="{{list_page.url}}">Read More...</a>
+            <a href="{{list_page.url}}">Read More ...</a>
         </div>
         {%endif%}
     </li>{%endif%}{% endifnotequal %}{% endfor %}
-</ul>
-<ul>
-{% with node as parent%}        
-{% for node in parent.children %}
-    <li class="node">
-{% block inner_listing %}
-    {% include "skeleton/_innerlisting.html" %}
-{% endblock %}        
-    </li>
-{% endfor %}
-{% endwith %}
 </ul>
 {%endspaceless%}
 {% endblock %}

@@ -6,10 +6,10 @@
 {% block extra_extra_js %}{% endblock %}
 <script type="text/javascript" charset="utf-8">
  $(function(){
-	dp.SyntaxHighlighter.ClipboardSwf = '{{site.url}}/media/flash/clipboard.swf';
-	dp.SyntaxHighlighter.HighlightAll('code');
-	{% block ready_function %}
-	{% endblock %}
+    dp.SyntaxHighlighter.ClipboardSwf = '{{site.url}}/media/flash/clipboard.swf';
+    dp.SyntaxHighlighter.HighlightAll('code');
+    {% block ready_function %}
+    {% endblock %}
 });
 </script>
 {% endblock %}
