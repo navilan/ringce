@@ -83,8 +83,10 @@ body {
 .home-content .tower, .home-content .platform {
     margin: 1em;
     background-color: #333;
-    -moz-border-radius: 1em;
-    -webkit-border-radius: 1em;
+    -moz-border-radius-bottomleft: 1em;
+    -webkit-border-bottom-left-radius: 1em;
+    -moz-border-radius-bottomright: 1em;
+    -webkit-border-bottom-right-radius: 1em;
 }
 
 .home-content .tower h2,
@@ -92,6 +94,7 @@ body {
     padding-top: .5em;
     text-align: center;
     border-bottom: 2px solid #649064;
+    background-color:#649064;
 }
 
 .home-content .tower h2 a,
