@@ -11,8 +11,7 @@
  <updated>{{now|xmldatetime}}</updated>
  <id>{{site.full_url}}</id>
  {% for node_page in page.node.walk_pages %}
- {% ifnotequal node_page page %}
- {% if not node_page.listing and not node_page.exclude %}
+ {% if node_page.display_in_list %}
  <entry>
    <title>{{node_page.title}}</title>
   <author><name>Lakshmi Vyas</name></author>
@@ -25,7 +24,6 @@
    </content>
  </entry>
  {%endif%}
- {%endifnotequal%}
  {% endfor %}
 </feed>
 {%endspaceless%}
