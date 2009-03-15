@@ -73,7 +73,7 @@ CONTEXT = {
         {'name': 'Shelved', 'disabled': True, 'image': "Shelved_128x128.png"},
         {'name': 'Goalce', 'disabled': False, 'image': "what2do.png"},
         {'name': 'Hyde', 'disabled':False, 'image': "hyde-icon.png"},
-        {'name': 'Unknown2', 'disabled':True, 'image': "blank.png"}),
+        {'name': 'Slammer', 'disabled':False, 'image': "Slammer-Icon2_128x128.png"}),
     'code_categories': (
         {'name': 'Python', 'disabled': True},
         {'name': 'jQuery', 'disabled': False},
@@ -92,6 +92,9 @@ CONTEXT = {
         "jQuery Form Plugin v2.18": "http://malsup.com/jquery/form/",
         "MIT": "http://www.opensource.org/licenses/mit-license.php",
         "GPL": "http://www.gnu.org/copyleft/gpl.html",
+        "Slammer": {
+            "Download": "http://idisk.mac.com/lakshmi.vyas-Public/releases/slammer/Slammer0.1.zip"
+        },
         "Hyde": {
             "Download": GIT_HUB + "/hyde/zipball/master",
             "Source": GIT_HUB + "/hyde",

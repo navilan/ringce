@@ -1,0 +1,96 @@
+            {% extends "skeleton/_root.html" %}
+{% hyde
+
+    title: Slammer
+    created: 2009-03-15 01:57:12
+
+%}
+
+{% block all %}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+    "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <title>Slammer</title>
+    <link rel="stylesheet" href="{{site.url}}/media/css/base.css" type="text/css" media="screen" charset="utf-8"/>
+    <link rel="stylesheet" href="{{site.url}}/media/css/slammer.css" type="text/css" media="screen" charset="utf-8"/>    
+</head>
+<body>
+  <div class="slammer-page">  
+    <div class="slammer-header">
+        <div class="slammer-logo">
+        <img                    
+        src="{{site.url}}/media/images/Slammer-Icon2_128x128.png"/>
+        </div>
+        <div class="heading">
+            <h1>Slammer</h1>
+            <div class="subtitle">Now, the matrix is everywhere.</div>
+        </div>
+        <div class="ringce-logo">
+            <a href="{{site.listing_url}}">
+                <img src="{{site.url}}/media/images/ringce-icon.png">
+            </a>    
+        </div>    
+    </div> 
+    <div class="slammer-bar">
+        <div class="slammer-info">
+            <span>Leopard Only</span>
+            <span class="slammer-download">
+                <a href="{{links.Slammer.Download}}">Free Download</a>
+            </span>
+            <span>Version: 0.1 Beta</span>
+        </div>    
+    </div> 
+    <div class="slammer-content">
+        <img class="cap" src="{{site.url}}/media/images/slammer-cap.png"/>
+        <div class="left-column">
+            <h2>Grid for any application</h2>
+            <p>
+                Designing a web page? <br/>
+                Designing for the Mac?<br/>
+                Designing an iPhone App?<br/>                      
+                
+                Run Slammer, drag the grid on top of any window. Push those pixels until they line up with the grid.
+            </p>
+        </div>
+        <div class="right-column">
+            <h2>Completely customizable</h2>
+            <p>
+            <ul>
+                <li>Change the background color and the grid color according to the application background so that the grid is prominent yet non-intrusive.</li>
+               <li>Change the grid dimensions to suit your applications.</li>
+            </ul></p>
+        </div>   
+        <div class="left-column">
+            <h2>Position it with ease</h2>
+            <p>
+               Slammer has excellent keyboard support for precise positioning and alignment. 
+               <ul>
+                   <li>Position the grid using the arrow keys.</li>
+                   <li>Resize the grid using shift + arrow keys.</li>
+            </p>
+        </div>
+        <div class="right-column">
+            <h2>Coming Soon...</h2>
+            <p><ul>
+                <li>Automatic positioning</li>
+                <li>Built in Ruler</li>
+                <li>Presets</li>                
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+ </div>   
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+    var pageTracker = _gat._getTracker("UA-322025-3");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+</body>
+</html>
+{% endblock %}

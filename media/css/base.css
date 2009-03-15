@@ -94,7 +94,7 @@ body {
     padding-top: .5em;
     text-align: center;
     border-bottom: 2px solid #649064;
-    background-color:#649064;
+    background-color: #649064;
 }
 
 .home-content .tower h2 a,
@@ -399,7 +399,7 @@ body {
     margin-right: .2em;
     margin-top: 1em;
     *margin-top: .5em;
-    margin-left: 0.5em;
+    margin-left: .5em;
     float: left;
 }
 
@@ -555,7 +555,7 @@ body {
 .overlay {
     background-color: #bcc;
     opacity: .3;
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=30)"; 
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
     filter: alpha(opacity=30);
     position: absolute;
     top: 0;
@@ -672,4 +672,4 @@ span.social-badges li {
 }
 
 #post-content h2 { margin: 1em 0; }
-#content-header .date-badge span.date-year { margin-top: 0em; }
+#content-header .date-badge span.date-year { margin-top: 0; }
