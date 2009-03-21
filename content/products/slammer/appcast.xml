@@ -19,6 +19,20 @@
       		length="2792980"
       		sparkle:dsaSignature="MC0CFGbLuaWSQiicp9bsSkSm5F7GyX3qAhUAgjy2KpVr3lKeIpwwsOZW4J6Q7Jw="
       	/>
+      </item>    
+      <item sparkle:minimumSystemVersion="10.5.6">
+      	<title>Version 0.2 Beta</title>
+      	  <sparkle:releaseNotesLink>
+      	    http://www.ringce.com/products/slammer/0.2.html
+      	  </sparkle:releaseNotesLink>
+	<pubDate>Sat, 21 Mar 2009 12:40:54 -0700</pubDate>
+      	<enclosure
+      		url="http://idisk.mac.com/lakshmi.vyas-Public/releases/slammer/Slammer0.2.zip"
+      		sparkle:version="0.2"            
+      		sparkle:shortVersionString="0.2 Beta"     
+      		type="application/octet-stream"
+    		length="2817434"
+    		sparkle:dsaSignature="MCwCFAxWjSEAGTfLGTHezc4SDphFx0TTAhRT7eLq6IUo7z2C5dXtidOglG5W9A=="      	/>
       </item>
    </channel>
 </rss>

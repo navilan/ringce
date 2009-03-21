@@ -93,7 +93,7 @@ CONTEXT = {
         "MIT": "http://www.opensource.org/licenses/mit-license.php",
         "GPL": "http://www.gnu.org/copyleft/gpl.html",
         "Slammer": {
-            "Download": "http://idisk.mac.com/lakshmi.vyas-Public/releases/slammer/Slammer0.1.zip"
+            "Download": "http://idisk.mac.com/lakshmi.vyas-Public/releases/slammer/Slammer0.2.zip"
         },
         "Hyde": {
             "Download": GIT_HUB + "/hyde/zipball/master",
