@@ -68,7 +68,7 @@ TED = "http://www.ted.com/index.php/talks"
 
 CONTEXT = {
     'groups':("Products", "Open Source", "Blog", "About"),
-    'badge_selectors': {"badge-new": "#jquery"},
+    'badge_selectors': {"badge-new": "#cocoa"},
     'products': (
         {'name': 'Shelved', 'disabled': True, 'image': "Shelved_128x128.png"},
         {'name': 'Goalce', 'disabled': False, 'image': "what2do.png"},
@@ -77,7 +77,7 @@ CONTEXT = {
     'code_categories': (
         {'name': 'Python', 'disabled': True},
         {'name': 'jQuery', 'disabled': False},
-        {'name': 'Cocoa', 'disabled': True}
+        {'name': 'Cocoa', 'disabled': False}
     ),
     'links': {
         "py":"http://codespeak.net/py/dist/",
@@ -102,6 +102,9 @@ CONTEXT = {
         "Ringce": {
             "Download": GIT_HUB + "/ringce/zipball/master",
             "Source": GIT_HUB + "/ringce"},
+        "lvcolorwellcell": {
+            "Download": GIT_HUB + "/lvcolorwellcell/zipball/master",
+            "Source": GIT_HUB + "/lvcolorwellcell"},
         "jquery-inplace-modal": {
             "Download": GIT_HUB + "/jquery-ui-inplace-modal/zipball/master",
             "Source": GIT_HUB + "/jquery-ui-inplace-modal"},

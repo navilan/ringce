@@ -1,0 +1,82 @@
+{% extends "_code.html" %}
+{% hyde
+
+    title: Color Well Cell
+    created: 2009-03-21 20:08:41
+    licenses:
+        - MIT
+    dependencies: 
+        - Garbage Collection
+    status: beta
+    version: 0.5b
+%}           
+
+{% block extra_extra_js %}
+
+<script language="javascript" src="{{site.url}}/media/js/shBrushObjC.js"></script>
+
+{% endblock %}
+
+{% block article %}
+
+{% markdown %}
+
+### What is it? ###
+
+{%article%}
+
+{% excerpt %}
+
+LVColorWellCell is a Cocoa NSActionCell derived class to allow displaying and picking colors from a Table View.
+
+{% endexcerpt %}
+
+{%endarticle%}
+
+### Usage without a Delegate ###
+1. Connect the table view to your Array Controller and bind the columns [like you always do](http://cocoadevcentral.com/articles/000080.php).
+2. Make sure that the `identifier` property is populated for the color column.
+![Interface Builder Identifier Property]({{site.url}}/media/images/lvcw_idproperty.gif)
+3. Add the following code to the `awakeFromNib` of your controller.
+<pre name="code" class="obj-c">
+//
+// Replace @"color" with the identifier you provided in step 2.
+//
+NSUInteger index = [colorTable columnWithIdentifier:@"color"];
+NSTableColumn * colorColumn = [[colorTable tableColumns] objectAtIndex:index];
+LVColorWellCell * colorCell = [[LVColorWellCell alloc] init];
+// This is the property name of the color value in the object/dictionary bound to the table view.
+[colorCell setColorKey:@"color"];
+[colorColumn setDataCell:colorCell];
+</pre>
+4. All Done. Your color wells should show and work nicely.
+
+### Usage with a Delegate ###
+
+Delegate support right now fairly basic. The delegate can choose to return the color and replace the color when the user interacts with the color picker after clicking on the cell. The following protocol(not enforced) should spell out the expected behavior.
+
+<pre name="code" class="obj-c">
+@protocol LVColorWellCellDelegate
+
+-(void)colorCell:(LVColorWellCell *)colorCell
+            setColor:(NSColor *)color
+            forRow:(int)row;
+
+-(NSColor *)colorCell:(LVColorWellCell *)colorCell
+            colorForRow:(int)row;
+
+@end
+
+</pre>
+
+Take a look at the [demo project]( {{links|value_for_key:page.page_name|value_for_key:"Source"}} ) for a complete and working example for using delegates.
+
+### Features in the back-burner ###
+
+* Interface Builder Palette
+* Enhanced delegation
+* More drawing styles(Border styles etc)
+
+
+{% endmarkdown %}
+{% endblock %}
