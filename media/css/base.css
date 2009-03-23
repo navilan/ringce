@@ -230,11 +230,11 @@ body {
 
 .badge-new {
     background-color: #333;
-    border: 1px solid #b9e3b5;
-    width: 10px;
-    height: 10px; 
+    border: 3px solid #b9e3b5;
+    width: 18px;
+    height: 18px; 
     -moz-border-radius: 10px;
-    -webkit-border-radius: 1px;
+    -webkit-border-radius: 10px;
 }
 
 .badge-uc {
@@ -491,9 +491,12 @@ body {
     position: absolute; 
 }
 
-.context-nav { right: 0;     font-variant: small-caps;  }
+.context-nav { right: 0;font-variant: small-caps;}
 .breadcrumbs li { float: left; }
-.context-nav a, .breadcrumbs a { color: #649064; }
+.context-nav a, .breadcrumbs a {
+     color: #649064; 
+     font-variant: small-caps;  
+}
 .context-nav a { margin-right: .5em; }
 
 #post-content {
