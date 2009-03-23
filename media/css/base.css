@@ -87,7 +87,7 @@ body {
 }   
 
 .feeds a SPAN{
-   padding:0.5em; 
+   padding:0.45em; 
    -moz-border-radius-bottomright: .5em;
    -webkit-border-bottom-right-radius: .5em;
    -moz-border-radius-topright: .5em;
