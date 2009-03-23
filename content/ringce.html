@@ -11,7 +11,7 @@
 $(function(){
 	{% for badge, selector in badge_selectors.items %}
 	$("{{selector}}").badge({
-		offset: {left: -20, top:-20},
+		offset: {left: 1, top:5},
 		cssClass: '{{badge}}'
 	});
 	{% endfor %}
