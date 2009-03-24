@@ -75,25 +75,40 @@ body {
 .feeds a{
     display:block;
     text-decoration:none; 
-    height: 2em;
-    padding: .2em;
-    margin: .2em;
+    height: 1.4em;
+    padding: .3em;
+    margin: .3em;
+    -moz-border-radius-bottomleft: .5em;
+    -webkit-border-bottom-left-radius: .5em;
+    -moz-border-radius-topleft: .5em;
+    -webkit-border-top-left-radius: .5em;      
+    background-color: #649064;
 }       
 
 .feeds IMG,
-.feeds SPAN{   
+.feeds SPAN{
+    padding-top:.1em;   
     display:block;
-    float: left;     
+    float: left;
+    margin-top:.1em;
 }   
 
 .feeds a SPAN{
-   padding:0.45em; 
-   -moz-border-radius-bottomright: .5em;
-   -webkit-border-bottom-right-radius: .5em;
-   -moz-border-radius-topright: .5em;
-   -webkit-border-top-right-radius: .5em;
-   background-color: #649064;
    width:3em; 
+}             
+
+.feeds a IMG{
+    background-color:#333;
+    padding: .1em;
+    margin-top:0;
+}
+
+.feeds a:hover SPAN{
+    color:#b9e3b5;
+}
+
+.feeds a:hover IMG{
+    background-color:#b9e3b5;
 }
 
 #header img { max-width: 90%; }
