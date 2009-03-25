@@ -1,4 +1,4 @@
-            {% extends "skeleton/_root.html" %}
+{% extends "skeleton/_root.html" %}
 {% hyde
 
     title: Slammer
@@ -14,13 +14,27 @@
 <head>
     <title>Slammer</title>
     <link rel="stylesheet" href="{{site.url}}/media/css/base.css" type="text/css" media="screen" charset="utf-8"/>
-    <link rel="stylesheet" href="{{site.url}}/media/css/slammer.css" type="text/css" media="screen" charset="utf-8"/>    
+    <link rel="stylesheet" href="{{site.url}}/media/css/slammer.css" type="text/css" media="screen" charset="utf-8"/>  
+    <link rel="stylesheet" type="text/css" href="{{site.url}}/media/css/jquery.lightbox-0.5.css" media="screen" />    
+    <script type="text/javascript" src="{{site.url}}/media/js/jquery.js"></script>    
+    <script type="text/javascript" src="{{site.url}}/media/js/jquery.lightbox-0.5.pack.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('.lb').lightBox({
+             imageLoading:'{{site.url}}/media/images/lightbox-ico-loading.gif',      
+                imageBtnPrev:'{{site.url}}/media/images/lightbox-btn-prev.gif',         
+                imageBtnNext:'{{site.url}}/media/images/lightbox-btn-next.gif',         
+                imageBtnClose:'{{site.url}}/media/images/lightbox-btn-close.gif',        
+                imageBlank:'{{site.url}}/media/images/lightbox-blank.gif',            
+        });
+    });
+    </script>
 </head>
 <body>
   <div class="slammer-page">  
     <div class="slammer-header">
-        <div class="slammer-logo">
-        <img                    
+        <div class="slammer-logo">  
+          <img                    
         src="{{site.url}}/media/images/Slammer-Icon2_128x128.png"/>
         </div>
         <div class="heading">
@@ -39,21 +53,54 @@
             <span class="slammer-download">
                 <a href="{{links.Slammer.Download}}">Free Download</a>
             </span>
-            <span>Version: 0.2 Beta</span>
+            <span>Version: 0.3 Beta</span>
         </div>    
     </div> 
     <div class="slammer-content">
-        <img class="cap" src="{{site.url}}/media/images/slammer-cap.png"/>
+        <div class="left-column">   
+            <p>
+                <a href="{{site.url}}/media/images/slammer-cap.png" class="lb">
+                    <img class="cap" src="{{site.url}}/media/images/slammer-cap.png"/></a>
+                    </p>
+        </div>    
         <div class="left-column">
             <h2>Grid for any application</h2>
             <p>
-                Designing a web page? <br/>
-                Designing for the Mac?<br/>
-                Designing an iPhone App?<br/>                      
-                
-                Run Slammer, drag the grid on top of any window. Push those pixels until they line up with the grid.
+                <h3>Are you:</h3>       
+                <p>
+                    Designing a web page? <br/>
+                    Designing for the Mac?<br/>
+                    Designing an iPhone App?<br/>         
+                </p>
+                <h3>You need Slammer.</h3>      
+                <p>
+                    Generate a grid.<br/> 
+                    Drag the grid on top of your design tool.<br/> 
+                    Push those pixels until they line up with the grid.
+                <p>
             </p>
         </div>
+        <div class="right-column">
+            <h2>What are they saying?</h2>
+<p>            <ul>
+                <li>
+                    <a href="http://twitter.com/mattwiebe">
+                    mattwiebe</a>: If you design with grids and use a Mac, you should definitely be using Slammer...Intensely useful.
+                </li>
+                <li> 
+                    <a href="http://twitter.com/carlrafting">
+                    carlrafting</a>: Wowzer: Slammer
+                </li>                                     
+                <li>
+                    <a href="http://twitter.com/dubsak">                    
+                    dubsak</a>: Slammer - Put a grid over any window. This just made life a little nicer...
+                </li> 
+                <li>
+                    <a href="http://twitter.com/aisleone">
+                    aisleone</a>: A simple but very useful Mac OS X app that superimposes a customizable grid over any window
+                </li>    
+            </ul>
+</p>        </div>
         <div class="right-column">
             <h2>Completely customizable</h2>
             <p>
@@ -62,6 +109,7 @@
                <li>Change the grid dimensions to suit your applications.</li>
                <li>Add multiple grids for fine tuning your design.</li>
                <li>Save your favorite grids as presets for future use.</li>
+               <li>Share your grids with other designers.</li>
             </ul></p>
         </div>   
         <div class="left-column">
@@ -79,10 +127,16 @@
                 <li>Automatic positioning</li>
                 <li>Built in Ruler</li>
             </ul>
-        </div>
+        </div>                      
         <div class="clear"></div>
     </div>
  </div>   
+ <div class="slammer-footer">
+     <a href="http://twitter.com/friendships/create/lakshmivyas">
+         <img src="{{site.url}}/media/images/followme.gif">
+      </a>
+      <a href="http://getsatisfaction.com/ringce"><img alt="Badge_logo_small" src="http://getsatisfaction.com/images/badges/badge_logo_small.png" /></a>
+ </div>    
     <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
