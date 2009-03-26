@@ -24,7 +24,7 @@
         <item sparkle:minimumSystemVersion="10.5.6">
             <title>Version 0.3 Beta</title>
             <sparkle:releaseNotesLink>
-                http://www.ringce.com/products/slammer/0.3.html
+                http://site.ringce.com/products/slammer/0.3.html
               </sparkle:releaseNotesLink>
 	          <pubDate>Wed, 25 Mar 2009 15:00:33 -0700</pubDate>      
             <enclosure url="http://idisk.mac.com/lakshmi.vyas-Public/releases/slammer/Slammer0.3.zip" sparkle:version="0.3" sparkle:shortVersionString="0.3 Beta" type="application/octet-stream" length="2817434" sparkle:dsaSignature="MC4CFQCfxbrV6NbvEw+9lkCh1CPSOuG+PQIVAIVT2O8O0yaXS9hldXY78HLqKvE5" />

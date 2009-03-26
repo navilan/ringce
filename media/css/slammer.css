@@ -13,21 +13,26 @@ h3{
 }
 
 .slammer-page{    
-    width: 1000px;    
+    width: 1005px;    
     margin: 0 auto;        
 }
 
 .slammer-header {
-    height: 10em;
+    height: 11.3em;
     background-color: #333;
     text-align:center;
+}                         
+
+.slammer-header .slam{
+   float: left;                                            
+   width: 30em; 
+   border: 1em solid #333;  
+   border-top:0;
 }
 
 .slammer-header .heading {
-    float: left;
     background: #FFF url(/media/images/slammer-gridbg.png);
     padding: 1em 0;
-    width: 32em;  
 }
 
 .slammer-header h1 {
@@ -42,38 +47,43 @@ h3{
 
 .slammer-header .slammer-logo {
     float: left;
-    margin: 2em 3.65em;
+    padding:1.6em 2em;
+    width: 11.45em;
 }   
 
 .slammer-header .ringce-logo{
-    padding: 1.5em 0;
-}
+    float:left;
+    padding: 1em 1.5em;
+    width: 11.45em;
 
-.slammer-bar {
-    background-color: #333;
-    height: 2.2em;
 }
 
 .slammer-info {
     background-color: #649064;
     height: 2.2em;
-    width: 32em;
+    width: 30em;
     margin: 0 auto;
 }
 
 .slammer-info span {
     display: block;
     float: left;
-    margin: 0 1em;
+    margin: 0;
     padding: .5em;
     color: #b9e3b5;
+    text-align:center;
+    width: 8em;
 }
 
-.slammer-info .slammer-download { font-weight: bold; }
+.slammer-info .slammer-download { 
+    font-weight: bold; 
+    width: 10em;
+}
 
 .slammer-content {
     border: 1px solid #333;    
     padding:2em;
+    padding-top:3em;
     background: #b9e3b5; 
 }
 

@@ -31,18 +31,18 @@ handlers:
   mime_type: text/css
   upload: media/css/(.*)\.syn
 
-- url: /(.*?)/([^\.\/]*).xml
+- url: /(.*?)/([^\/]*).xml
   static_files: \1/\2.xml
-  upload: (.*?)/([^\.\/]*).xml      
+  upload: (.*?)/([^\/]*).xml      
   
-- url: /(.*?)/([^\.\/]*).html
+- url: /(.*?)/([^\/]*).html
   static_files: \1/\2.html 
-  upload: (.*?)/([^\.\/]*).html
+  upload: (.*?)/([^\/]*).html
 
-- url: /([^\.\/]*)/?
+- url: /([^\/]*)/?
   static_files: \1/\1.html 
-  upload: ([^\.\/]*)/([^\.\/]*).html
+  upload: ([^\.\/]*)/([^\/]*).html
 
-- url: /(.*?)/([^\.\/]*)/?
+- url: /(.*?)/([^\/]*)/?
   static_files: \1/\2/\2.html 
-  upload: (.*?)/([^\.\/]*)/([^\.\/]*).html
+  upload: (.*?)/([^\/]*)/([^\/]*).html
