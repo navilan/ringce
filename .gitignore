@@ -3,3 +3,4 @@ deploy_tmp
 deploy
 backups
 *.log
+*esproj

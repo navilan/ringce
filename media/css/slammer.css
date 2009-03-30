@@ -1,67 +1,108 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
 body {
-    background-color: #649064;
-    color: #333;
-    font-family:"Helvetica", "Helvetica Nueue", Verdana, Arial;
-} 
-
-h2{
-    color: #649064;
-}             
-
-h3{
-  padding-left:.5em;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
 }
 
+/* remember to define focus styles! */
+:focus {
+	outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+	text-decoration: none;
+}
+del {
+	text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    background-color: #4D804D;
+    color: #333;
+    font-family: "Helvetica";
+} 
+
 .slammer-page{    
-    width: 1005px;    
+    width: 960px;    
     margin: 0 auto;        
 }
 
 .slammer-header {
-    height: 11.3em;
+    height: 171px;
     background-color: #333;
     text-align:center;
 }                         
 
 .slammer-header .slam{
    float: left;                                            
-   width: 30em; 
-   border: 1em solid #333;  
+   width: 480px; 
+   border: 30px solid #649064;     
    border-top:0;
-}
-
-.slammer-header .heading {
-    background: #FFF url(/media/images/slammer-gridbg.png);
-    padding: 1em 0;
+   border-bottom:0;
+   background-color:#333;  
 }
 
 .slammer-header h1 {
-    font-size: 5em;
-    border-bottom: .1em solid #333;
+    padding-top:38px;
+    font-size: 96px;
+    height: 100px;
+    background: #FFF url(/media/images/slammer-gridbg.png);
 }
 
 .slammer-header .subtitle {
-    color: #333;
-    font-size: 1.5em;
-}
+    color: #649064;
+    font-size: 16px;
+    padding: 8px; 
+    height: 18px; 
+    font-variant:small-caps;
+    letter-spacing: 1px;
+}                            
 
 .slammer-header .slammer-logo {
     float: left;
-    padding:1.6em 2em;
-    width: 11.45em;
+    width: 180px; 
+    padding: 20px;
 }   
 
 .slammer-header .ringce-logo{
-    float:left;
-    padding: 1em 1.5em;
-    width: 11.45em;
-
-}
+    float: left;
+    width: 180px; 
+    padding:10px 10px;
+}   
 
 .slammer-info {
     background-color: #649064;
-    height: 2.2em;
-    width: 30em;
+    height: 33px;
+    width: 480px;
     margin: 0 auto;
 }
 
@@ -69,68 +110,126 @@ h3{
     display: block;
     float: left;
     margin: 0;
-    padding: .5em;
+    padding: 8px 0;
     color: #b9e3b5;
     text-align:center;
-    width: 8em;
+    width: 140px;
 }
 
 .slammer-info .slammer-download { 
-    font-weight: bold; 
-    width: 10em;
+    background-color: #333;    
+    width: 200px;
+}
+
+.slammer-info .slammer-download a{
+    color: #b9e3b5; 
+    letter-spacing:2px;
 }
 
 .slammer-content {
     border: 1px solid #333;    
-    padding:2em;
-    padding-top:3em;
-    background: #b9e3b5; 
-}
-
-.slammer-content  .cap{    
-    margin: 0 auto;  
-    width:22em;   
-    margin-top:1.5em;
-}               
-
-.slammer-content ul{
-    margin-left: 2em;  
-}
-
-.slammer-content a{
-    color:#b9e3b5;
+    padding: 20px;
+    padding-top: 60px;    
+    background: #b9e3b5;
+    width: 918px; 
+    height: 670px;
 }
 
 .slammer-content h2{
-    background: #649064;
-    color:#333;
+    background: #333;
+    color:#b9e3b5;
+    letter-spacing: 2px;
+    font-weight:normal;
+    font-size: 16px;   
+    text-align:center;
     margin:0;  
-    padding: 0.5em 0 0 0.5em;     
+    padding: 10px 0;      
+}   
+ 
+.slammer-column{
+    color: #333;
+    background-color: #649064; 
+    float: left;
+    width: 297px;
+    height: 670px;
+    line-height: 20px;
+    font-size: 12px;
+    margin: 0; 
+    padding: 0;
+    overflow:hidden;
+}
+
+#slammer-presets img,
+#slammer-screenshots img{
+    margin: 15px 5px;     
+    padding: 1px;  
+    height: 64px;
+}  
+#slammer-presets img:hover,
+#slammer-screenshots img:hover{
+    background-color: #b9e3b5;
+}
+
+#slammer-screenshots,
+#slammer-presets{
+    width: 160px;
+    border-right:1px solid #333;        
+}
+
+#slammer-presets,
+#slammer-screenshots{
+   border-left:1px solid #333;            
 }   
 
-.right-column,
-.left-column{
-    color:#649064;
-    background-color:#333; 
-    float:left;
-    width:24.2em;
-    height: 24em;
-    line-height: 2em;
-    font-size:0.8em;
-    -moz-border-radius: 0px;
-    -webkit-border-radius: 0px;  
-    margin:0; 
-    border: 1px solid #b9e3b5;
-    padding:0;
-}                
+#slammer-presets .download{
+}                         
 
-.right-column p,
-.left-column p{            
+#slammer-presets .download IMG{
+    height:64px; 
+    background-color:#333;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    margin-left: 32px;
+}   
+
+#slammer-features,
+#slammer-overheard{
+    border:0;
+}              
+
+#slammer-features li{
+    height: 120px;
+}
+
+#slammer-overheard li,
+#slammer-features li{
+  background-color: #b9e3b5;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  margin: 12px;
+  padding: 10px;
+}                     
+
+#slammer-overheard h3,
+#slammer-features h3{
+    text-align: center;
+    padding: 5px;
+}
+
+#slammer-overheard a{
+    color: #333; 
+    font-weight:bold;
+}
+
+.slammer-column p{            
     padding-left:1em;
     padding-right:1em;
 }
 
-.slammer-footer{    
-    padding:0.5em;
+.slammer-footer{  
+    width: 960px;
+    margin: 0 auto;  
+    padding: 8px 0;
     text-align:center;
+    background-color:#333;
 }
