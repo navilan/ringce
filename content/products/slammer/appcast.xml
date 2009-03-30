@@ -34,8 +34,8 @@
             <sparkle:releaseNotesLink>
                 http://site.ringce.com/products/slammer/0.4.html
               </sparkle:releaseNotesLink>
-	          <pubDate>Mon, 30 Mar 2009 09:31:20 -0700</pubDate> 
-            <enclosure url="http://idisk.mac.com/lakshmi.vyas-Public/releases/slammer/Slammer0.3.zip" sparkle:version="0.4" sparkle:shortVersionString="0.4 Beta" type="application/octet-stream" length="3147096" sparkle:dsaSignature="MC0CFAaf7oeWHaef1FNui3d1Wt7oU/dPAhUAlTzAgHCFss6zgF99RB8nB4ZFAjE="/>
+            <pubDate>Mon, 30 Mar 2009 09:48:33 -0700</pubDate>
+            <enclosure url="http://idisk.mac.com/lakshmi.vyas-Public/releases/slammer/Slammer0.3.zip" sparkle:version="0.4" sparkle:shortVersionString="0.4 Beta" type="application/octet-stream" length="3147097" sparkle:dsaSignature="MCwCFCkFKo76NWG4M39pn9Z5qWeWV4xSAhRPl/74Dxh9LOi/kanFMwbfaVw3iA=="/>
         </item>
     </channel>
 </rss>
