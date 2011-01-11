@@ -1,0 +1,23 @@
+a {
+    color: @glowing;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px @clear;
+    &:hover {
+        color: @darker;
+        text-decoration: underline;
+        text-shadow: 0px 1px -1px @clear;
+    }
+}
+
+body{
+    font-family: @text-font;
+    color: @darker;
+    background-color: @dark;
+}
+
+.subheading{
+    font-family: @subheading-font;
+    font-size: @gutter * 2;
+    font-weight: normal;
+    color: @darkest;
+}

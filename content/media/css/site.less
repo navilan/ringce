@@ -2,35 +2,13 @@
 @import 'inc/measures';
 @import 'inc/colors';
 @import 'inc/mixins';
+@import 'inc/common';
 @import 'inc/layout';
 @import 'inc/text';
 @import 'inc/controls';
 @import 'inc/base.css';
 @import 'inc/tweet';
 
-a {
-    color: @glowing;
-    text-decoration: none;
-    text-shadow: 0px 1px 0px @clear;
-    &:hover {
-        color: @darker;
-        text-decoration: underline;
-        text-shadow: 0px 1px -1px @clear;
-    }
-}
-
-body{
-    font-family: @text-font;
-    color: @darker;
-    background-color: @dark;
-}
-
-.subheading{
-    font-family: @subheading-font;
-    font-size: @gutter * 2;
-    font-weight: normal;
-    color: @darkest;
-}
 
 hgroup#banner{
     margin-bottom: @gutter * 6 + 4;

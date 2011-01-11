@@ -34,7 +34,7 @@
             {{ resource.meta.about|markdown|typogrify }}
         </section>
         {% endblock about %}
-        <small>Sculpted with Slammer. Smelted with Hyde. Copyright &copy; Ringce, 2008 - 2011.</small>
+        <small>{{ resource.meta.footnote|markdown|typogrify }}</small>
         {% endblock rfooter %}
     </footer>
 

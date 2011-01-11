@@ -13,8 +13,17 @@ meta:
         useful and beautiful city of Chennai.
 
         The name Ringce is intentionally mistyped
-        and inspired by the _Miyamoto Mushashi_ book
-        _The five rings_.
+        and inspired by [Miyamoto Mushashi][MM]'s
+        [The five rings][FR].
+        [MM]:http://en.wikipedia.org/wiki/Miyamoto_Musashi
+        [FR]:http://www.amazon.com/Book-Five-Rings-Miyamoto-Musashi/dp/1590308913
+
+    footnote: |
+        Sculpted with [Slammer][]. Smelted with [Hyde][]. Copyright &copy; Ringce, 2008-2011.
+        [Slammer]: /slammer
+        [Hyde]: /hyde
+
+
 plugins:
     - hyde.ext.plugins.meta.MetaPlugin
     - hyde.ext.plugins.auto_extend.AutoExtendPlugin

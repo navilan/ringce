@@ -31,7 +31,12 @@ body{
         padding-left: @gutter * 2;
         font-variant: italic;
         font-size: small;
-        text-shadow: @dark 0px 1px -2px;
+        text-shadow: @dark 0px 1px 0px;
+
+        a {
+            text-shadow: 1px 0px 0px @shade;
+            color: @qdark;
+        }
     }
 }
 
