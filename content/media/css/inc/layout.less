@@ -1,0 +1,25 @@
+body{
+    width: @totalwidth;
+}
+
+.pane{
+    height: 1200px;
+    float:left;
+    padding: 0 @gutter * 2 + 2;
+}
+
+#leftpane{
+    width: @pane1 - @gutter * 7;
+    background-color: @clear;
+   .boxshadow(@gutter, @gutter, @gutter * 2, @shade);
+   .pane;
+   border-left: @gutter dashed @dark;
+   padding-left: @gutter * 3;
+   margin-left: @gutter * -1/2;
+   .radius(@gutter);
+}
+
+#rightpane{
+    width: @pane2 - @gutter * 4;
+    .pane;
+}

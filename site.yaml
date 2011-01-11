@@ -1,0 +1,19 @@
+mode: development
+media_root:: media
+media_url: /media
+base_url: /
+template: hyde.ext.jinja2
+meta:
+    author: Lakshmi Vyas
+    twitter: http://twitter.com/lakshmivyas
+plugins:
+    - hyde.ext.plugins.meta.MetaPlugin
+    - hyde.ext.plugins.auto_extend.AutoExtendPlugin
+    - hyde.ext.plugins.less.LessCSSPlugin
+    - hyde.ext.plugins.blockdown.BlockdownPlugin
+    - hyde.ext.plugins.sorter.SorterPlugin
+less:
+    app: ~/local/bin/lessc
+markdown:
+    extensions:
+        - def_list

@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block main %}
+<div id="leftpane">
+    {% block leftpane %}
+    <header>
+        {% block lheader %}
+        <hgroup id="banner">
+            <h1>Ringce</h1>
+            <h2>Software Organs for Modern Humans
+        </hgroup>
+        {% endblock %}</header>
+    <div id="lcontent"><article>{% block lcontent %}{% endblock %}</article></div>
+    <footer>{% block lfooter %}{% endblock %}</footer>
+    {% endblock %}
+</div>
+<div id="rightpane">
+    {% block rightpane %}
+    <header>
+        {% block rheader %}
+        {% block twitter %}
+        <div class="tweet">
+        </div>
+         <br class="clear"/>
+        {% endblock %}
+        {% endblock %}
+    </header>
+    <div id="rcontent">
+        {% block rcontent %}{% endblock %}
+    </div>
+    <footer>
+        {% block rfooter %}
+        {% block about %}
+        {% filter typogrify %}
+        {% markdown %}
+# About Ringce
+
+<aside>
+Ringce is an intentionally mistyped name inspired
+by the Miyamoto Mushashi book The five rings.
+
+It's an extremely small software company focussed
+on simple, useful and beautiful software, inside and
+outside.
+
+Ringce is based out of an equally simple, useful and
+beautiful city of chennai in southern India.
+</aside>
+        {% endmarkdown %}
+        {% endfilter %}
+        {% endblock %}
+        {% endblock %}
+    </footer>
+    {% endblock %}
+</div>
+<br class="clear"/>
+{% endblock %}
+
+{% block js %}
+
+{{ super() }}
+
+<script src="{{ media_url('js/jquery.tweet.js') }}"
+        type="text/javascript"></script>
+
+<script type="text/javascript">
+$(function(){
+     $(".tweet").tweet({username:'lakshmivyas'});
+});
+</script>
+
+{% endblock %}

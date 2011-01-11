@@ -1,9 +1,0 @@
-[submodule "media/js/jquery-ui-badge"]
-	path = media/js/jquery-ui-badge
-	url = git@github.com:lakshmivyas/jquery-ui-badge.git
-[submodule "media/js/jquery-ui-ajax-machine"]
-	path = media/js/jquery-ui-ajax-machine
-	url = git@github.com:lakshmivyas/jquery-ui-ajax-machine.git
-[submodule "media/js/jquery-ui-inplace-modal"]
-	path = media/js/jquery-ui-inplace-modal
-	url = git@github.com:lakshmivyas/jquery-ui-inplace-modal.git
