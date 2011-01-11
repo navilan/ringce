@@ -9,16 +9,15 @@
 @import 'inc/tweet';
 
 a {
-    color: @darkest;
-    text-decoration: underline;
+    color: @glowing;
+    text-decoration: none;
     text-shadow: 0px 1px 0px @clear;
+    &:hover {
+        color: @darker;
+        text-decoration: underline;
+        text-shadow: 0px 1px -1px @clear;
+    }
 }
-
-a:hover {
-    color: @darker;
-    text-shadow: 0px 1px -1px @clear;
-}
-
 
 body{
     font-family: @text-font;
@@ -28,80 +27,85 @@ body{
 
 .subheading{
     font-family: @subheading-font;
-    font-size: 24px;
+    font-size: @gutter * 2;
     font-weight: normal;
     color: @darkest;
 }
 
 hgroup#banner{
     margin-bottom: @gutter * 6 + 2;
+
+    h1{
+        margin-top: 1px;
+        font-family: @heading-font;
+        font-size: 64px;
+        line-height: @gutter * 10;
+        color: @darker;
+        text-shadow: 2px 1px 1px @darker;
+        .heading;
+    }
+
+    h2{
+        .subheading;
+    }
 }
 
-hgroup#banner h1{
-    margin-top: @gutter * 2 + 1;
-    font-family: @heading-font;
-    font-size: 64px;
-    line-height: @gutter * 10;
-    color: @darker;
-    text-shadow: 2px 1px 1px @darker;
-    .heading;
+
+#rightpane {
+
+    header, footer{
+        margin-top: @gutter * 2;
+        .boxshadow(-4px, 4px, 6px, @shade);
+        background-color: @light;
+        display:block;
+    }
+
+    aside{
+        font-weight: 300;
+        line-height: 24px;
+        padding: @gutter @gutter * 2;
+
+        p{
+            padding: @gutter / 2;
+        }
+    }
+
+    h1, dt{
+        .subheading;
+        padding: 16px 16px 0;
+        .boxshadow(-3px, -4px, 4px, @shade);
+        margin:0;
+        border-bottom: 1px solid @shade;
+        line-height: 44px;
+    }
+    
 }
 
-hgroup#banner h2{
-    .subheading;
-}
 
-#rightpane header,
-#rightpane footer{
-    margin-top: @gutter * 4;
-    .boxshadow(-4px, 4px, 6px, @shade);
-    background-color: @light;
-    display:block;
-}
+#products {
 
-#products{
-    margin-top: @gutter * 5;
+    margin-top: @gutter * 2;
     .boxshadow(-4px, -4px, 6px, @shade);
     background-color: @light;
-}
 
-#rightpane h1,
-#products dt{
-    .subheading;
-    padding: 16px 16px 0;
-    .boxshadow(-3px, -4px, 4px, @shade);
-    margin:0;
-    border-bottom: 1px solid @shade;
-    line-height: 44px;
-}
+    p, ul {
+        margin-bottom: @gutter;
+    }
 
-#rightpane aside{
-    font-weight: 300;
-    line-height: 24px;
-    padding: @gutter @gutter * 2;
-}
+    dd{
+        font-weight: 300;
+        padding: 16px;
+        line-height: 24px;
+        padding-bottom: @gutter * 2 - @gutter / 2 + 2;
+    }
 
-#rightpane aside p{
-    padding: @gutter / 2;
-}
-
-#products dd{
-    font-weight: 300;
-    padding: 16px;
-    line-height: 24px;
-    padding-bottom: @gutter * 2 - @gutter / 2;
-}
-
-#products p,  #products ul {
-    margin-bottom: @gutter;
-}
-
-#products img {
-    float:left;
-    vertical-align:center;
-    margin-top: @gutter;
-    margin-bottom: @gutter;
-    margin-right: @gutter * 3;
+    img {
+        float:left;
+        vertical-align:center;
+        margin-top: @gutter;
+        margin-bottom: @gutter;
+        margin-right: @gutter * 3;
+    }
 }
 
 @import 'inc/media.css';

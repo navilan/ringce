@@ -6,12 +6,29 @@
 .tweet li{
     overflow: hidden;
     line-height: @gutter * 2;
-    padding: @gutter;
+    padding: 0 @gutter * 2;
 }
 
 .tweet{
     .boxshadow(-3px, -4px, 4px, @shade);
-    background: url(@twitterbird) no-repeat left top;
-    padding: @gutter * 1.5 @gutter * 2 0;
+    background: url(@twitterbird) no-repeat -6px -7px;
     font-weight: 300;
+    min-height: 96px;
+    padding: @gutter * 1.5 0 0;
+}
+
+.tweet_time{
+    background-color: @dark;
+    padding: 2px 4px 0;
+    .radius(4px);
+    a {
+        color: @clear;
+        text-shadow: none;
+
+        &:hover{
+            color: @light;
+            text-shadow: none;
+            text-decoration: none;
+        }
+    }
 }

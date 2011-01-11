@@ -1,30 +1,31 @@
 .nohover-button, .nohover-button:visited,
 .button, .button:visited {
-    background: @shade;
+    background: @dark;
     padding: 5px 10px 6px;
     color: @clear;
     text-decoration: none;
     .radius(5px);
-    .boxshadow(0, 1px, 3px, rgba(0,0,0,0.5));
-    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
-    border-bottom: 1px solid rgba(0,0,0,0.25);
+    .boxshadow(0, 1px, 3px, @qdark);
+    text-shadow: 0 -1px 1px @qdark;
+    border-bottom: 1px solid @qdark;
     .clickable;
-}  
-
-.button:hover {
-    background-color: @glowing;
-    color: @light;
-}
-
-.button:active {
-    top: 1px;
+    
+    &:hover {
+        background-color: @glowing;
+        color: @light;
+        text-shadow: 0 -1px 1px @qdark;
+    }
+    
+    &:active {
+        top: 1px;
+    }
 }
 
 .button, .button:visited {
     font-size: 13px;
     font-weight: bold;
     line-height: 1;
-    text-shadow: 0 -1px 1px rgba(0,0,0,0.25);
+    text-shadow: 0 -1px 1px @qdark;
 }     
 
 .huge-button{
