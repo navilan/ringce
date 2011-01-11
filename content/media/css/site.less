@@ -33,15 +33,12 @@ body{
 }
 
 hgroup#banner{
-    margin-bottom: @gutter * 6 + 2;
+    margin-bottom: @gutter * 6 + 4;
 
     h1{
-        margin-top: 1px;
         font-family: @heading-font;
-        font-size: 64px;
-        line-height: @gutter * 10;
-        color: @darker;
-        text-shadow: 2px 1px 1px @darker;
+        font-size: @gutter * 5;
+        line-height: @gutter * 10 + 2;
         .heading;
     }
 
@@ -54,18 +51,21 @@ hgroup#banner{
 #rightpane {
 
     header, footer{
-        margin-top: @gutter * 2;
-        .boxshadow(-4px, 4px, 6px, @shade);
-        background-color: @light;
-        display:block;
+        section{
+            padding-bottom: @gutter;
+            margin-top: @gutter * 2 - 1;
+            .boxshadow(-4px, 4px, 6px, @shade);
+            background-color: @light;
+            display:block;
+        }
     }
 
     aside{
         font-weight: 300;
-        line-height: 24px;
-        padding: @gutter @gutter * 2;
+        line-height: @gutter * 2;
+        padding: @gutter - 1 @gutter * 2;
 
-        p{
+        p {
             padding: @gutter / 2;
         }
     }
@@ -76,15 +76,19 @@ hgroup#banner{
         .boxshadow(-3px, -4px, 4px, @shade);
         margin:0;
         border-bottom: 1px solid @shade;
-        line-height: 44px;
+        line-height: @gutter * 4 - @gutter * 0.25;
     }
-    
+
+    footer section p{
+        font-size: normal;
+        padding: @gutter * 1.5 - 1 @gutter * 2;
+    }
 }
 
 
 #products {
 
-    margin-top: @gutter * 2;
+    margin-top: @gutter + @gutter / 2;
     .boxshadow(-4px, -4px, 6px, @shade);
     background-color: @light;
 
@@ -93,10 +97,9 @@ hgroup#banner{
     }
 
     dd{
-        font-weight: 300;
-        padding: 16px;
-        line-height: 24px;
-        padding-bottom: @gutter * 2 - @gutter / 2 + 2;
+        margin-top: 1px;
+        padding: @gutter * 1.25 @gutter * 2;
+        padding-bottom: @gutter * 2 - 1 - @gutter / 2 + 2;
     }
 
     img {

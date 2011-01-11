@@ -6,6 +6,15 @@ template: hyde.ext.jinja2
 meta:
     author: Lakshmi Vyas
     twitter: http://twitter.com/lakshmivyas
+    about: |
+        Ringce is a small software company focussed on
+        simple, useful and beautiful software, inside &
+        outside. Ringce is based out of an equally simple,
+        useful and beautiful city of Chennai.
+
+        The name Ringce is intentionally mistyped
+        and inspired by the _Miyamoto Mushashi_ book
+        _The five rings_.
 plugins:
     - hyde.ext.plugins.meta.MetaPlugin
     - hyde.ext.plugins.auto_extend.AutoExtendPlugin

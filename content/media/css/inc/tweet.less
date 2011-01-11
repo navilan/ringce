@@ -5,8 +5,7 @@
 
 .tweet li{
     overflow: hidden;
-    line-height: @gutter * 2;
-    padding: 0 @gutter * 2;
+    padding: 0 @gutter * 2 @gutter;
 }
 
 .tweet{
@@ -18,17 +17,22 @@
 }
 
 .tweet_time{
-    background-color: @dark;
-    padding: 2px 4px 0;
+    font-size: @gutter;
+    position: absolute;
+    background-color: @qdark;
+    padding: 1px 4px 0;
     .radius(4px);
     a {
         color: @clear;
         text-shadow: none;
-
         &:hover{
             color: @light;
             text-shadow: none;
             text-decoration: none;
         }
     }
+}
+
+.tweet_text{
+    padding-left: @gutter * 10;
 }

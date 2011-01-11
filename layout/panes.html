@@ -6,51 +6,39 @@
         {% block lheader %}
         <hgroup id="banner">
             <h1>Ringce</h1>
-            <h2>Software Organs for Modern Humans
+            <h2>Software Organs for Modern Humans</h2>
         </hgroup>
-        {% endblock %}</header>
+        {% endblock lheader %}
+    </header>
     <div id="lcontent"><article>{% block lcontent %}{% endblock %}</article></div>
     <footer>{% block lfooter %}{% endblock %}</footer>
-    {% endblock %}
+    {% endblock leftpane %}
 </div>
 <div id="rightpane">
     {% block rightpane %}
     <header>
-        {% block rheader %}
-        {% block twitter %}
-        <div class="tweet">
-        </div>
-         <br class="clear"/>
-        {% endblock %}
-        {% endblock %}
+        {% block rheader %}{% block twitter %}
+        <section>
+        <div class="tweet"></div>
+        </section>
+        <br class="clear"/>
+        {% endblock twitter %}{% endblock rheader %}
     </header>
     <div id="rcontent">
-        {% block rcontent %}{% endblock %}
+        {% block rcontent %}{% endblock rcontent %}
     </div>
     <footer>
-        {% block rfooter %}
-        {% block about %}
-        {% filter typogrify %}
-        {% markdown %}
-# About Ringce
-
-<aside>
-Ringce is an intentionally mistyped name inspired
-by the Miyamoto Mushashi book The five rings.
-
-It's an extremely small software company focussed
-on simple, useful and beautiful software, inside and
-outside.
-
-Ringce is based out of an equally simple, useful and
-beautiful city of chennai in southern India.
-</aside>
-        {% endmarkdown %}
-        {% endfilter %}
-        {% endblock %}
-        {% endblock %}
+        {% block rfooter %}{% block about %}
+        <section id="about">
+            <h1>About Ringce</h1>
+            {{ resource.meta.about|markdown|typogrify }}
+        </section>
+        {% endblock about %}
+        <small>Sculpted with Slammer. Smelted with Hyde. Copyright &copy; Ringce, 2008 - 2011.</small>
+        {% endblock rfooter %}
     </footer>
-    {% endblock %}
+
+    {% endblock rightpane %}
 </div>
 <br class="clear"/>
 {% endblock %}
