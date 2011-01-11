@@ -1,22 +1,27 @@
-@heading-font: "anivers-sc-1","anivers-sc-2", Helvetica, Arial, sans-serif;
+@heading-font: "anivers-1","anivers-2", Helvetica, Arial, sans-serif;
 @subheading-font: "anivers-1","anivers-2", Helvetica, Arial, sans-serif;
-@text-font: "museo-1", "museo-2", Georgia, serif;
+@text-font: "anivers-1","anivers-2", Helvetica, Arial, sans-serif;
+@caps-font: "anivers-1","anivers-2", Helvetica, Arial, sans-serif;
 
 .heading{
-    color: @dark;
-    text-shadow: @darkest 0px 1px -1px;
+    color: @clear - 40;
+/*    text-shadow: @darkest 0px 1px -1px;*/
+    text-shadow: -1px -1px 0px @clear - 90, 1px 1px 0px @clear + 90;
 }
 
 body{
     font-size: @gutter + 4;
     line-height: @gutter * 2;
-    font-weight: 300;
+    font-weight: normal;
 }
 
 .amp {
     font-family: Baskerville, Palatino, "Book Antiqua", serif;
-    font-style: italic;
     line-height: 75%;
+}
+
+.caps, .sc {
+    font-family: @caps-font;
 }
 
 /* These selection declarations have to be separate.

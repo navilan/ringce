@@ -1,5 +1,6 @@
 body{
     width: @totalwidth;
+    min-height: 1200px;
 }
 
 .pane{
@@ -36,6 +37,31 @@ body{
         a {
             text-shadow: 1px 0px 0px @shade;
             color: @qdark;
+        }
+    }
+}
+
+footer nav{
+    position: fixed;
+    font-size: @gutter * 3;
+    bottom: 0;
+    color: @dark - 20;
+    height: @gutter * 5;
+    @padding-left: @gutter * 5;
+    z-index: -10;
+    li {
+        display:inline;
+        font: @heading-font;
+        text-shadow: -1px -1px 0px @dark - 40, 1px 1px 0px @dark + 40;
+        &:before {
+            content: "/";
+            color: @shade;
+            text-shadow: 1px 1px 0px @darkest;
+            padding: 0 @gutter * 2 0 @gutter;
+        }
+
+        &:first-child:before {
+            content: "";
         }
     }
 }
