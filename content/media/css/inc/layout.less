@@ -16,14 +16,15 @@
 }
 
 #leftpane{
-    width: @pane1 - @gutter * 7;
     background-color: @clear;
+    width: @pane1 - @gutter * 7;
    .boxshadow(@gutter, @gutter, @gutter * 2, @shade);
    .pane;
    padding-left: @gutter * 3;
    padding-top: @gutter;
    margin-top: @gutter * -1;
    .radiusBottom(@gutter);
+   margin-right: @gutter * 3;
 }
 
 #rightpane{
@@ -46,35 +47,29 @@
     }
 }
 
-footer nav{
-    position: fixed;
-    font-size: @gutter * 3;
-    bottom: 0;
-    height: @gutter * 3;
-    z-index: -10;
-/*    border-top: @gutter / 2 solid @dark + 10;
-    border-bottom: @gutter / 2 solid @dark + 10;
-*/    padding-top: @gutter;
+header nav{
+    font-size: @gutter * 1.5;
+    padding-top: @gutter;
     li {
         display:inline;
         padding:0;
         margin:0;
         a {
             font: @heading-font;
-            text-shadow: -1px -1px 0px @dark - 40, 1px 1px 0px @dark + 40;
-            color: @dark - 20;
+            text-shadow: -1px -1px 0px @clear - 40, 1px 1px 0px @clear + 40;
+            color: @shade;
 
             &:hover {
-                color: @dark + 10;
+                color: @dark;
                 text-decoration: none;
-                text-shadow: -1px -1px 0px @dark - 40, 1px 1px 0px @dark + 20;
+                text-shadow: -1px -1px 0px @clear - 20, 1px 1px 0px @clear + 20;
             }
         }
         &:before {
             content: "/";
             color: @shade;
             text-shadow: 1px 1px 0px @darkest;
-            padding: 0 @gutter * 2 0 @gutter;
+            padding: 0 @gutter 0 0;
         }
 
         &:first-child:before {
