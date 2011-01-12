@@ -1,10 +1,15 @@
-body{
-    width: @totalwidth;
+#body{
     min-height: 1200px;
 }
 
+#container{
+    width: @totalwidth;
+    margin: 0 auto @gutter * 8;
+    background-color: @dark;
+}
+
 .pane{
-    min-height: 1080px;
+    min-height: 1100px;
     float:left;
     padding: 0 @gutter * 2 + 2;
     margin: 2px 0 0;
@@ -15,25 +20,25 @@ body{
     background-color: @clear;
    .boxshadow(@gutter, @gutter, @gutter * 2, @shade);
    .pane;
-   border-left: @gutter dashed @dark;
    padding-left: @gutter * 3;
-   margin-left: @gutter * -1/2;
-   .radius(@gutter);
+   padding-top: @gutter;
+   margin-top: @gutter * -1;
+   .radiusBottom(@gutter);
 }
 
 #rightpane{
     width: @pane2 - @gutter * 4;
     .pane;
-
+    position: relative;
     footer small{
+        position: absolute;
         display:block;
-        padding-top: @gutter;
+        width: @pane2 - @gutter * 4;
+        bottom: 0;
         color: @qdark;
-        padding-left: @gutter * 2;
-        font-variant: italic;
         font-size: small;
+        text-align: center;
         text-shadow: @dark 0px 1px 0px;
-
         a {
             text-shadow: 1px 0px 0px @shade;
             color: @qdark;
@@ -45,14 +50,26 @@ footer nav{
     position: fixed;
     font-size: @gutter * 3;
     bottom: 0;
-    color: @dark - 20;
-    height: @gutter * 5;
-    @padding-left: @gutter * 5;
+    height: @gutter * 3;
     z-index: -10;
+/*    border-top: @gutter / 2 solid @dark + 10;
+    border-bottom: @gutter / 2 solid @dark + 10;
+*/    padding-top: @gutter;
     li {
         display:inline;
-        font: @heading-font;
-        text-shadow: -1px -1px 0px @dark - 40, 1px 1px 0px @dark + 40;
+        padding:0;
+        margin:0;
+        a {
+            font: @heading-font;
+            text-shadow: -1px -1px 0px @dark - 40, 1px 1px 0px @dark + 40;
+            color: @dark - 20;
+
+            &:hover {
+                color: @dark + 10;
+                text-decoration: none;
+                text-shadow: -1px -1px 0px @dark - 40, 1px 1px 0px @dark + 20;
+            }
+        }
         &:before {
             content: "/";
             color: @shade;
@@ -61,7 +78,11 @@ footer nav{
         }
 
         &:first-child:before {
+            display:none;
             content: "";
+            margin:0
+            padding: 0;
+            width:0;
         }
     }
 }
