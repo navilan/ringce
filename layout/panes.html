@@ -24,23 +24,23 @@
 <div id="rightpane">
     {% block rightpane %}
     <header>
-        {% block rheader %}{% block twitter %}
-        <section>
-        <div class="tweet"></div>
+        {% block rheader %}{% block about %}
+        <section id="about">
+            <h1>About Ringce</h1>
+            {{ resource.meta.about|markdown|typogrify }}
         </section>
-        <br class="clear"/>
-        {% endblock twitter %}{% endblock rheader %}
+        {% endblock about %}{% endblock rheader %}
     </header>
     <div id="rcontent">
         {% block rcontent %}{% endblock rcontent %}
     </div>
     <footer>
-        {% block rfooter %}{% block about %}
-        <section id="about">
-            <h1>About Ringce</h1>
-            {{ resource.meta.about|markdown|typogrify }}
+        {% block rfooter %}{% block twitter %}
+        <section>
+        <div class="tweet"></div>
         </section>
-        {% endblock about %}
+        <br class="clear"/>
+        {% endblock twitter %}
         <small>{{ resource.meta.footnote|markdown|typogrify }}</small>
         {% endblock rfooter %}
     </footer>

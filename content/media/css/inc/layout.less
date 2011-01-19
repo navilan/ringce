@@ -9,28 +9,33 @@
 }
 
 .pane{
-    min-height: 1100px;
+    min-height: 1136px;
     float:left;
-    padding: 0 @gutter * 2 + 2;
-    margin: 2px 0 0;
 }
 
 #leftpane{
     background-color: @clear;
-    width: @pane1 - @gutter * 7;
    .boxshadow(@gutter, @gutter, @gutter * 2, @shade);
    .pane;
-   padding-left: @gutter * 3;
-   padding-top: @gutter;
-   margin-top: @gutter * -1;
+   padding: 0 0 0 @column;
+   width: @pane1 - (@column + @gutter * 3);
    .radiusBottom(@gutter);
-   margin-right: @gutter * 3;
 }
 
+.rightbox{
+    .box{
+        .boxshadow(-4px, 4px, 6px, @shade);
+        display:block;
+    }
+}
+
+
+
 #rightpane{
-    width: @pane2 - @gutter * 4;
     .pane;
     position: relative;
+    margin-left: @column + @gutter * 2;
+    width: @totalwidth - @pane1 - @column - @gutter;
     footer small{
         position: absolute;
         display:block;
@@ -49,27 +54,33 @@
 
 header nav{
     font-size: @gutter * 1.5;
-    padding-top: @gutter;
+    line-height: @gutter * 3 + 1;
+    background-color: @dark;
+    .boxshadow(2px, 2px, 2px, @shade);
+    margin: 0 3px @gutter / 2 @column * -1 + 2px;
+    padding: @gutter / 2 0 0 @column;
     li {
         display:inline;
         padding:0;
         margin:0;
         a {
             font: @heading-font;
-            text-shadow: -1px -1px 0px @clear - 40, 1px 1px 0px @clear + 40;
-            color: @shade;
+            text-shadow: -1px -1px 0px @dark - 40, 1px 1px 0px @dark + 40;
+            color: @clear;
 
             &:hover {
-                color: @dark;
+                color: @shade;
                 text-decoration: none;
-                text-shadow: -1px -1px 0px @clear - 20, 1px 1px 0px @clear + 20;
+                text-shadow: -1px -1px 0px @dark - 20, 1px 1px 0px @dark + 20;
             }
         }
         &:before {
             content: "/";
+            font-weight: bold;
+            font-size: @gutter * 2px;
             color: @shade;
-            text-shadow: 1px 1px 0px @darkest;
-            padding: 0 @gutter 0 0;
+            text-shadow: 1px 1px 0px @dark - 20, 1px 1px 0px @dark + 20;
+            padding: 0 @gutter;
         }
 
         &:first-child:before {

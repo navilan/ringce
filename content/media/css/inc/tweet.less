@@ -11,21 +11,18 @@
 .tweet{
     .boxshadow(-3px, -4px, 4px, @shade);
     background: url(@twitterbird) no-repeat -6px -7px;
-    min-height: 96px;
+    min-height: @gutter * 7;
     padding: @gutter * 1.5 0 0;
 }
 
 .tweet_time{
     font-size: @gutter;
     position: absolute;
-    background-color: @qdark;
-    padding: 1px 4px 0;
-    .radius(4px);
     a {
-        color: @clear;
+        color: @shade;
         text-shadow: none;
         &:hover{
-            color: @light;
+            color: @glowing;
             text-shadow: none;
             text-decoration: none;
         }
@@ -33,5 +30,7 @@
 }
 
 .tweet_text{
+    display: inline-block;
     padding-left: @gutter * 10;
+    font-size: @gutter;
 }
