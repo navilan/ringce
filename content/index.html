@@ -14,8 +14,21 @@ Hello!
 <div id="products">
 {% filter typogrify %}
 {% markdown %}
+Hyde - static hotness
+:   ![{@class=logo} Hyde logo]({{ media_url('images/art/hyde-logo-128.png') }})
+
+    Hyde is a powerful, extensible & elegant static website
+    generator written in python.
+
+    Hyde supports several template languages including jinja2 & django.
+
+<div class="buttonbar">
+ <a class="button" href="/hyde.html">Learn more&hellip;</a>
+ <a class="button" href="http://github.com/hydepy/hyde">View Source&hellip;</a>
+</div>
+
 Slammer - gorgeous grids
-:   ![{@class=logo} Slammer logo]({{ media_url('images/art/slammer-logo.png') }})
+:   ![{@class=logo} Slammer logo]({{ media_url('images/art/slammer-logo-128.png') }})
 
     Slammer gives you any grid you want, anywhere you want.
 
@@ -26,19 +39,6 @@ Slammer - gorgeous grids
 <div class="buttonbar">
     <a class="button" href="/slammer.html">Learn more&hellip;</a>
     <a class="button" href="/slammer/download.html">Download</a>
-</div>
-
-Hyde - static hotness
-:   ![{@class=logo} Hyde logo]({{ media_url('images/art/hyde-logo-small.png') }})
-
-    Hyde is a powerful, extensible & elegant static website
-    generator written in python.
-
-    Hyde supports several template languages including jinja2 & django.
-
-<div class="buttonbar">
- <a class="button" href="/hyde.html">Learn more&hellip;</a>
- <a class="button" href="http://github.com/hydepy/hyde">View Source&hellip;</a>
 </div>
 {% endmarkdown %}
 {% endfilter %}
