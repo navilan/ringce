@@ -9,7 +9,7 @@
 }
 
 .pane{
-    min-height: 1136px;
+    min-height: 1148px;
     float:left;
 }
 
@@ -34,14 +34,15 @@
 #rightpane{
     .pane;
     position: relative;
+    margin-top: @column;
     margin-left: @column + @gutter * 2;
     width: @totalwidth - @pane1 - @column - @gutter;
     footer small{
         position: absolute;
         display:block;
-        width: @pane2 - @gutter * 4;
-        bottom: 0;
-        color: @qdark;
+        width: 100%;
+        bottom: @gutter * 3.25;
+        color: @totalwidth - @pane1 - @column - @gutter;
         font-size: small;
         text-align: center;
         text-shadow: @dark 0px 1px 0px;

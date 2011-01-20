@@ -14,8 +14,8 @@ hgroup#banner{
     margin-bottom: @gutter * 4 + 2;
     padding-bottom: @gutter * 2;
     h1{
-        background: transparent url({{ media_url('images/art/ringce-logo.png') }}) no-repeat left center;
-        padding-left: @column + @gutter;
+        /*background: transparent url({{ media_url('images/art/ringce-logo.png') }}) no-repeat left center;
+                padding-left: @column + @gutter;*/
         font-family: @heading-font;
         font-size: @gutter * 5;
         line-height: @gutter * 10;
@@ -30,6 +30,15 @@ hgroup#banner{
 
 #rightpane {
 
+    .logo {
+        float:left;
+        vertical-align:center;
+        margin-top: @gutter;
+        margin-bottom: @gutter;
+        width: 128px;
+        margin-right: @gutter;
+    }
+
     header, footer{
         margin: @gutter 0;
         background-color: @clear;
@@ -37,7 +46,7 @@ hgroup#banner{
         padding:0;
     }
 
-   
+
     h1, dt{
         .subheading;
         padding: @gutter * 1.25 @gutter * 2 2px;
@@ -54,7 +63,7 @@ hgroup#banner{
             padding: @gutter @gutter * 2;
         }
     }
-    
+
     footer{
         margin-top: @gutter * 1.75;
         small{
@@ -78,16 +87,7 @@ hgroup#banner{
 
     dd{
         padding: @gutter @gutter * 2;
-        padding-bottom: @gutter * 2 - 1 - @gutter / 2 + 2;
-    }
-
-    img {
-        float:left;
-        vertical-align:center;
-        margin-top: @gutter;
-        margin-bottom: @gutter;
-        width: 128px;
-        margin-right: @gutter;
+        padding-bottom: @gutter / 2 + 1;
     }
 }
 

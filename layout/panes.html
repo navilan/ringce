@@ -27,7 +27,9 @@
         {% block rheader %}{% block about %}
         <section id="about">
             <h1>About Ringce</h1>
-            {{ resource.meta.about|markdown|typogrify }}
+            {% filter typogrify %}{% markdown %}
+            {% include "blurbs/about.md" %}
+            {% endmarkdown %}{% endfilter %}
         </section>
         {% endblock about %}{% endblock rheader %}
     </header>
@@ -39,9 +41,12 @@
         <section>
         <div class="tweet"></div>
         </section>
-        <br class="clear"/>
         {% endblock twitter %}
-        <small>{{ resource.meta.footnote|markdown|typogrify }}</small>
+        <small>
+        {% filter typogrify %}{% markdown %}
+        {% include "blurbs/footnote.md" %}
+        {% endmarkdown %}{% endfilter %}
+        </small>
         {% endblock rfooter %}
     </footer>
 
