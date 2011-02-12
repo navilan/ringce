@@ -1,4 +1,3 @@
-mode: development
 media_root:: media
 media_url: /media
 base_url: /
@@ -7,15 +6,21 @@ meta:
     author: Lakshmi Vyas
     twitter: http://twitter.com/lakshmivyas
     footnote: |
-        
-
-
+context:
+    data:
+        in_development_node: false
 plugins:
+    - hyde.ext.plugins.folders.FlattenerPlugin
     - hyde.ext.plugins.meta.MetaPlugin
     - hyde.ext.plugins.auto_extend.AutoExtendPlugin
     - hyde.ext.plugins.less.LessCSSPlugin
     - hyde.ext.plugins.blockdown.BlockdownPlugin
     - hyde.ext.plugins.sorter.SorterPlugin
+    - hyde.ext.plugins.grouper.GrouperPlugin
+    - hyde.ext.plugins.markings.MarkingsPlugin
+    - hyde.ext.plugins.markings.ReferencePlugin
+    - hyde.ext.plugins.syntext.SyntextPlugin
+    - hyde.ext.plugins.textlinks.TextlinksPlugin
 less:
     app: ~/local/bin/lessc
 markdown:

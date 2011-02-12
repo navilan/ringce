@@ -1,5 +1,5 @@
 ===
-extends: panes.html
+extends: panes.j2
 title: Ringce - Software organs for modern humans
 ===
 ===lcontent===
@@ -11,24 +11,24 @@ Hello!
 ===/lcontent===
 
 ===rcontent===
+
 <div id="products">
 {% filter typogrify %}
 {% markdown %}
 Hyde - static hotness
-:   ![{@class=logo} Hyde logo]({{ media_url('images/art/hyde-logo-128.png') }})
+:   ![{@class=logo} Hyde logo]([[!!images/art/hyde-logo-128.png]])
 
     Hyde is a powerful, extensible & elegant static website
     generator written in python.
 
     Hyde supports several template languages including jinja2 & django.
 
-<div class="buttonbar">
- <a class="button" href="/hyde.html">Learn more&hellip;</a>
- <a class="button" href="http://github.com/hydepy/hyde">View Source&hellip;</a>
-</div>
+    {{ widgets.buttons(
+        [('/hyde', 'Learn more&hellip;'),
+        ('http://github.com/hyde/hyde', 'View Source&hellip;')]) }}
 
 Slammer - gorgeous grids
-:   ![{@class=logo} Slammer logo]({{ media_url('images/art/slammer-logo-128.png') }})
+:   ![{@class=logo} Slammer logo]([[!!images/art/slammer-logo-128.png]])
 
     Slammer gives you any grid you want, anywhere you want.
 
@@ -36,10 +36,10 @@ Slammer - gorgeous grids
     you to create intricate grids and overlay them on top of any
     application.
 
-<div class="buttonbar">
-    <a class="button" href="/slammer.html">Learn more&hellip;</a>
-    <a class="button" href="/slammer/download.html">Download</a>
-</div>
+    {{ widgets.buttons(
+        [('/slammer.html', 'Learn more&hellip;'),
+        ('/slammer/download.html', 'Download')]) }}
+
 {% endmarkdown %}
 {% endfilter %}
 </div>

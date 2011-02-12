@@ -1,0 +1,7 @@
+{% macro buttons(button_list, bar=True) -%}
+{% if bar -%}<div class="buttonbar">{%- endif %}
+{% for link, label in button_list -%}
+<a class="button" href="{{ link }}">{{ label }}</a>
+{%- endfor %}
+{% if bar -%}</div>{%- endif %}
+{%- endmacro %}

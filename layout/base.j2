@@ -6,7 +6,7 @@
 <!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
 <head>
-  {% block starthead %}{% endblock starthead %}
+  {% block starthead scoped %}{% endblock starthead %}
   <meta charset="{{ resource.meta.charset|default('utf-8') }}">
 
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
@@ -18,79 +18,70 @@
   <!-- meta element for compatibility mode needs to be before all elements except title & meta msdn.microsoft.com/en-us/library/cc288325(VS.85).aspx -->
   <!-- Chrome Frame is only invoked if meta element for compatibility mode is within the first 1K bytes code.google.com/p/chromium/issues/detail?id=23003 -->
 
-  <title>{% block title %}{{ resource.meta.title }}{% endblock %}</title>
+  <title>{% block title scoped %}{{ resource.meta.title }}{% endblock %}</title>
   <meta name="description" content="{{ resource.meta.description }}">
   <meta name="author" content="{{ resource.meta.author }}">
 
   <!--  Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="{{ page.meta.viewport|default('width=device-width, initial-scale=1.0') }}">
 
-  {% block favicons %}
+  {% block favicons scoped %}
   <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
   <link rel="shortcut icon" href="{{ media_url('/favicon.ico') }}">
   <link rel="apple-touch-icon" href="{{ media_url('/apple-touch-icon.png') }}">
   {% endblock favicons %}
 
-  {% block typekit %}
+  {% block typekit scoped %}
     <script type="text/javascript" src="http://use.typekit.com/hyw1bsz.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   {% endblock %}
 
-  {% block css %}
+  {% block css scoped %}
   <!-- CSS : implied media="all" -->
   <link rel="stylesheet" href="{{ media_url('css/site.css') }}">
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
   {% endblock css %}
 
-  {% block headjs %}
+  {% block headjs scoped %}
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
     <script src="{{ media_url('js/libs/modernizr-1.6.min.js') }}"></script>
   {% endblock headjs %}
-  {% block endhead %}{% endblock endhead %}
+  {% block endhead scoped %}{% endblock endhead %}
 </head>
 <body id="{{ resource.id if resource.id else resource.name_without_extension }}">
-  {% block content %}
+  {% block content scoped %}
+  {% import "widgets.j2" as widgets -%}
   <div id="container">
-      {% block container %}
+      {% block container scoped %}
       <div id="main" role="main">
-          {% block main %}{% endblock main %}
+          {% block main scoped %}{% endblock main %}
       </div>
       <footer>
     </footer>
     {% endblock container %}
   </div> <!--! end of #container -->
   {% endblock content%}
-  {% block js %}
+  {% block js scoped %}
   <!-- Javascript at the bottom for fast page loading -->
-  {% block jquery %}
+  {% block jquery scoped %}
   <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"></script>
   <script>!window.jQuery && document.write(unescape('%3Cscript src="{{ media_url('js/libs/jquery-1.4.4.js') }}"%3E%3C/script%3E'))</script>
   {% endblock jquery %}
 
-  {% block scripts %}
+  {% block scripts scoped %}
   <!-- scripts concatenated and minified via ant build script-->
 
   <!-- end concatenated and minified scripts-->
   {% endblock scripts %}
 
-  {% block pngfix %}
-  <!--[if lt IE 7 ]>
-    <script>
-      // More information on tackling transparent PNGs for IE goo.gl/mZiyb
-      //fix any <img> or .png_bg background-images
-      $.getScript("{{ media_url('js/libs/dd_belatedpng.js') }}",function(){ DD_belatedPNG.fix('img, .png_bg'); });
-    </script>
-  <![endif]-->
-  {% endblock pngfix %}
-
-  {% block debug %}
-  {% include "devmode.html" %}
+  {% block debug scoped %}
+  {% include "devmode.j2" %}
   {% endblock debug %}
 
-  {% block analytics %}
-  {% include "analytics.html" %}
+  {% block analytics scoped %}
+  {% include "analytics.j2" %}
   {% endblock analytics %}
 
   {% endblock js %}
