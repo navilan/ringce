@@ -1,0 +1,185 @@
+@import 'inc/reset.css';
+@import 'inc/measures';
+@import 'inc/colors';
+@import 'inc/mixins';
+@import 'inc/common';
+@import 'inc/text';
+@import 'inc/controls';
+@import 'inc/colophon';
+@import 'inc/base.css';
+@import 'inc/tweet';
+
+#body{
+    min-height: 1200px;
+}
+
+#container{
+    width: @totalwidth;
+    margin: 0 auto @gutter * 8;
+    background-color: @dark;
+}
+
+.pane{
+    min-height: 1148px;
+    float:left;
+}
+
+#leftpane{
+    background-color: @clear;
+   .boxshadow(@gutter, @gutter, @gutter * 2, @shade);
+   .pane;
+   padding: 0 0 0 @column;
+   width: @pane1 - (@column + @gutter * 3);
+   .radiusBottom(@gutter);
+}
+
+.rightbox{
+    .box{
+        .boxshadow(-4px, 4px, 6px, @shade);
+        display:block;
+    }
+}
+
+
+
+#rightpane{
+    .pane;
+    position: relative;
+    margin-top: @column;
+    margin-left: @column + @gutter * 2;
+    width: @totalwidth - @pane1 - @column - @gutter;
+}
+
+footer .colophon{
+    position: absolute;
+    display:block;
+    width: 100%;
+    bottom: @gutter * 3.25;
+    color: @totalwidth - @pane1 - @column - @gutter;
+    font-size: small;
+    text-align: center;
+    text-shadow: @dark 0px 1px 0px;
+    a {
+        text-shadow: 1px 0px 0px @shade;
+        color: @darker;
+    }
+}
+
+header nav{
+    font-size: @gutter * 1.5;
+    line-height: @gutter * 3 + 1;
+    background-color: @dark;
+    .boxshadow(2px, 2px, 2px, @shade);
+    margin: 0 3px @gutter / 2 @column * -1 + 2px;
+    padding: @gutter / 2 0 0 @column;
+    li {
+        display:inline;
+        padding:0;
+        margin:0;
+        a {
+            font: @heading-font;
+            text-shadow: -1px -1px 0px @dark - 40, 1px 1px 0px @dark + 40;
+            color: @clear;
+            text-decoration: none;
+
+            &:hover {
+                color: @shade;
+                text-decoration: none;
+                text-shadow: -1px -1px 0px @dark - 20, 1px 1px 0px @dark + 20;
+            }
+        }
+        &:before {
+            content: "/";
+            font-weight: bold;
+            font-size: @gutter * 2px;
+            color: @shade;
+            text-shadow: 1px 1px 0px @dark - 20, 1px 1px 0px @dark + 20;
+            padding: 0 @gutter;
+        }
+
+        &:first-child:before {
+            display:none;
+            content: "";
+            margin:0
+            padding: 0;
+            width:0;
+        }
+    }
+}
+
+hgroup#banner{
+    margin-bottom: @gutter * 4 + 2;
+    padding-bottom: @gutter * 2;
+    h1{
+        font-family: @heading-font;
+        font-size: @gutter * 5;
+        line-height: @gutter * 10;
+        .heading;
+    }
+
+    h2{
+        .subheading;
+    }
+}
+
+
+#rightpane {
+
+    .logo {
+        float:left;
+        vertical-align:center;
+        margin-top: @gutter;
+        margin-bottom: @gutter;
+        width: 128px;
+        margin-right: @gutter;
+    }
+
+    header, footer{
+        margin: @gutter 0;
+        background-color: @clear;
+        .rightbox .box;
+        padding:0;
+    }
+
+
+    h1, dt{
+        .subheading;
+        padding: @gutter * 1.25 @gutter * 2 2px;
+        .boxshadow(-3px, -4px, 4px, @shade);
+        margin:0;
+        border-bottom: 1px solid @clear - 10;
+        line-height: @gutter * 4;
+    }
+
+    header section{
+        padding-bottom: @gutter;
+        margin-bottom: @gutter * 1.5;
+        p {
+            padding: @gutter @gutter * 2;
+        }
+    }
+
+    footer{
+        margin-top: @gutter * 1.75;
+    }
+}
+
+#products {
+
+    margin-top: @gutter + @gutter / 2;
+    .boxshadow(-4px, -4px, 6px, @shade);
+    background-color: @clear;
+
+    p, ul {
+        margin: 0;
+        padding: 0;
+        margin-bottom: @gutter;
+    }
+
+    dd{
+        padding: @gutter @gutter * 2;
+        padding-bottom: @gutter / 2 + 1;
+    }
+}
+
+@import 'inc/media.css';

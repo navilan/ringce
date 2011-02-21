@@ -1,0 +1,54 @@
+{% extends "base.j2" %}
+{% block css %}
+<link rel="stylesheet" href="{{ media_url('css/slammer.css') }}" type="text/css">
+{% endblock %}
+
+{% block main %}
+<div id="pane">
+    <header id="banner">
+        <hgroup>
+            <h1>Slammer</h1>
+            <h2>Any grid you want, anywhere you want</h2>
+        </hgroup>
+    </header>
+    <article class="clearfix">
+    {% block copy -%}{%- endblock %}
+    </article>
+    <footer>
+        <section>
+            <div class="tweet"></div>
+        </section>
+    </footer>
+</div>
+<br class="clear"/>
+<footer>
+    <small class="colophon">{% includetext "blurbs/footnote.md" %}</small>
+</footer>
+{% endblock %}
+
+{% block endjs %}
+
+{{ super() }}
+
+<script type="text/javascript">
+
+head('jquery', function(){
+
+    head.js({tweet: "{{ media_url('js/jquery.tweet.js') }}"});
+
+    head('tweet', function(){
+        $(".tweet").tweet({
+            template: function(info){
+              return info["user"] + info["join"] + info["text"];
+            },
+            username:'slammerapp',
+            count: 3,
+            fav: true
+        });
+    });
+
+});
+
+</script>
+
+{% endblock %}

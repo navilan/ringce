@@ -8,7 +8,7 @@ meta:
     footnote: |
 context:
     data:
-        in_development_node: false
+        in_production_mode: true
 plugins:
     - hyde.ext.plugins.folders.FlattenerPlugin
     - hyde.ext.plugins.meta.MetaPlugin
@@ -26,3 +26,4 @@ less:
 markdown:
     extensions:
         - def_list
+        - headerid

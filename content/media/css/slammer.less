@@ -1,0 +1,87 @@
+@import 'inc/reset.css';
+@import 'inc/measures';
+@import 'inc/colors';
+@import 'inc/mixins';
+@import 'inc/common';
+@import 'inc/text';
+@import 'inc/controls';
+@import 'inc/colophon';
+@import 'inc/tweet';
+@import 'inc/base.css';
+
+body{
+    min-height: 1224px;
+}
+
+.tweet{
+    box-shadow: none;
+    width: @column * 13;
+    margin-top: @column;
+    
+    a{
+        text-shadow: none;
+    }
+}
+
+#container{
+    background-color: @dark;
+    width: @column * 24;
+    margin: 0 auto @column * 2;
+}
+
+#pane{
+    background-color: @clear;
+   .boxshadow(@gutter, @gutter, @gutter * 2, @shade);
+   padding: 0 @column * 2 @column;
+   margin-bottom: @column * 2;
+   .radiusBottom(@gutter);
+
+   p {
+       line-height: @gutter * 2;
+       display: block;
+       float: left;
+       width: @column * 6;
+       margin-right: @column;
+       margin-bottom: @gutter * 2;
+
+       &.blurb{
+           clear: both;
+           float: none;
+           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+           font-weight: 100;
+           font-size: @gutter * 2;
+           line-height: @gutter * 3;
+           width: @column * 13;
+       }
+   }
+
+   hr{
+       clear:both;
+   }
+
+   h2 {
+       font-size: @gutter * 1.5;
+       line-height: @column;
+   }
+
+}
+
+#banner{
+    color: @darkest;
+    font-family: helvetica, arial, sans-serif;
+    h1{
+        font-size: @column * 2;
+        line-height: @column * 3;
+        padding: 0;
+        margin: 0;
+
+    }
+
+    h2{
+        font-size: @gutter * 2;
+        line-height: @column;
+        margin-bottom: @column * 1;
+    }
+}
+
+@import 'inc/media.css';

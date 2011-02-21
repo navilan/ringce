@@ -40,26 +40,33 @@
         <section>
         <div class="tweet"></div>
         </section>{% endblock twitter %}
-        <small>{% includetext "blurbs/footnote.md" %}</small>
         {% endblock rfooter %}
     </footer>
 
     {% endblock rightpane %}
 </div>
+<footer>
+<small class="colophon">{% includetext "blurbs/footnote.md" %}</small>
+</footer>
 <br class="clear"/>
 {% endblock %}
 
-{% block js %}
+{% block endjs %}
 
 {{ super() }}
 
-<script src="{{ media_url('js/jquery.tweet.js') }}"
-        type="text/javascript"></script>
-
 <script type="text/javascript">
-$(function(){
-     $(".tweet").tweet({username:'lakshmivyas', count: 2});
+
+head('jquery', function(){
+
+    head.js({tweet: "{{ media_url('js/jquery.tweet.js') }}"});
+
+    head('tweet', function(){
+        $(".tweet").tweet({username:'lakshmivyas', count: 2});
+    });
+
 });
+
 </script>
 
 {% endblock %}
