@@ -14,10 +14,9 @@ body{
 }
 
 .tweet{
-    box-shadow: none;
+    .boxshadow(0, 0, 0, 0);
     width: @column * 13;
     margin-top: @column;
-    
     a{
         text-shadow: none;
     }
@@ -26,17 +25,17 @@ body{
 #container{
     background-color: @dark;
     width: @column * 24;
-    margin: 0 auto @column * 2;
+    margin: 0 auto;
 }
 
 #pane{
     background-color: @clear;
    .boxshadow(@gutter, @gutter, @gutter * 2, @shade);
    padding: 0 @column * 2 @column;
-   margin-bottom: @column * 2;
    .radiusBottom(@gutter);
 
    p {
+       position: relative;
        line-height: @gutter * 2;
        display: block;
        float: left;
@@ -52,6 +51,23 @@ body{
            font-size: @gutter * 2;
            line-height: @gutter * 3;
            width: @column * 13;
+       }
+   }
+
+   p.pop{
+       width: @column * 2;
+       img{
+           margin-top: @column * -1;
+           width: 200px;
+           height: 200px;
+
+           &.wide{
+               width: 300px
+           }
+
+           &:hover{
+               .scale(2);
+           }
        }
    }
 
