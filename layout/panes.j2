@@ -4,14 +4,7 @@
     {% block leftpane %}
     <header>
         {% block lheader %}
-        <nav>
-            <ul>
-                <li><a href="{{ content_url('/') }}">Home</a></li>
-                <li><a href="{{ content_url('/news') }}">News</a></li>
-                <li><a href="{{ content_url('/articles') }}">Articles</a></li>
-                <li><a href="{{ content_url('/projects') }}">Projects</a></li>
-            </ul>
-        </nav>
+        {% include "nav.j2" %}
         <hgroup id="banner">
             <h1>Ringce</h1>
             <h2>Software organs for modern humans</h2>

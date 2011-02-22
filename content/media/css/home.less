@@ -8,6 +8,7 @@
 @import 'inc/colophon';
 @import 'inc/base.css';
 @import 'inc/tweet';
+@import 'inc/nav';
 
 #body{
     min-height: 1200px;
@@ -62,48 +63,6 @@ footer .colophon{
     a {
         text-shadow: 1px 0px 0px @shade;
         color: @darker;
-    }
-}
-
-header nav{
-    font-size: @gutter * 1.5;
-    line-height: @gutter * 3 + 1;
-    background-color: @dark;
-    .boxshadow(2px, 2px, 2px, @shade);
-    margin: 0 3px @gutter / 2 @column * -1 + 2px;
-    padding: @gutter / 2 0 0 @column;
-    li {
-        display:inline;
-        padding:0;
-        margin:0;
-        a {
-            font: @heading-font;
-            text-shadow: -1px -1px 0px @dark - 40, 1px 1px 0px @dark + 40;
-            color: @clear;
-            text-decoration: none;
-
-            &:hover {
-                color: @shade;
-                text-decoration: none;
-                text-shadow: -1px -1px 0px @dark - 20, 1px 1px 0px @dark + 20;
-            }
-        }
-        &:before {
-            content: "/";
-            font-weight: bold;
-            font-size: @gutter * 2px;
-            color: @shade;
-            text-shadow: 1px 1px 0px @dark - 20, 1px 1px 0px @dark + 20;
-            padding: 0 @gutter;
-        }
-
-        &:first-child:before {
-            display:none;
-            content: "";
-            margin:0
-            padding: 0;
-            width:0;
-        }
     }
 }
 

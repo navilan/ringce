@@ -1,12 +1,14 @@
 footer .colophon {
-    margin: 0 auto;
+    margin: @gutter auto @gutter * -1;
     font-size: small;
     text-align: center;
-    text-shadow: @dark 0px 1px 0px;
+    text-shadow: @light - 90 0px 1px 0px;
+    color: @darkest;
     p{
         a {
-            text-shadow: 1px 0px 0px @shade;
-            color: @darker;
+            font-size: small;
+            text-shadow: @clear - 90 0px 1px 0px;
+            color: @darkest;
         }
     }
 }

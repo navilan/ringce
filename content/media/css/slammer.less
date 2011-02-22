@@ -8,6 +8,7 @@
 @import 'inc/colophon';
 @import 'inc/tweet';
 @import 'inc/base.css';
+@import 'inc/nav';
 
 body{
     min-height: 1224px;
@@ -20,6 +21,7 @@ body{
     a{
         text-shadow: none;
     }
+    float: left;
 }
 
 #container{
@@ -29,11 +31,10 @@ body{
 }
 
 #pane{
-    background-color: @clear;
+   text-shadow: @light + 20 0px 1px 0px;
+   background: @clear;
    .boxshadow(@gutter, @gutter, @gutter * 2, @shade);
-   padding: 0 @column * 2 @column;
    .radiusBottom(@gutter);
-
    p {
        position: relative;
        line-height: @gutter * 2;
@@ -80,22 +81,41 @@ body{
        line-height: @column;
    }
 
+   a.ringce-home{
+       display: block;
+       float: right;
+       margin-top: @column;
+       text-decoration: none;
+   }
+
+   header, article{
+       margin: 0 @column * 2;
+   }
+
+   aside {
+       padding: 0 @column * 2 @column;
+       background-color: @clear;
+       .radiusBottom(@gutter);
+   }
+
 }
 
 #banner{
     color: @darkest;
     font-family: helvetica, arial, sans-serif;
     h1{
+        clear: both;
         font-size: @column * 2;
         line-height: @column * 3;
         padding: 0;
         margin: 0;
-
     }
 
     h2{
-        font-size: @gutter * 2;
+        font-size: @gutter * 2.5;
+        font-weight: normal;
         line-height: @column;
+        margin-left: @gutter;
         margin-bottom: @column * 1;
     }
 }
