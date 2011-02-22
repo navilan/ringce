@@ -2,6 +2,15 @@
 extends: slammer.j2
 ===
 
+{% macro lb(name, caption, class) %}
+{% set basepath = 'http://ringce.com/media/art/shots/' %}
+{% set tname = basepath~'t-'~name~'.png' %}
+{% set fname = basepath~name~'.png' %}
+<p class="pop">
+<a href="{{ fname }}"><img src="{{ tname }}" class="{{ class }}" alt="{{ caption }}"></a>
+</p>
+{% endmacro %}
+
 ===copy===
 
 {% filter markdown|typogrify %}
@@ -13,15 +22,14 @@ extends: slammer.j2
 Grids are paved roads that take you to mountains, seas & other unchartered
 territories. {@class=blurb}
 
-Slammer is the perfect vehicle that you can take through those paved
-roads to layout your next design to perfection. Slammer’s grid overlays will blend
-naturally with your design tools and workflow.
+Slammer is an amazing vehicle that you can take through those paved roads to
+layout your next design to perfection. Slammer’s grid overlays will blend naturally
+with your design tools and workflow.
 
 Whether you are designing for print, web, iPhone or Mac applications, you can layer
 typographic grids, fibonacci series, harmonious sections and golden sections to
 create layouts as simple or as complex as you want them to be.
-
-{@class=pop}![grids](http://ringce.com/media/art/shots/slammer-grids.png)
+{{ lb('slammer-grids', "Modular grids", '') }}
 
 -----------------------------------------------------------------------------------
 
@@ -36,9 +44,8 @@ background and super useful magnifier.
 
 Slammer can capture the area below the frame with or without the grid overlays.
 Slammer’s grids can be exported as a composite PNG, as a Slammer template or in
-the open JSON format
-
-{@class=pop}![{@class=wide}grids](http://ringce.com/media/art/shots/slammer-tools.png)
+the open JSON format.
+{{ lb('slammer-tools', "Essential tools", 'wide') }}
 
 -----------------------------------------------------------------------------------
 {% endfilter %}
