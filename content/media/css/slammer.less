@@ -118,6 +118,40 @@ body{
         margin-left: @gutter;
         margin-bottom: @column * 1;
     }
+    
+    hgroup {
+        float: left;
+    }
+}
+
+
+#download-buy {
+    margin-top: @column;
+    float:right;
+    .notes, > span { font-size: 12px; }
+    .button{
+        font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        min-width:0;
+        text-align: center;
+        display: block;
+    }
+    .buy { width: 64px; }
+    .download { width: 102px; }
+    .download{ clear:both; margin-top: 20px; }
+    span { display:block; float: left; }
+    .dld-btn, .buy-btn {
+        border-right: 1px solid rgba(0, 0, 0, 0.1);
+        padding-right: 8px;
+    }
+    .version, .price{
+        text-align:center;
+        padding-left: 8px;
+    }
+    a:hover{
+        text-decoration:none;
+    }
 }
 
 @import 'inc/media.css';
