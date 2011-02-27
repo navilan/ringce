@@ -7,7 +7,10 @@ extends: slammer.j2
 {% set tname = basepath~'t-'~name~'.png' %}
 {% set fname = basepath~name~'.png' %}
 <p class="pop">
-<a href="{{ fname }}"><img src="{{ tname }}" class="{{ class }}" alt="{{ caption }}"></a>
+    <img rel="#{{ name }}" src="{{ tname }}" class="{{ class }}">
+    <div class="overlay black" id="{{ name }}" style="display:none" >
+        <img src="{{ fname }}">
+    </div>
 </p>
 {% endmacro %}
 
@@ -19,35 +22,66 @@ extends: slammer.j2
 
 ## Grids
 
-Grids are paved roads that take you to mountains, seas & other unchartered
-territories. {@class=blurb}
+Grids are paved roads that take you to mountains, seas and other unchartered
+territories. Slammer is your vehicle.{@class=blurb}
 
-Slammer is an amazing vehicle that you can take through those paved roads to
-layout your next design to perfection. Slammer’s grid overlays will blend naturally
-with your design tools and workflow.
+Whether you are designing for print, web, iPhone or Mac applications, you can use
+Slammer for layouts. Layer typographic grids, fibonacci, harmonious
+& golden sections to create layouts as simple or as complex as you need.
 
-Whether you are designing for print, web, iPhone or Mac applications, you can layer
-typographic grids, fibonacci series, harmonious sections and golden sections to
-create layouts as simple or as complex as you want them to be.
+Slammer’s grids can be exported as a composite PNG, as a Slammer template or
+in the open JSON format. You can share them with your peers or show them off on
+your website using a [simple and free jQuery plugin][jslammer].
+
 {{ lb('slammer-grids', "Modular grids", '') }}
+
+[jslammer]: [[jslammer]]
+
 
 -----------------------------------------------------------------------------------
 
 ## Tools
 
-Slammer’s tools complement its grid layouts by allowing you to measure, inspect and
-capture your design area. {@class=blurb}
+Measure, inspect and capture your design area. You can use Slammer’s tools to
+complement its grid layouts.  {@class=blurb}
 
 Slammer’s measurement mode allows you to measure distances & angles with a simple
 click and drag interface. Slammer has precise crosshairs that are visible on any
-background and super useful magnifier.
+background.
 
-Slammer can capture the area below the frame with or without the grid overlays.
-Slammer’s grids can be exported as a composite PNG, as a Slammer template or in
-the open JSON format.
+You can use the built-in maginifier and info window to look at the finer details
+and color information. Slammer can capture the area below the frame with or without
+the grid overlays.
+
 {{ lb('slammer-tools', "Essential tools", 'wide') }}
 
 -----------------------------------------------------------------------------------
+
+
+## Resources
 {% endfilter %}
+<ul class="resources">
+    <li>
+        <figure class="videos">
+            <figcaption>Screenshots</figcaption>
+        </figure>
+    </li>
+    <li>
+        <figure class="screenshots">
+            <figcaption>Videos</figcaption>
+        </figure>
+    </li>
+    <li>
+        <figure class="jSlammer">
+            <figcaption>jSlammer</figcaption>
+        </figure>
+    </li>
+    <li>
+        <figure class="documents">
+            <figcaption>Documents</figcaption>
+        </figure>
+    </li>
+</ul>
+<hr>
 
 ===/===

@@ -104,7 +104,7 @@ a img {
 
 .linearGradient(@from:#000, @to:#EEE)
 {
-    background: @from;
+    background-color: @from;
     background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
     background-image: -moz-linear-gradient(top, @from, @to);
     filter: formatstring("progid:DXImageTransform.Microsoft.gradient(startColorstr='{0}', endColorstr='{1}')", @from, @to); /* IE6,IE7 */

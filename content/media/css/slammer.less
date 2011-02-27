@@ -9,6 +9,7 @@
 @import 'inc/tweet';
 @import 'inc/base.css';
 @import 'inc/nav';
+@import 'inc/overlay';
 
 body{
     min-height: 1224px;
@@ -17,7 +18,7 @@ body{
 .tweet{
     .boxshadow(0, 0, 0, 0);
     width: @column * 13;
-    margin-top: @column;
+    margin-top: @gutter * 2;
     a{
         text-shadow: none;
     }
@@ -149,5 +150,18 @@ body{
         text-decoration:none;
     }
 }
+
+.resources {
+    li {
+        width: @column * 4;
+        float: left;
+        margin-right: @gutter * 2;
+    }
+
+    li:last-child{
+        margin-right: 0;
+    }
+}
+
 
 @import 'inc/media.css';
