@@ -9,6 +9,68 @@ meta:
 context:
     data:
         in_production_mode: true
+        slammer_shot_root: http://d.ringce.com/slammer/shots/slammer
+        slammer_shots :
+            -
+                name: Slammer-Unibody-Theme
+                description: Slammer Unibody Theme
+            -
+                name: Slammer-Dark-Theme
+                description: Slammer Dark Theme
+            -
+                name: Slammer-BorderedDark-Theme
+                description: Slammer Bordered Dark Theme
+            -
+                name: Slammer-Blue-Theme
+                description: Slammer Blue Theme
+            -
+                name: Slammer-Purple-Theme
+                description: Slammer Purple Theme
+            -
+                name: Slammer-Glass-Theme
+                description: Slammer Glass Theme
+            -
+                name: Slammer-Inspector
+                description: Slammer Inspector
+            -
+                name: Slammer-Frame-Size
+                description: Slammer Frame Size
+            -
+                name: Slammer-BlendingModes
+                description: Slammer Blending Modes for Layers & Overlays
+            -
+                name: Slammer-Layer-Margins
+                description: Slammer Layer Margins
+            -
+                name: Slammer-Uniform-Overlay
+                description: Slammer Uniform Overlay
+            -
+                name: Slammer-Overlay-Orientation
+                description: Slammer Overlay Orientation Angle
+            -
+                name: Slammer-Fib
+                description: Slammer Fibonacci Series Overlay
+            -
+                name: Slammer-Golden
+                description: Slammer Golden Section Overlay
+            -
+                name: Slammer-Harmonious
+                description: Slammer Harmonious Section Overlay
+            -
+                name: Preferences - General
+                description: Slammer Preferences General
+            -
+                name: Preferences - Rulers
+                description: Slammer Preferences Rulers
+            -
+                name: Preferences - Themes
+                description: Slammer Preferences Themes
+            -
+                name: Measurement Mode
+                description: Slammer Measurements
+            -
+                name: jSlammer-hide
+                description: jQuery Slammer from exported JSON
 plugins:
     - hyde.ext.plugins.folders.FlattenerPlugin
     - hyde.ext.plugins.meta.MetaPlugin

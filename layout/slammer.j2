@@ -1,6 +1,7 @@
 {% extends "base.j2" %}
 {% block css %}
 <link rel="stylesheet" href="{{ media_url('css/slammer.css') }}" type="text/css">
+<link rel="stylesheet" href="{{ media_url('css/fancybox.css') }}" type="text/css">
 {% endblock %}
 
 {% block main %}
@@ -50,28 +51,22 @@
 
 head('jquery', function(){
 
-    head.js({expose: "{{ media_url('js/expose.js') }}"});
-    head.js({tweet: "{{ media_url('js/jquery.tweet.js') }}"});
-    head('tweet', function(){
-        $(".tweet").tweet({
-            template: function(info){
-              return info["user"] + info["join"] + info["text"];
-            },
-            username:'slammerapp',
-            count: 3,
-            fav: true
+    head.js({fancy: "{{ media_url('js/fancybox.js') }}"});
+        head.js({tweet: "{{ media_url('js/jquery.tweet.js') }}"});
+        head('tweet', function(){
+            $(".tweet").tweet({
+                template: function(info){
+                  return info["user"] + info["join"] + info["text"];
+                },
+                username:'slammerapp',
+                count: 3,
+                fav: true
+            });
         });
-    });
-    head("expose", function(){
-       $("img[rel]").overlay({
-           mask: {
-                color: '#444',
-                loadSpeed: 200,
-                opacity: 0.5
-            },
-            closeOnClick: true
-       });
-    });
+        head("fancy", function(){
+           $("p.pop a").fancybox();
+           $(".slammer-shots a").fancybox();
+        });
 
 
 });

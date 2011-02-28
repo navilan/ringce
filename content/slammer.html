@@ -2,16 +2,18 @@
 extends: slammer.j2
 ===
 
+{% macro fancybox(tname, fname, caption, class, pclass, rel) %}
+<p class="{{ pclass }}">
+<a href="{{ fname }}" title="{{ caption }}" {% if rel -%}rel="{{ rel }}"{%- endif %}><img src="{{ tname }}" class="{{ class }}" alt="{{ caption }}"></a>
+</p>
+{% endmacro %}
+
+
 {% macro lb(name, caption, class) %}
 {% set basepath = 'http://ringce.com/media/art/shots/' %}
 {% set tname = basepath~'t-'~name~'.png' %}
 {% set fname = basepath~name~'.png' %}
-<p class="pop">
-    <img rel="#{{ name }}" src="{{ tname }}" class="{{ class }}">
-    <div class="overlay black" id="{{ name }}" style="display:none" >
-        <img src="{{ fname }}">
-    </div>
-</p>
+{{ fancybox(tname, fname, caption, class, 'pop') }}
 {% endmacro %}
 
 ===copy===
@@ -61,14 +63,29 @@ the grid overlays.
 ## Resources
 {% endfilter %}
 <ul class="resources">
-    <li>
-        <figure class="videos">
+    <li id="screenshots">
+        <figure class="screenshots">
             <figcaption>Screenshots</figcaption>
+            <ul id="slideshow">
+                {% for image in slammer_shots %}
+                <li>
+                {{ fancybox(
+                    slammer_shot_root~'/thumb/th_'~loop.index~'-'~image.name~'.jpg',
+                    slammer_shot_root~'/'~loop.index~'-'~image.name~'.png',
+                    image.description,
+                    'slammer-shot',
+                    'slammer-shots',
+                    'slammer-shots'
+                    )}}
+                </li>
+                {% endfor %}
+            </ul>
         </figure>
     </li>
-    <li>
-        <figure class="screenshots">
-            <figcaption>Videos</figcaption>
+    <li id="videos">
+        <figure class="videos">
+            <figcaption>Video</figcaption>
+            <a href="" class="video_thumbnail"></div>
         </figure>
     </li>
     <li>

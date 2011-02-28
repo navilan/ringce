@@ -9,7 +9,6 @@
 @import 'inc/tweet';
 @import 'inc/base.css';
 @import 'inc/nav';
-@import 'inc/overlay';
 
 body{
     min-height: 1224px;
@@ -58,6 +57,7 @@ body{
 
    p.pop{
        width: @column * 2;
+       cursor: pointer;
        img{
            margin-top: @column * -1;
            width: 200px;
@@ -153,14 +153,36 @@ body{
 
 .resources {
     li {
-        width: @column * 4;
+        width: @column * 3;
         float: left;
-        margin-right: @gutter * 2;
+        margin-right: @column;
+        
+        &#videos{
+            width: @column * 5;
+            margin-right: @gutter * 2;
+        }
     }
 
     li:last-child{
         margin-right: 0;
     }
+}
+
+#slideshow li {
+    display:none;
+
+    &:first-child{
+        display:block;
+    }
+}
+
+.video_thumbnail{
+    
+    width: 200px;
+    height: 120px;
+    background: @darkest url([[!!images/play.png]]) no-repeat 50% 50%;
+    .radius(@gutter);
+    cursor: pointer;
 }
 
 
