@@ -26,7 +26,7 @@ body{
 
 #container{
     background-color: @dark;
-    width: @column * 24;
+    width: @column * 24 - @gutter;
     margin: 0 auto;
 }
 
@@ -41,7 +41,7 @@ body{
        display: block;
        float: left;
        width: @column * 6;
-       margin-right: @column;
+       margin-right: @column + @gutter;
        margin-bottom: @gutter * 2;
 
        &.blurb{
@@ -50,27 +50,31 @@ body{
            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
            font-weight: 100;
            font-size: @gutter * 2;
-           line-height: @gutter * 3;
+           line-height: @column;
            width: @column * 13;
+           margin-bottom: @gutter + 2;
        }
    }
 
    p.pop{
        width: @column * 2;
        cursor: pointer;
+       margin-left: @column * -1;
        img{
            margin-top: @column * -1;
            width: 200px;
            height: 200px;
 
            &.wide{
-               width: 300px
+               width: 300px;
+               margin-left: @gutter;
            }
        }
    }
 
    hr{
        clear:both;
+       margin-bottom: @gutter * 1.6;
    }
 
    h2 {
@@ -98,12 +102,13 @@ body{
 }
 
 #banner{
+    padding-top: 3px;
     color: @darkest;
     font-family: helvetica, arial, sans-serif;
     h1{
         clear: both;
         font-size: @column * 2;
-        line-height: @column * 3;
+        line-height: @column * 2;
         padding: 0;
         margin: 0;
     }
@@ -112,19 +117,19 @@ body{
         font-size: @gutter * 2.5;
         font-weight: normal;
         line-height: @column;
-        margin-left: @gutter;
-        margin-bottom: @column * 1;
+        margin-bottom: @gutter * 2;
     }
 
     hgroup {
         float: left;
+        width: @column * 14 - @gutter;
     }
 }
 
 
 #download-buy {
-    margin-top: @column;
-    float:right;
+    margin-top: @gutter * 2;
+    float: left;
     .notes, > span { font-size: 12px; }
     .button{
         font: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -133,14 +138,19 @@ body{
         min-width:0;
         text-align: center;
         display: block;
+        line-height: @gutter * 2;
     }
     .buy { width: 64px; }
     .download { width: 102px; }
-    .download{ clear:both; margin-top: 20px; }
+    .download{ clear:both; margin-top: @gutter; }
     span { display:block; float: left; }
     .dld-btn, .buy-btn {
         border-right: 1px solid rgba(0, 0, 0, 0.1);
         padding-right: 8px;
+    }
+
+    .slreq{
+        line-height: @gutter * 3;
     }
     .version, .price{
         text-align:center;
@@ -155,16 +165,46 @@ body{
     li {
         width: @column * 3;
         float: left;
-        margin-right: @column;
-        
+        margin-right: 0;
+
         &#videos{
             width: @column * 5;
-            margin-right: @gutter * 2;
+            margin-right: @gutter;
         }
     }
 
+    li:first-child{
+        width: @column * 2;
+        margin-right: @column * 1.5;
+    }
+
     li:last-child{
-        margin-right: 0;
+        margin-left: @column * 2;
+        width: @column * 6;
+    }
+
+    figcaption{
+        margin-bottom: @gutter;
+    }
+}
+
+.bigtext{
+    display: block;
+    float: left;
+    margin-top: 6px;
+    font-size: 24px;
+    text-align: center;
+    padding: 44px 12px;
+    margin-right: 12px;
+    .radius(@gutter);
+    background-color: @clear - 10 ;
+    color: @darkest;
+    font-weight: normal;
+    text-decoration: none;
+
+    &:hover{
+        color: @dark;
+        text-decoration: none;
     }
 }
 
@@ -177,10 +217,10 @@ body{
 }
 
 .video_thumbnail{
-    
-    width: 200px;
-    height: 120px;
-    background: @darkest url([[!!images/play.png]]) no-repeat 50% 50%;
+
+    width: @column * 4;
+    height: @gutter * 10;
+    background: @clear - 10 url([[!!images/play.png]]) no-repeat 50% 50%;
     .radius(@gutter);
     cursor: pointer;
 }
