@@ -4,6 +4,20 @@
 <link rel="stylesheet" href="{{ media_url('css/fancybox.css') }}" type="text/css">
 {% endblock %}
 
+{% macro fancybox(tname, fname, caption, class, pclass, rel) %}
+<p class="{{ pclass }}">
+<a href="{{ fname }}" title="{{ caption }}" {% if rel -%}rel="{{ rel }}"{%- endif %}><img src="{{ tname }}" class="{{ class }}" alt="{{ caption }}"></a>
+</p>
+{% endmacro %}
+
+
+{% macro lb(name, caption, class) %}
+{% set basepath = 'http://ringce.com/media/art/shots/' %}
+{% set tname = basepath~'t-'~name~'.png' %}
+{% set fname = basepath~name~'.png' %}
+{{ fancybox(tname, fname, caption, class, 'pop') }}
+{% endmacro %}
+
 {% block main %}
 <div id="pane">
     <header id="banner">
@@ -28,8 +42,54 @@
         <br class="clear"/>
     </header>
     <article class="clearfix">
+    {% filter markdown|typogrify -%}
     {% block copy -%}{%- endblock %}
+    {%- endfilter %}
     </article>
+    <aside>
+        <h3>Resources</h3>
+        <ul class="resources">
+            <li id="screenshots">
+                <figure class="screenshots">
+                    <figcaption>Screenshots</figcaption>
+                    <ul id="slideshow">
+                        {% for image in slammer_shots %}
+                        <li>
+                        {{ fancybox(
+                            slammer_shot_root~'/thumb/th_'~loop.index~'-'~image.name~'.jpg',
+                            slammer_shot_root~'/'~loop.index~'-'~image.name~'.png',
+                            image.description,
+                            'slammer-shot',
+                            'slammer-shots',
+                            'slammer-shots'
+                            )}}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </figure>
+            </li>
+            <li id="videos">
+                <figure class="videos">
+                    <figcaption>Video</figcaption>
+                    <a href="{{ content_url('slammer/movie') }}" class="video_thumbnail"></a>
+                </figure>
+            </li>
+            <li>
+                <figure class="jSlammer">
+                    <figcaption>Javascript Grids</figcaption>
+                    <a href="{{ content_url('jSlammer') }}" class="bigtext">jSlammer</a>
+                </figure>
+            </li>
+            <li>
+                <figure class="documents">
+                    <figcaption>Documents</figcaption>
+                    <a class="bigtext" href="{{ media_url('data/userguide') }}">User Guide</a>
+                    <a class="bigtext" href="{{ media_url('data/presskit') }}">Press Kit</a>
+                </figure>
+            </li>
+        </ul>
+        <hr>
+    </aside>
     <aside>
         <div class="tweet"></div>
         <a class="ringce-home" href="{{ content_url('/') }}" title="Ringce Home">

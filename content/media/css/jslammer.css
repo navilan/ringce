@@ -1,0 +1,148 @@
+/*
+ * jSlammer
+ * Copyright © Lakshmi Vyasarajan, Ringce.com
+ * version: 0.1a (2009-11-17 20:28)
+ * @requires jQuery v1.3.2 or later
+
+ * Examples and documentation at: http://onlayout.com
+ * Dual licensed under the MIT and GPL licenses:
+ *   http://www.opensource.org/licenses/mit-license.php
+ *   http://www.gnu.org/licenses/gpl.html
+
+ * This CSS File can be used any which way you want.
+ * Attribution is not required, but will be appreciated.
+ * Lakshmi Vyasarajan, http://ringce.com
+ */
+
+body{
+
+    background-color: #ededed;
+    font-family: Helvetica, sans-serif;
+    padding: 0;
+}
+
+#twrap{
+    width: 960px;
+    margin: 0 auto;
+    clear:both;
+}
+
+.clear{
+
+    clear: both;
+}
+
+#header{
+    clear: both;
+}
+
+#logotype{
+    padding-left: 24px;
+    font-size: 104px;
+    line-height: 120px;
+    letter-spacing: 12px;
+    font-style: oblique;
+    font-weight: bolder;
+    float: left;
+}
+
+
+#logotype .j{
+    font-size: 96px;
+    color:orangered;
+    font-family: "Lucida Handwriting", cursive;
+}
+
+
+
+#subtitle{
+    float:left;
+    color: orangered;
+    font-family: "Lucida Handwriting", cursive;
+    font-weight: lighter;
+    font-size: 48px;
+    padding-top: 48px;
+    padding-left: 10px;
+
+}
+
+
+#nav{
+    clear: both;
+    padding-left: 385px;
+    margin: 0;
+}
+
+#nav li{
+
+    list-style-type: none;
+    float: left;
+    width:  106px;
+    text-align: center;
+    background-color: black;
+    color: yellow;
+    height: 86px;
+    margin-top: 24px;
+    padding-top: 16px;
+    font-size:  18px;
+    line-height: 40px;
+    cursor: pointer;
+    border-right: 1px solid red;
+    
+}
+
+#nav li a{
+    color: yellow;
+    text-decoration: none;
+}
+
+#nav li a:hover{
+    text-decoration: underline;
+}
+
+#nav li:hover{
+    background-color: orangered;
+}
+
+#gallery{
+    float: left;
+    width:  368px;
+    padding-bottom: 16px;
+    border-top: 16px solid #ededed;
+    background-color: red;
+
+}
+
+#gallery ul{
+    margin: 0;
+    padding: 0;
+}
+
+#gallery li:hover{
+    background-color: yellow;
+}
+
+#gallery li{
+    list-style-type: none;
+    background-color: black;
+    width: 72px;
+    float: left;
+    height: 72px;
+    margin: 16px 0 0 16px;
+    padding: 0;
+}
+
+#blurb{
+    margin-top: 4px;
+    float: left;
+    width:  367px;
+    padding-left: 224px;
+    text-align: justify;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+#hide{
+    position: relative;
+    z-index: 999999;
+}

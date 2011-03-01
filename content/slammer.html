@@ -2,23 +2,7 @@
 extends: slammer.j2
 ===
 
-{% macro fancybox(tname, fname, caption, class, pclass, rel) %}
-<p class="{{ pclass }}">
-<a href="{{ fname }}" title="{{ caption }}" {% if rel -%}rel="{{ rel }}"{%- endif %}><img src="{{ tname }}" class="{{ class }}" alt="{{ caption }}"></a>
-</p>
-{% endmacro %}
-
-
-{% macro lb(name, caption, class) %}
-{% set basepath = 'http://ringce.com/media/art/shots/' %}
-{% set tname = basepath~'t-'~name~'.png' %}
-{% set fname = basepath~name~'.png' %}
-{{ fancybox(tname, fname, caption, class, 'pop') }}
-{% endmacro %}
-
 ===copy===
-
-{% filter markdown|typogrify %}
 
 -----------------------------------------------------------------------------------
 
@@ -35,9 +19,9 @@ Slammer’s grids can be exported as a composite PNG, as a Slammer template or
 in the open JSON format. You can share them with your peers or show them off on
 your website using a [simple and free jQuery plugin][jslammer].
 
-{{ lb('slammer-grids', "Modular grids", '') }}
-
 [jslammer]: [[jslammer]]
+
+{{ lb('slammer-grids', "Modular grids", '') }}
 
 
 -----------------------------------------------------------------------------------
@@ -58,50 +42,5 @@ the grid overlays.
 {{ lb('slammer-tools', "Essential tools", 'wide') }}
 
 -----------------------------------------------------------------------------------
-
-
-## Resources
-{% endfilter %}
-<ul class="resources">
-    <li id="screenshots">
-        <figure class="screenshots">
-            <figcaption>Screenshots</figcaption>
-            <ul id="slideshow">
-                {% for image in slammer_shots %}
-                <li>
-                {{ fancybox(
-                    slammer_shot_root~'/thumb/th_'~loop.index~'-'~image.name~'.jpg',
-                    slammer_shot_root~'/'~loop.index~'-'~image.name~'.png',
-                    image.description,
-                    'slammer-shot',
-                    'slammer-shots',
-                    'slammer-shots'
-                    )}}
-                </li>
-                {% endfor %}
-            </ul>
-        </figure>
-    </li>
-    <li id="videos">
-        <figure class="videos">
-            <figcaption>Video</figcaption>
-            <div href="" class="video_thumbnail"></div>
-        </figure>
-    </li>
-    <li>
-        <figure class="jSlammer">
-            <figcaption>Javascript Grids</figcaption>
-            <a href="[[jSlammer]]" class="bigtext">jSlammer</a>
-        </figure>
-    </li>
-    <li>
-        <figure class="documents">
-            <figcaption>Documents</figcaption>
-            <a class="bigtext" href="[[userguide]]">User Guide</a>
-            <a class="bigtext" href="[[userguide]]">Press Kit</a>
-        </figure>
-    </li>
-</ul>
-<hr>
 
 ===/===

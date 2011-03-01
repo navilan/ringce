@@ -1,0 +1,110 @@
+===
+extends: false
+===
+
+<! DOCTYPE HTML>
+<html>
+    <head>
+    <link rel="stylesheet" href="{{ media_url('css/jslammer.css') }}" type="text/css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.4.4/jquery.js"
+        type="text/javascript"></script>
+    <script src="{{ media_url('js/jquery.ringce.slammer.js') }}"
+        type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var shown = false;
+        $(function(){
+            $.getJSON("{{ media_url('data/index.json') }}", null, function(data){
+               $("#twrap").slammer(data);
+            });
+            $("#show").click(function(){
+               if (shown) return;
+               $("#twrap").slammer("showAll");
+               $("#layout-canvas").css("z-index", 99);
+               shown = true;
+            });
+            $("#hide").click(function(){
+               if (!shown) return;
+               $("#twrap").slammer("hideAll");
+               $("#layout-canvas").css("z-index", -1);
+               shown = false;
+            });
+        });
+    </script>
+
+    </head>
+    <body>
+        <div id="site">
+            <div id="twrap">
+                <div id="header">
+                    <div id="logotype"><span class="j">j</span>Slammer</div>
+                     <div id="subtitle">get a grid</div>
+                     <br class="clear"/>
+                </div>
+                <div id="nav">
+                    <ul>
+                        <li id="show">Show</li>
+                        <li id="hide">Hide</li>
+                        <li><a href="{{ jslammer.source }}">Source</a></li>
+                        <li><a href="{{ jslammer.download }}">Download</a></li>
+                        <li><a href="{{ content_url('slammer') }}">Slammer</a></li>
+                    </ul>
+                    <br class="clear"/>
+                </div>
+                <div id="body">
+                    <div id="gallery">
+                        <ul>
+                            <li>One</li>
+                            <li>Two</li>
+                            <li>Three</li>
+                            <li>Four</li>
+                            <li>Five</li>
+                            <li>One</li>
+                            <li>Two</li>
+                            <li>Three</li>
+                            <li>Four</li>
+                            <li>Five</li>
+                            <li>One</li>
+                            <li>Two</li>
+                            <li>Three</li>
+                            <li>Four</li>
+                            <li>Five</li>
+                         </ul>
+                    </div>
+                    <div id="content">
+                         <div id="portfolio"></div>
+                         <div id="blurb">
+                             <p>
+
+                              Lorem ipsum dolor sit amet, consectetur adipiscing
+                             elit. Fusce ultricies mollis risus quis rutrum.
+                             Curabitur lacus tellus, auctor sit amet malesuada
+                             vitae, tempus a dolor. Praesent eget enim quam.
+                             Vestibulum egestas mauris ac odio cursus adipiscing.
+                             Morbi sed dolor vitae lacus consequat aliquet. Mauris
+                             a dignissim sem.
+
+                              </p>
+
+                              <p> Integer sollicitudin massa quis quam ornare
+                             mollis tincidunt lacus eleifend. Phasellus orci enim,
+                             rutrum sit amet tristique eget, pellentesque eget
+                             sapien. Nulla et purus non enim dapibus convallis.
+                             Pellentesque ut felis a tortor hendrerit venenatis.
+                             Quisque vel varius nisi. In a tellus risus. Nullam
+                             rhoncus convallis gravida. </p>
+
+                        </div>
+                    </div>
+                </div>
+                <br class="clear"/>
+            </div>
+            <br class="clear"/>
+            <div id="bwrap">
+                <div id="footer">
+
+                 </div>
+            </div>
+        </div>
+    </body>
+</html>

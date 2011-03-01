@@ -9,6 +9,9 @@ meta:
 context:
     data:
         in_production_mode: true
+        jslammer:
+            source: https://github.com/lakshmivyas/jSlammer
+            download: https://github.com/lakshmivyas/jSlammer/zipball/master
         slammer_shot_root: http://d.ringce.com/slammer/shots/slammer
         slammer_shots :
             -
